@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="online_quote_dfh_second_page">
+            <div>
+                <br/>
+                <div class="row">
+                    <div style="margin-left:100px;">
+                        <span><b>Reference: </b><span t-if="sale_order.partner_id.city" t-field="sale_order.partner_id.city"/>,&#160;<span t-if="sale_order.partner_id.name" t-field="sale_order.partner_id.name"/>,&#160;<span t-field="sale_order.name"/></span><br/>
+                        <span><b>Date of inspection: </b></span><span t-if="sale_order.question_frm_id.date_opportunity" t-esc="sale_order.question_frm_id.date_opportunity" t-options='{"widget": "date"}'/><br/>
+                        <span><b>Date of reporting: </b></span><span t-if="sale_order.question_frm_id.date_report" t-esc="sale_order.question_frm_id.date_report" t-options='{"widget": "date"}'/><br/>
+                        <span><b>Author: </b><span t-if="sale_order.user_id" t-field="sale_order.user_id"/></span><br/>
+                    </div>
+                    <div style="margin-left:150px;" id="address">
+                        <strong>Adres:</strong>
+                        <br/>
+                        <span t-field="sale_order.partner_id.name"/><br/>
+                        <t t-if="sale_order.partner_id.street"><span t-field="sale_order.partner_id.street"/><br/></t>
+                        <span class="oe_inline" t-field="sale_order.partner_id.zip"/>&#160;<span class="oe_inline" t-field="sale_order.partner_id.city"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="online_quote_dfh_first_page">
+            <h1 class="text-center mt6 mb6">
+                <span t-esc="sale_order.sale_order_template_id.name"/>
+            </h1>
+            <br/><br/>
+            <div class="text-center mt6 mb6">
+                <span>Findings regarding your </span><span t-field="sale_order.soort"/><span> part of your building</span>
+            </div>
+            <br/><br/>
+            <div class="text-center">
+                <img t-if="sale_order.question_frm_id.image" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.question_frm_id.image)" style="height: 320px; width:320px;"/>
+                <p></p>
+            </div>
+        </template>
+
+        <template id="dfh_second_page">
+            <div>
+                <h1 class="text-center mt6 mb6">
+                    <span t-esc="sale_order.sale_order_template_id.name"/>
+                </h1>
+                <br/><br/>
+                <div class="text-center mt6 mb6">
+                    <span>Findings regarding your </span><span t-field="sale_order.soort"/><span> part of your building</span>
+                </div>
+                <br/><br/>
+                <div class="text-center">
+                    <img t-if="sale_order.question_frm_id.image" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.question_frm_id.image)" style="height: 320px; width:320px;"/>
+                    <p></p>
+                </div>
+                <br/><br/><br/>
+                <div style="margin-left:100px;">
+                    <span><b>Reference: </b><span t-if="sale_order.partner_id.city" t-field="sale_order.partner_id.city"/>,&#160;<span t-if="sale_order.partner_id.name" t-field="sale_order.partner_id.name"/>,&#160;<span t-field="sale_order.name"/></span><br/>
+                    <span><b>Date of inspection: </b></span><span t-if="sale_order.question_frm_id.date_opportunity" t-esc="sale_order.question_frm_id.date_opportunity" t-options='{"widget": "date"}'/><br/>
+                    <span><b>Date of reporting: </b></span><span t-if="sale_order.question_frm_id.date_report" t-esc="sale_order.question_frm_id.date_report" t-options='{"widget": "date"}'/><br/>
+                    <span><b>Author: </b><span t-if="sale_order.user_id" t-field="sale_order.user_id"/></span><br/>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="question_formulier_profile" name="Questions Form Profile">
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="name">Form Name</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input type="text" class="form-control o_website_form_input" name="name" t-att-value="question_frm_id.name" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="partner_id">Customer Name</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input type="text" class="form-control o_website_form_input" t-att-value="question_frm_id.partner_id.name" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="address">Address</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input type="text" class="form-control o_website_form_input mb16" name="street" placeholder="street" t-att-value="question_frm_id.street" readonly=""/>
+                <input type="text" class="form-control o_website_form_input" name="street2" placeholder="street2" t-att-value="question_frm_id.street2" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="city">City</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <input type="text" class="form-control o_website_form_input" name="city" t-att-value="question_frm_id.city" readonly=""/>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 custom-text">
+                <label class="col-form-label" for="zip">Zip</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <input type="text" class="form-control o_website_form_input" name="zip" t-att-value="question_frm_id.zip" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="country_id">Country</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div t-attf-class="form-group div_country">
+                    <select id="country_id" name="country_id" t-attf-class="form-control" readonly="">
+                        <option value="">Country...</option>
+                        <t t-foreach="countries" t-as="c">
+                            <option t-att-value="c.id" t-att-selected="c.name == question_frm_id.country_id.name">
+                                <t t-esc="c.name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 custom-text">
+                <label class="col-form-label" for="state_id">State</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div t-attf-class="form-group div_state">
+                    <select id="state_id" name="state_id" t-attf-class="form-control" readonly="">
+                        <option value="">State </option>
+                        <t t-foreach="question_frm_id.country_id and question_frm_id.country_id.state_ids or []" t-as="s">
+                            <option t-att-value="s.id" t-att-selected="s.name == question_frm_id.state_id.name">
+                                <t t-esc="s.name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="phone">Phone</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input type="text" class="form-control o_website_form_input" name="phone" t-att-value="question_frm_id.phone" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="mobile">Mobile</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <input type="text" class="form-control o_website_form_input" name="mobile" t-att-value="question_frm_id.mobile" readonly=""/>
+            </div>
+        </div>
+        <div class="form-group row form-field" id="overview_image">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="image">Overview photo</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 div_image">
+                <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                <img class="img img-fluid" id="image" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image"/>
+                <input type="file" name="image" class="hide_input_image form-control o_website_form_input"/>
+                <input type="hidden" name="que_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+    </template>
+</odoo>

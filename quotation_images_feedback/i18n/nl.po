@@ -1,0 +1,321 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * quotation_images_feedback
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-03 06:06+0000\n"
+"PO-Revision-Date: 2019-10-03 06:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quotation_images_feedback
+#. openerp-web
+#: code:addons/quotation_images_feedback/static/src/js/website_form.js:0
+#, python-format
+msgid "'%s' is not a correct date"
+msgstr ""
+
+#. module: quotation_images_feedback
+#. openerp-web
+#: code:addons/quotation_images_feedback/static/src/js/website_form.js:0
+#, python-format
+msgid "'%s' is not a correct datetime"
+msgstr ""
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.portal_my_project_formulier
+msgid "/question/formulier/"
+msgstr ""
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_template
+msgid "<i class=\"fa fa-arrow-right\"/> Back to edit mode"
+msgstr "<i class=\"fa fa-arrow-right\"/> Terug naar bewerken"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "<span class=\"o_stat_text\"> Opportunities </span>"
+msgstr "<span class=\"o_stat_text\"> Kansen </span>"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "<span class=\"o_stat_text\"> Quotation(s) </span>"
+msgstr "<span class=\"o_stat_text\"> Offertes </span>"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "<span class=\"o_stat_text\"> Tasks </span>"
+msgstr "<span class=\"o_stat_text\"> Taken </span>"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Address"
+msgstr "Adres"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__city
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "City"
+msgstr "Stad"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__country_id
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Country"
+msgstr "land"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__partner_id
+msgid "Customer"
+msgstr "klant"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+msgid "Customer Name"
+msgstr "Klantnaam"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.opportunity_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_document
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.quote_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.task_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Documents"
+msgstr "Documenten"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.opportunity_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.quote_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.task_tab_template
+msgid "Extra Images"
+msgstr "Extra Afbeeldingen"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+msgid "Form Name"
+msgstr "Formulier naam"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.opportunity_tab_template
+msgid "General Questions"
+msgstr "Algemene vragen"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Goto Website Form"
+msgstr "Ga naar het webformulier"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__image_ids
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.opportunity_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_extra_image
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.quote_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.task_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Implementation"
+msgstr "Uitvoering"
+
+#. module: quotation_images_feedback
+#: model:ir.actions.act_window,name:quotation_images_feedback.formulier_action_lead
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__lead_id
+msgid "Lead"
+msgstr "Verkoopkans"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__date_opportunity
+msgid "Meeting Date"
+msgstr "Afspraak Datum"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__mobile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+msgid "Mobile"
+msgstr "Mobiel"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_order_document__name
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_order_image__name
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_order_video__name
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: quotation_images_feedback
+#: model:ir.actions.act_window,name:quotation_images_feedback.action_crm_lead_form_view
+#: model:ir.model.fields.selection,name:quotation_images_feedback.selection__question_formulier__state__opportunity
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Opportunity"
+msgstr "Kans"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Opportunity Extra Images"
+msgstr "Analyse Extra Beelden"
+
+#. module: quotation_images_feedback
+#: model:ir.model,name:quotation_images_feedback.model_order_image
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Opportunity Images"
+msgstr "Analyse Beelden"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields.selection,name:quotation_images_feedback.selection__question_formulier__state__opportunity_output
+msgid "Opportunity Output"
+msgstr "Kans Uitw."
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.task_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Opportunity Questions"
+msgstr "Analyse Vragen"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Opportunity Stage"
+msgstr "Kans Stage"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+msgid "Overview photo"
+msgstr "Overzicht foto"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Overview photo object"
+msgstr "Overzicht foto object"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__phone
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_crm_lead__customer_type
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__customer_type
+msgid "Question Type"
+msgstr "vraag type"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields.selection,name:quotation_images_feedback.selection__question_formulier__state__quotation_output
+msgid "Quotation Output"
+msgstr "Offerte Uitw."
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Quotation Stage"
+msgstr "Offerte Stage"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Quote"
+msgstr "Offerte"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Quote Extra Images"
+msgstr "Offerte Extra Beelden"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Quote Images"
+msgstr "Offerte Beelden"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Quote Questions"
+msgstr "Offerte Vragen"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__date_report
+msgid "Report Date"
+msgstr "Rapport Datum"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_template
+msgid "Save"
+msgstr "Opslaan"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__state_id
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.portal_my_project_formulier
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "State"
+msgstr "staat"
+
+#. module: quotation_images_feedback
+#: model:ir.actions.act_window,name:quotation_images_feedback.formulier_action_task
+#: model:ir.model,name:quotation_images_feedback.model_project_task
+#: model:ir.model.fields.selection,name:quotation_images_feedback.selection__question_formulier__state__task
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task"
+msgstr "Taak"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Extra Images"
+msgstr "Taak Extra Beelde"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Hours"
+msgstr "Taak Uren"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Images"
+msgstr "Taak Beelden"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields.selection,name:quotation_images_feedback.selection__question_formulier__state__task_output
+msgid "Task Output"
+msgstr "Taak Uitw."
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Products"
+msgstr "Taak Producten"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.task_tab_template
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Questions"
+msgstr "Taak Info"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Task Stage"
+msgstr "Taak Stage"
+
+#. module: quotation_images_feedback
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_template
+msgid "This is a preview of the customer portal."
+msgstr "Dit is een voorbeeld van het klantenportaal."
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__time
+msgid "Time of day"
+msgstr "Tijdstip"
+
+#. module: quotation_images_feedback
+#: model:ir.model.fields,field_description:quotation_images_feedback.field_question_formulier__zip
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.question_formulier_profile
+#: model_terms:ir.ui.view,arch_db:quotation_images_feedback.view_question_formulier_form
+msgid "Zip"
+msgstr "Postcode"

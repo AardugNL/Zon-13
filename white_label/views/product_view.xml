@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_template_form_view_inherit_white_label" model="ir.ui.view">
+            <field name="name">product.template.form.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="before">
+                    <field name="XA_white_label_description"/>
+                </field>
+                <field name="taxes_id" position="before">
+                <label for="XA_white_label_sale_price"/>
+                    <div name="pricing">
+                        <field name="XA_white_label_sale_price" class="oe_inline" widget='monetary'
+                            options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                    </div> 
+                </field>
+                <field name="categ_id" position="after">
+                    <field name="XA_box_quantity"/>
+                    <field name="XA_box_square_meter"/>
+                    <field name="XA_box_weight"/>
+                    <field name="XA_pallet_boxes"/>
+                    <field name="XA_pallet_square_meter"/>
+                    <field name="XA_pallet_weight"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

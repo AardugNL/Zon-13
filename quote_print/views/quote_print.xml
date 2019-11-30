@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_order_quote_print_inh" model="ir.ui.view">
+            <field name="name">sale.order.form.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/button[@name='action_confirm']" position="after">
+                    <button name="get_quote_print_pdf" string="Print Online Quotation" type="object" states="draft,sent,sale" groups="base.group_user"/>
+                </xpath>
+
+                <xpath expr="//field[@name='client_order_ref']" position="after">
+                    <field name="website_desc_footer" invisible="1"/>
+                    <field name="website_desc_footer_bellow" invisible="1"/>
+                    <field name="cover_image" invisible="1"/>
+                    <field name="close_image" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="show_only_total"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_company_form_inherit" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="custom_header_footer.view_company_form_custom"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='all_report']" position="after">
+                    <group string="For Web Quoation Report Only">
+                        <field name="footer_address_image" filename="file_name_footer_address"/>
+                        <field name="file_name_footer_address" invisible="1"/>
+                        <field name="footer_no_address_image" filename="file_name_footer_no_address"/>
+                        <field name="file_name_footer_no_address" invisible="1"/>
+                        <field name="footeradrs_first_page_img" filename="file_name_footeradrsfirstpage"/>
+                        <field name="file_name_footeradrsfirstpage" invisible="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sale_quote_template_form_inherit">
+            <field name="name">sale.order.template.form.inherit</field>
+            <field name="model">sale.order.template</field>
+            <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='number_of_days']" position="after">
+                    <label for="cover_image"/>
+                    <div id="cover_image">
+                        <field name="cover_image" filename="file_name_cover" class="oe_inline"/>
+                        <field name="file_name_cover" invisible="1" class="oe_inline"/>
+                    </div>
+                    <label for="report_layout"/>
+                    <div id="report_layout">
+                        <field name="report_layout" class="oe_inline"/>
+                    </div>
+                    <label for="cover_height" groups="base.group_no_one"/>
+                    <div id="cover_height" groups="base.group_no_one">
+                        <field name="cover_height" class="oe_inline"/>
+                    </div>
+                    <label for="isfooteradrsimg_first_page"/>
+                    <div id="isfooteradrsimg_first_page">
+                        <field name="isfooteradrsimg_first_page" class="oe_inline"/>
+                    </div>
+                </xpath>
+                <xpath expr="//form/sheet/group[1]/group" position="after">
+                    <group>
+                        <label for="close_image"/>
+                        <div id="close_image">
+                            <field name="close_image" filename="file_name_close" class="oe_inline"/>
+                            <field name="file_name_close" invisible="1" class="oe_inline"/>
+                        </div>
+                        <label for="close_height" groups="base.group_no_one"/>
+                        <div id="close_height" groups="base.group_no_one">
+                            <field name="close_height" class="oe_inline"/>
+                        </div>
+                        <label for="header_image"/>
+                        <div id="header_image">
+                            <field name="header_image" filename="file_name_header" class="oe_inline"/>
+                            <field name="file_name_header" invisible="1" class="oe_inline"/>
+                        </div>
+                        <label for="footer_image"/>
+                        <div id="footer_image">
+                            <field name="footer_image" filename="file_name_footer" class="oe_inline"/>
+                            <field name="file_name_footer" invisible="1" class="oe_inline"/>
+                        </div>
+                        <label for="pdf_attachment"/>
+                        <div id="pdf_attachment">
+                            <field name="pdf_attachment" filename="file_name_pdf" class="oe_inline"/>
+                            <field name="file_name_pdf" invisible="1" class="oe_inline"/>
+                        </div>
+                        <field name="hide_pricing_tab"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

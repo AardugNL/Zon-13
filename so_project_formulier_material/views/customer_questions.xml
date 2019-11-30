@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="customer_questions_form" name="Customer Questions">
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="according_to_plan">According to plan</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div t-attf-class="form-group">
+                    <select name="according_to_plan" t-attf-class="form-control">
+                        <option t-att-value="question_frm_id.according_to_plan">
+                            <t t-esc="question_frm_id.according_to_plan"/>
+                        </option>
+                        <t t-if="question_frm_id.according_to_plan != 'Ja'">
+                            <option value='Ja'>Ja</option>
+                        </t>
+                        <t t-if="question_frm_id.according_to_plan != 'Nee'">
+                            <option value='Nee'>Nee</option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="garden_left_tidy">The garden has been left tidy</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div t-attf-class="form-group">
+                    <select name="garden_left_tidy" t-attf-class="form-control">
+                        <option t-att-value="question_frm_id.garden_left_tidy">
+                            <t t-esc="question_frm_id.garden_left_tidy"/>
+                        </option>
+                        <t t-if="question_frm_id.garden_left_tidy != 'Ja'">
+                            <option value='Ja'>Ja</option>
+                        </t>
+                        <t t-if="question_frm_id.garden_left_tidy != 'Nee'">
+                            <option value='Nee'>Nee</option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="walls_left_tidy">The garden has been left tidy</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div t-attf-class="form-group">
+                    <select name="walls_left_tidy" t-attf-class="form-control">
+                        <option t-att-value="question_frm_id.walls_left_tidy">
+                            <t t-esc="question_frm_id.walls_left_tidy"/>
+                        </option>
+                        <t t-if="question_frm_id.walls_left_tidy != 'Ja'">
+                            <option value='Ja'>Ja</option>
+                        </t>
+                        <t t-if="question_frm_id.walls_left_tidy != 'Nee'">
+                            <option value='Nee'>Nee</option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="damage_property_caused">Damage to your property caused by us</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div t-attf-class="form-group">
+                    <select name="damage_property_caused" t-attf-class="form-control">
+                        <option t-att-value="question_frm_id.damage_property_caused">
+                            <t t-esc="question_frm_id.damage_property_caused"/>
+                        </option>
+                        <t t-if="question_frm_id.damage_property_caused != 'Ja'">
+                            <option value='Ja'>Ja</option>
+                        </t>
+                        <t t-if="question_frm_id.damage_property_caused != 'Nee'">
+                            <option value='Nee'>Nee</option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="satisfied_progress_work">Are you satisfied with the progress of the work?</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div t-attf-class="form-group">
+                    <select name="satisfied_progress_work" t-attf-class="form-control">
+                        <option t-att-value="question_frm_id.satisfied_progress_work">
+                            <t t-esc="question_frm_id.satisfied_progress_work"/>
+                        </option>
+                        <t t-if="question_frm_id.satisfied_progress_work != 'Ja'">
+                            <option value='Ja'>Ja</option>
+                        </t>
+                        <t t-if="question_frm_id.satisfied_progress_work != 'Nee'">
+                            <option value='Nee'>Nee</option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 text-right">
+                <label class="col-form-label" for="comments">Comments</label>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <textarea rows="3" name="comments" class="form-control"><t t-esc="question_frm_id.comments"/></textarea>
+            </div>
+        </div>
+        <t t-call="portal.signature_form">
+            <t t-set="call_url" t-value="'/question/formulier/'+str(question_frm_id.id)+'/accept'"/>
+            <t t-set="default_name" t-value="question_frm_id.partner_id.name"/>
+        </t>
+    </template>
+</odoo>

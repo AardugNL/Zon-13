@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="inherited_crm_case_tree_view_leads" model="ir.ui.view">
+            <field name="name">crm.lead.tree.lead.custom</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="default_order">create_date desc</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inherited_crm_lead_form_email_desc_view_leads" model="ir.ui.view">
+            <field name="name">crm.lead.form.lead.extra.page.custom</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="lead_category.crm_case_form_view_leads_inh"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='extra']" position="after">
+                    <page string="Email Description">
+                        <field name="email_description" widget="html"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_mail_message_company_lead_form" model="ir.ui.view">
+            <field name="name">mail.message.company.form</field>
+            <field name="model">mail.message</field>
+            <field name="inherit_id" ref="mail.view_message_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='subtype_id']" position="after">
+                    <field name="company"/>
+                </xpath>        
+            </field>
+        </record>
+
+
+        <record id="lead_email_lead_category_tree" model="ir.ui.view">
+            <field name="name">lead.email.lead.category.tree</field>
+            <field name="model">lead.email.lead.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category" editable="bottom">
+                    <field name="lead_category"/>
+                    <field name="lead_email_lead_source"/>
+                    <field name="content"/>
+                    <field name="priority"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="lead_email_lead_category_form" model="ir.ui.view">
+            <field name="name">lead.email.lead.category.form</field>
+            <field name="model">lead.email.lead.category</field>
+            <field name="arch" type="xml">
+                <form string="Email Lead Category">
+                    <sheet>
+                        <group>
+                            <field name="lead_category"/>
+                            <field name="lead_email_lead_source"/>
+                            <field name="content"/>
+                            <field name="priority"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="lead_email_lead_category" model="ir.actions.act_window">
+            <field name="name">Lead Email Lead Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lead.email.lead.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="lead_email_lead_category"
+                  id="menu_lead_email_lead_category"
+                  parent="crm.crm_menu_config"/>
+
+
+        <record id="lead_email_lead_source_tree" model="ir.ui.view">
+            <field name="name">lead.email.lead.source.tree</field>
+            <field name="model">lead.email.lead.source</field>
+            <field name="arch" type="xml">
+                <tree string="Company" editable="bottom">
+                    <field name="lead_source"/>
+                    <field name="domain"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="lead_email_lead_source_form" model="ir.ui.view">
+            <field name="name">lead.email.lead.source.form</field>
+            <field name="model">lead.email.lead.source</field>
+            <field name="arch" type="xml">
+                <form string="Email Lead Company">
+                    <sheet>
+                        <group>
+                            <field name="lead_source"/>
+                            <field name="domain"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="lead_email_lead_source" model="ir.actions.act_window">
+            <field name="name">Lead Email Lead Source</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lead.email.lead.source</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="lead_email_lead_source"
+                  id="menu_lead_email_lead_source"
+                  parent="crm.crm_menu_config"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* white_label
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-25 06:33+0000\n"
+"PO-Revision-Date: 2019-11-25 06:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: white_label
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_box
+msgid "Box"
+msgstr "Doos"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/js/box_at_date_widget.js:0
+#: code:addons/white_label/static/src/js/purchase_box_at_date_widget.js:0
+#, python-format
+msgid "Box Details"
+msgstr "Doos Details"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_box_quantity
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_box_quantity
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_box_quantity
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_box_quantity
+#, python-format
+msgid "Box Quantity"
+msgstr "Aantal per Doos"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_box_square_meter
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_box_square_meter
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_box_square_meter
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_box_square_meter
+#, python-format
+msgid "Box Square Meter"
+msgstr "Mtrs2 per doos"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_box_weight
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_box_weight
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_box_weight
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_box_weight
+#, python-format
+msgid "Box Weight"
+msgstr "Gewicht Doos"
+
+#. module: white_label
+#: model:ir.model.fields.selection,name:white_label.selection__account_move_line__XA_type_show__brand
+#: model:ir.model.fields.selection,name:white_label.selection__sale_order_line__XA_type_show__brand
+msgid "Brand"
+msgstr "Brand"
+
+#. module: white_label
+#: model:ir.model,name:white_label.model_account_move_line
+msgid "Journal Item"
+msgstr "Boeking"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_pallet_boxes
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_pallet_boxes
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_pallet_boxes
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_pallet_boxes
+#, python-format
+msgid "Pallet Boxes"
+msgstr "Dozen per Pallet"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_pallet_square_meter
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_pallet_square_meter
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_pallet_square_meter
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_pallet_square_meter
+#, python-format
+msgid "Pallet Square Meter"
+msgstr "Mtr2 per Pallet"
+
+#. module: white_label
+#. openerp-web
+#: code:addons/white_label/static/src/xml/box_at_date.xml:0
+#: code:addons/white_label/static/src/xml/purchase_box_at_date.xml:0
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_pallet_weight
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_pallet_weight
+#: model:ir.model.fields,field_description:white_label.field_purchase_order_line__XA_pallet_weight
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_pallet_weight
+#, python-format
+msgid "Pallet Weight"
+msgstr "Gewicht Pallet"
+
+#. module: white_label
+#: model:ir.model,name:white_label.model_product_template
+msgid "Product Template"
+msgstr "Productsjabloon"
+
+#. module: white_label
+#: model:ir.model,name:white_label.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Inkooporderregel"
+
+#. module: white_label
+#: model:ir.model,name:white_label.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Verkooporderregel"
+
+#. module: white_label
+#: model:ir.model.fields,field_description:white_label.field_account_move_line__XA_type_show
+#: model:ir.model.fields,field_description:white_label.field_sale_order_line__XA_type_show
+msgid "Type"
+msgstr "Soort"
+
+#. module: white_label
+#: model:ir.model.fields.selection,name:white_label.selection__account_move_line__XA_type_show__whitelabel
+#: model:ir.model.fields.selection,name:white_label.selection__sale_order_line__XA_type_show__whitelabel
+msgid "White Label"
+msgstr "White Label"
+
+#. module: white_label
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_white_label_description
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_white_label_description
+msgid "White Label Description"
+msgstr "White Label Omschrijving"
+
+#. module: white_label
+#: model:ir.model.fields,field_description:white_label.field_product_product__XA_white_label_sale_price
+#: model:ir.model.fields,field_description:white_label.field_product_template__XA_white_label_sale_price
+msgid "White Label Sales Price"
+msgstr "White Label Sales Price"

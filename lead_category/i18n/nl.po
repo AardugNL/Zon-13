@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lead_category
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-19 13:22+0000\n"
+"PO-Revision-Date: 2019-09-19 13:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lead_category
+#: model_terms:ir.ui.view,arch_db:lead_category.lead_category_form
+#: model_terms:ir.ui.view,arch_db:lead_category.lead_category_tree
+msgid "Category"
+msgstr "Categorie"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__id
+msgid "ID"
+msgstr "ID"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: lead_category
+#: model:ir.actions.act_window,name:lead_category.lead_category
+#: model:ir.model,name:lead_category.model_lead_category
+#: model:ir.model.fields,field_description:lead_category.field_crm_lead__lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__name
+#: model:ir.model.fields,field_description:lead_category.field_sale_order__lead_category
+#: model:ir.ui.menu,name:lead_category.menu_lead_category
+msgid "Lead Category"
+msgstr "Aanvraag soort"
+
+#. module: lead_category
+#: model:ir.model,name:lead_category.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: lead_category
+#: model_terms:ir.ui.view,arch_db:lead_category.crm_case_form_view_oppor_inherit
+msgid "New Quotation"
+msgstr "Nieuwe offerte"
+
+#. module: lead_category
+#: model:ir.model,name:lead_category.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: lead_category
+#: model:ir.model,name:lead_category.model_sale_report
+msgid "Sales Orders Statistics"
+msgstr "Verkooporder analyses"
+
+#. module: lead_category
+#: model:ir.model.fields,field_description:lead_category.field_lead_category__tag_ids
+msgid "Tags"
+msgstr "Labels" 

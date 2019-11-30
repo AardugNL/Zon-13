@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    
+        <record id="lead_category_tree" model="ir.ui.view">
+            <field name="name">lead.category.tree</field>
+            <field name="model">lead.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category" editable="bottom">
+                    <field name="name"/>
+                    <field name="tag_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="lead_category_form" model="ir.ui.view">
+            <field name="name">lead.category.form</field>
+            <field name="model">lead.category</field>
+            <field name="arch" type="xml">
+                <form string="Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="lead_category" model="ir.actions.act_window">
+            <field name="name">Lead Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lead.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="lead_category" id="menu_lead_category" name="Lead Category" 
+                    parent="crm.crm_menu_config" sequence="0"/>
+
+        <record id="crm_case_form_view_leads_inh" model="ir.ui.view">
+            <field name="name">crm.lead.form.lead</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='team_id']" position="after">
+                        <field name="lead_category" widget="selection"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//button[@name='action_sale_quotations_new']" position="replace">
+                        <button string="New Quotation" name="action_sale_quotations_new" type="object" class="oe_highlight"
+                        attrs="{'invisible': ['|', ('type', '=', 'lead'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}"
+                        context="{'default_lead_lead_source': lead_lead_source}"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        
+        <record id="view_order_form_inh" model="ir.ui.view">
+            <field name="name">sale.order.form.in</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                        <field name="lead_category" widget="selection"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    
+    </data>
+</odoo>

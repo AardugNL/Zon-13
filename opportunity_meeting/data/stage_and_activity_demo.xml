@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+	
+	<!-- crm stage demo data -->
+    <record model="crm.stage" id="stage_lead_appoinment">
+        <field name="name">Appointment</field>
+        <field name="probability">10</field>
+        <field name="on_change">1</field>
+        <field name="sequence">2</field>
+    </record>
+</odoo>

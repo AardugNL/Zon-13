@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippets_inherit" inherit_id="quotation_images_feedback.snippets_inherit">
+        <xpath expr="//div[@id='formulier_snippet_panel_body']" position="inside">
+            <t t-snippet="formulier_type_1.four_image" t-thumbnail="/formulier_type_1/static/src/images/four_image.png"/>
+            <t t-snippet="formulier_type_1.general_info" t-thumbnail="/formulier_type_1/static/src/images/general_info.png"/>
+            <t t-snippet="formulier_type_1.other_info" t-thumbnail="/formulier_type_1/static/src/images/other_info.png"/>
+            <t t-snippet="formulier_type_1.formulier_text_block" t-thumbnail="/formulier_type_1/static/src/images/text-block.png"/>
+            <t t-snippet="formulier_type_1.least_four_image" t-thumbnail="/formulier_type_1/static/src/images/four_image.png"/>
+            <t t-snippet="formulier_type_1.situation_snippet" t-thumbnail="/formulier_type_1/static/src/images/general_info.png"/>
+            <t t-snippet="formulier_type_1.formulier_table" t-thumbnail="/formulier_type_1/static/src/images/general_info.png"/>
+            <t t-snippet="formulier_type_1.quotation_template_pdf" t-thumbnail="/formulier_type_1/static/src/images/quotation_attachment.png"/>
+            <t t-snippet="formulier_type_1.six_image" t-thumbnail="/formulier_type_1/static/src/images/six_imgs.png"/>
+            <t t-snippet="formulier_type_1.level_measurement" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.plattegrond_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.fundering_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.blueprint_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.lot_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.extra_drawing_1_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <t t-snippet="formulier_type_1.extra_drawing_2_img_snippet" t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.png"/>
+            <script>
+                formulier_type_one();
+            </script>
+        </xpath>
+    </template>
+    <template id="quotation_template_pdf" name="Quotation Attachment">
+        <section class="s_three_columns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <h4 class="text-center">Quotation Attachment Download</h4>
+                        <a href="#" id="quotation_template_pdf" target="_blank">
+                            <span class="fa fa-file" style="font-size:80px;"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="four_image" name="Four Image">
+        <section class="s_three_columns bg-200 pt32 pb32">
+            <div class="container">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Linker aanzicht van object</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_image_1"/>
+                    </div>
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Vooraanzicht van object</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 2 for three columns" id="f_image_2"/>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Rechter aanzicht van object</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 3 for three columns" id="f_image_3"/>
+                    </div>
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">waterpas meting</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 3 for three columns" id="f_image_4"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="least_four_image" name="Least Four Image">
+        <section class="s_three_columns bg-200 pt32 pb32">
+            <div class="container">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Toegankelijkheid voor kraan</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_image_5"/>
+                    </div>
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Opgegraven Fundering</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 2 for three columns" id="f_image_6"/>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Scheur in metselwerk</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 3 for three columns" id="f_image_7"/>
+                    </div>
+                    <div class="col-lg-6 mt16">
+                        <h4 class="mb16 text-center">Aanvullende Info</h4>
+                        <img class="card-img-top img-height-65" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 3 for three columns" id="f_image_8"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="general_info" name="General Information">
+        <section class="s_features_grid pt48 pb24">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 s_col_no_bgcolor pb24">
+                        <h2>General Information</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_houseinfo" >
+                            <h4>Change Icons</h4>
+                            <p>Double click an icon to replace it with one of your choice.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_analysis">
+                            <h4>Duplicate</h4>
+                            <p>Duplicate blocks and columns to add more features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_con_bgg">
+                            <h4>Delete Blocks</h4>
+                            <p>Select and delete blocks to remove some features.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_lead">
+                            <h4>Delete Blocks</h4>
+                            <p>Select and delete blocks to remove some features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_goal_owner">
+                            <h4>Great Value</h4>
+                            <p>Turn every feature into a benefit for your reader.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_fasad_con">
+                            <h4>Edit Styles</h4>
+                            <p>You can edit colors and background to highlight features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="g_s_f_c_verd">
+                            <h4>Sample Icons</h4>
+                            <p>All these icons are completely free for commercial use.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="s_g_roof_structure">
+                            <h4>Delete Blocks</h4>
+                            <p>Select and delete blocks to remove some features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="other_info" name="Other Information">
+        <section class="s_features_grid pt48 pb24">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 s_col_no_bgcolor pb24">
+                      <h2>Other Information</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_inspection">
+                            <h4>Change Icons</h4>
+                            <p>Double click an icon to replace it with one of your choice.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_posslible">
+                            <h4>Duplicate</h4>
+                            <p>Duplicate blocks and columns to add more features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_action">
+                            <h4>Delete Blocks</h4>
+                            <p>Select and delete blocks to remove some features.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_target">
+                            <h4>Delete Blocks</h4>
+                            <p>Select and delete blocks to remove some features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_location">
+                            <h4>Great Value</h4>
+                            <p>Turn every feature into a benefit for your reader.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16" data-name="Box">
+                        <div class="s_features_grid_content" id="o_i_access">
+                            <h4>Edit Styles</h4>
+                            <p>You can edit colors and background to highlight features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="formulier_text_block" name="Snippet Inleiding">
+        <section class="s_text_block pt32 pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 pt32 pb32">
+                        <h3> <b>Inleiding</b></h3>
+                       <p><span id="quot_name">Dhr Ferry Nieuwboer</span> names Duurzaam Funderingsherstel heeft op <span id="quote_date">date</span> een inspectie uitgevoered bij de <span id="quote_soort">aanbouw/ hoek/ kopgevel/groot deel </span> van uw gebouw aan de  <span id="customer_street">street</span> te <span id="customer_city">Great stories</span></p>
+                        <p>Doel van de Inspectie is het verzamelen van gegevens ten behoeve van het achteehalen van de mogelijke verzakking oorzaak. hierbij is een waterpassing uitgevoerd, zijn er  foto's gemaakt en is de fundering bekeken.</p>
+                        <p>In deze rapportage vindt u dus de bevindingen, adviezen en kostenindicatie voor herstel.</p>
+                    </div>
+                </div>
+            </div>
+      </section>
+    </template>
+    <template id="situation_snippet" name="Situation">
+        <section class="Situatie_snip pt24 pb16">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 s_col_no_bgcolor pb16">
+                        <h2>Situatie</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 s_col_no_bgcolor pb24">
+                        <div class="col-lg-12" data-name="Box">
+                            <div class="s_features_grid_content" id="g_s_houseinfo_new" >
+                                <p id="g_s_houseinfo_new_value">Double click an icon to replace it with one of your choice.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" data-name="Box">
+                            <div class="s_features_grid_content" id="g_s_goal_owner_new" >
+                                <p id="g_s_goal_owner_new_value">Double click an icon to replace it with one of your choice.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" data-name="Box">
+                            <div class="s_features_grid_content" id="g_s_analysis_new">
+                                <p id="g_s_analysis_new_value">Duplicate blocks and columns to add more features.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="formulier_table" name="Opportunity Question Table">
+        <section id="formiler_data_table">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 pt32 pb32">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Fundering Opbouw<br/></td>
+                                    <td><span id="foundation_construction_name_image_id">foundation construction ids</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Gevelopbouw<br/></td>
+                                    <td><span id="faced_construction_id">Gevelopbouw</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Vloeropbouw bgg<br/></td>
+                                    <td><span id="flore_construction_id">Vloeropbouw bgg</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Vloeropbouw 1* verdieping<br/></td>
+                                    <td><span id="floor_construction_verd_id">Vloeropbouw 1* verdieping</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Vloeropbouw 2* verdieping<br/></td>
+                                    <td><span id="floor_construction_verd_2_id">Vloeropbouw 2* verdieping</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td> Vloeropbouw zolder<br/></td>
+                                    <td><span id="lead_id">Leads</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Dakopbouw<br/></td>
+                                    <td><span id="Dakbouw_id">Dakopbouw</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Inspectie Putje<br/></td>
+                                    <td><span id="inspection_foundation_depth_id">Inspectie Putje</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Ligging leidingwerk<br/></td>
+                                    <td><span id="location_pipping_ground_id">Ligging leidingwerk</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Maximale gemeten zetting<br/></td>
+                                    <td><span id="possible_settings_id">Maximale gemeten zetting</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Toegang / Knelpunten<br/></td>
+                                    <td><span id="access_bottlenecks_id">Toegang / Knelpunten</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Parkeren<br/></td>
+                                    <td><span id="parkeren">Parkeren</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Toegang<br/></td>
+                                    <td><span id="toegang">Toegang</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Tuin<br/></td>
+                                    <td><span id="tuin">Tuin</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Bomen<br/></td>
+                                    <td><span id="bomen">Bomen</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Kraan<br/></td>
+                                    <td><span id="kraan">Kraan</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Grondwerk<br/></td>
+                                    <td><span id="grondwerk">Grondwerk</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>Aanvullend<br/></td>
+                                    <td><span id="aanvullend">Aanvullend</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td> Actie Bewoner<br/></td>
+                                    <td><span id="action_resident_id">Actie Bewoner</span><br/></td>
+                                </tr>
+                                <tr>
+                                    <td> Actie DFH<br/></td>
+                                    <td><span id="action_total_wall_id">Actie DFH</span><br/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    
+    <template id="six_image" name="Drawing Images">
+        <section class="s_three_columns_two_row bg-200 pt32 pb32">
+            <div class="container">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-lg-12 mb16 text-center"><h2>Tekeningen</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Plattegrond</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_map"/>
+                    </div>
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Fundering</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_foundation"/>
+                    </div>
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Bouwtekening</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_blue_print"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Kavel</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_lot"/>
+                    </div>
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Extra tekening 1</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_extra_Drawing_1"/>
+                    </div>
+                    <div class="col-lg-4 mt16">
+                        <h4 class="mb16 text-center">Extra tekening 2</h4>
+                        <img class="card-img-top img-border-style" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Odoo - Sample 1 for three columns" id="f_extra_Drawing_2"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="level_measurement" name="Overview Photo Object">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16 text-center">
+                        <h1 class="s_title_thin">Weergave van het foto-object</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24">
+                        <img src="/formulier_type_1/static/src/images/blank_image.jpg" class="img img-fluid" alt="Project Formulier" id="level_measurement_img"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="plattegrond_img_snippet" name="Plattegrond Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Plattegrond</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24 text-center">
+                        <img class="img img-fluid one_image_height_300" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Pallateground Image" id="plattegrond_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="fundering_img_snippet" name="Sondering Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Sondering</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 pb24 text-center">
+                        <img class="img img-fluid" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Sondering Image" id="fundering_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="blueprint_img_snippet" name="Blueprint Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Bouwtekening</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24 text-center">
+                        <img class="img img-fluid one_image_height_300" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Bouwtekening Image" id="blueprint_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="lot_img_snippet" name="Lot Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Kavel</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24 text-center">
+                        <img class="img img-fluid one_image_height_300" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Kavel Image" id="lot_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="extra_drawing_1_img_snippet" name="Extra Drawing 1 Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Extra tekening 1</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24 text-center">
+                        <img class="img img-fluid one_image_height_300" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Extra tekening 1 Image" id="extra_drawing_1_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="extra_drawing_2_img_snippet" name="Extra Drawing 2 Image">
+        <section class="s_picture bg-200 pt48 pb24">
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title pt16 pb16">
+                        <h1 class="s_title_thin text-center">Extra tekening 2</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 pb24 text-center">
+                        <img class="img img-fluid one_image_height_300" src="/formulier_type_1/static/src/images/blank_image.jpg" alt="Extra tekening 2 Image" id="extra_drawing_2_img_id"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

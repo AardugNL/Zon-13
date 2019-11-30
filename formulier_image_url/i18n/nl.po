@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* formulier_image_url
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-06 06:50+0000\n"
+"PO-Revision-Date: 2019-06-06 06:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: formulier_image_url
+#: model:ir.model.fields,help:formulier_image_url.field_crm_lead_web_url
+msgid "Automatically sanitized HTML contents"
+msgstr "Automatisch gesanitiseerde HTML-inhoud"
+
+#. module: formulier_image_url
+#: model:ir.ui.view,arch_db:formulier_image_url.question_formulier_profile_ing
+msgid "Close"
+msgstr "Sluiten"
+
+#. module: formulier_image_url
+#: model:ir.ui.view,arch_db:formulier_image_url.question_formulier_profile_ing
+msgid "Enter URL"
+msgstr "URL invoeren"
+
+#. module: formulier_image_url
+#: model:ir.model.fields,field_description:formulier_image_url.field_crm_lead_web_url
+#: model:ir.model.fields,field_description:formulier_image_url.field_question_formulier_web_url
+msgid "Image URL"
+msgstr "Afbeelding URL"
+
+#. module: formulier_image_url
+#: model:ir.model,name:formulier_image_url.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: formulier_image_url
+#: model:ir.model.fields,field_description:formulier_image_url.field_crm_lead_image
+msgid "Overview photo object"
+msgstr "Overzichtsfotoobject"
+
+#. module: formulier_image_url
+#: code:addons/formulier_image_url/models/models.py:51
+#: code:addons/formulier_image_url/models/models.py:83
+#, python-format
+msgid "Please provide correct URL or check your image size.!"
+msgstr "Geef de juiste URL op of controleer uw afbeeldingsgrootte."
+
+#. module: formulier_image_url
+#: model:ir.model,name:formulier_image_url.model_question_formulier
+msgid "Questions/Answers"
+msgstr "Vragen/Antwoorden"
+
+#. module: formulier_image_url
+#: model:ir.ui.view,arch_db:formulier_image_url.question_formulier_profile_ing
+msgid "URL:"
+msgstr "URL:"
+
+#. module: formulier_image_url
+#: model:ir.ui.view,arch_db:formulier_image_url.question_formulier_profile_ing
+msgid "Upload Image"
+msgstr "Afbeelding Uploaden"
+
+#. module: formulier_image_url
+#: model:ir.ui.view,arch_db:formulier_image_url.question_formulier_profile_ing
+msgid "Upload Image from Url"
+msgstr "Uploaden afbeelding van URL"
+

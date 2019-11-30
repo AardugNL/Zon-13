@@ -1,0 +1,42 @@
+<templates>
+    <div t-name="white_label.boxAtDate">
+        <div>
+            <t>
+                <a tabindex="0" class="fa fa-info-circle text-primary"/>
+            </t>
+        </div>
+    </div>
+
+    <div t-name="white_label.BoxDetailPopOver">
+        <table>
+            <tbody>
+                <t>
+                    <tr>
+                        <td><strong>Box Quantity</strong><br /></td>
+                        <td><t t-esc='data.XA_box_quantity'/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Box Square Meter</strong><br /></td>
+                        <td><t t-esc='data.XA_box_square_meter'/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Box Weight</strong><br /></td>
+                        <td><t t-esc='data.XA_box_weight'/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pallet Boxes</strong><br /></td>
+                        <td><t t-esc='data.XA_pallet_boxes'/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pallet Square Meter</strong><br /></td>
+                        <td><t t-esc='data.XA_pallet_square_meter'/></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pallet Weight</strong><br /></td>
+                        <td><t t-esc='data.XA_pallet_weight'/></td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </div>
+</templates>

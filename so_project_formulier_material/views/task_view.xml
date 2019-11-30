@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_formulier_form2_tm" model="ir.ui.view">
+            <field name="name">question.formulier.form.tm</field>
+            <field name="model">question.formulier</field>
+            <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='implementation']/notebook" position="inside">
+                    <page string="Planned Material" name="planned_material">
+                        <field name="planned_material_ids" mode="tree" readonly="1">
+                            <form string="Planned material Lines">
+                                <group>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <label for="planned_qty"/>
+                                        <div>
+                                            <field name="planned_qty" class="oe_inline"/>
+                                            <field name="product_uom" class="oe_inline oe_no_button"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                    </group>
+                                </group>
+                                <label for="name"/>
+                                <field name="name"/>
+                            </form>
+                            <tree string="Planned Material Lines" editable="bottom">
+                                <field name="product_id"/>
+                                <field name="name"/>
+                                <field name="planned_qty"
+                                />
+                                <field name="product_uom" options='{"no_open": True}'/>
+                                <field name="sale_line_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Consumed Material">
+                        <field name="consumed_material_ids" mode="tree">
+                            <form string="Consumed material Lines">
+                                <group>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="planned_qty"/>
+                                        <field name="consumed_qty"/>
+                                        <field name="planned_qty"/>
+                                        <field name="product_uom"/>
+                                    </group>
+                                    <group>
+                                        <field name="sale_line_id" invisible="1"/>
+                                        <field name="sale_id"/>
+                                        <field name="task_id"/>
+                                    </group>
+                                </group>
+                                <label for="name"/>
+                                <field name="name"/>
+                            </form>
+                            <tree string="Consumed Material Lines" editable="bottom">
+                                <field name="create_from_button" invisible="1"/>
+                                <field name="product_id"/>
+                                <field name="name"/>
+                                <field name="sale_id"/>
+                                <field name="task_id"/>
+                                <field name="planned_qty" attrs="{'readonly':[('sale_line_id', '!=', False)]}"
+                                />
+                                <field name="consumed_qty"
+                                />
+                                <field name="product_uom" options='{"no_open": True}'/>
+                                <field name="sale_line_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Screw Piles">
+                        <field name="screw_piles_ids" mode="tree">
+                            <form string="Screw Piles">
+                                <group>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="sale_id"/>
+                                        <field name="sawn_length"/>
+                                        <field name="archived_torque"/>
+                                        <field name="add_work"/>
+                                    </group>
+                                    <group>
+                                        <field name="sale_line_id" invisible="1"/>
+                                        <field name="remarks"/>
+                                        <field name="image"/>
+                                    </group>
+                                </group>
+                                <label for="name"/>
+                                <field name="name"/>
+                            </form>
+                            <tree string="Screw Piles" editable="bottom">
+                                <field name="name"/>
+                                <field name="product_id"/>
+                                <field name="sale_id"/>
+                                <field name="sawn_length"/>
+                                <field name="archived_torque"/>
+                                <field name="add_work"/>
+                                <field name="remarks"/>
+                                <field name="image"/>
+                                <field name="sale_line_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="General">
+                    </page>
+                    <page string="Customer">
+                        <group>
+                            <group name="according_to_plan" string="According to plan">
+                                <field name="according_to_plan" nolabel="1"/>
+                            </group>
+                            <group name="garden_left_tidy" string="The garden has been left tidy">
+                                <field name="garden_left_tidy" nolabel="1"/>
+                            </group>
+                            <group name="walls_left_tidy" string="The walls have been left tidy">
+                                <field name="walls_left_tidy" nolabel="1"/>
+                            </group>
+                            <group name="damage_property_caused" string="Damage to your property caused by us">
+                                <field name="damage_property_caused" nolabel="1"/>
+                            </group>
+                            <group name="satisfied_progress_work" string="Are you satisfied with the progress of the work?">
+                                <field name="satisfied_progress_work" nolabel="1"/>
+                            </group>
+                            <group name="comments" string="Comments">
+                                <field name="comments" nolabel="1"/>
+                            </group>
+                            <group name="signature">
+                                <field name="signature" widget="image"/>
+                            </group>
+                            <group name="signed_by" string="Signed by">
+                                <field name="signed_by" nolabel="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

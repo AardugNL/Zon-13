@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="solar_quote_tab" inherit_id="quotation_images_feedback.opportunity_tab_template" name="Project Formulier">
+        <xpath expr="//ul/li[2]" position="after">
+            <li t-if="question_frm_id.customer_type == 'formulier_three'" class="nav-item">
+                <a class="nav-link" 
+                    id="nav_tabs_solar" 
+                    data-toggle="tab"
+                    href="#nav_tabs_solar_form" 
+                    role="tab" aria-controls="nav_tabs_solar_form"
+                    aria-selected="false">PF Quote</a>
+            </li>
+        </xpath>
+        <xpath expr="//div[hasclass('card-body')]" position="inside">
+            <div t-if="question_frm_id.customer_type == 'formulier_three'" class="tab-pane fade"
+                id="nav_tabs_solar_form"
+                role="tabpanel"
+                aria-labelledby="nav_tabs_solar">
+                <t t-call="formulier_type_3.formulier_solar_quote"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

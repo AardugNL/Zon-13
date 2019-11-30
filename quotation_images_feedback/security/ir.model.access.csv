@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_question_formulier_all,question.formulier.all,model_question_formulier,,1,1,1,0
+access_question_formulier_user,question.formulier.userl,model_question_formulier,base.group_user,1,1,1,0
+access_order_image_all,order.image,model_order_image,,1,1,1,1
+base.access_res_country_group_all,res_country group_user_alll,base.model_res_country,,1,1,1,1
+base.access_res_country_state_group_all,res_country_state group_user_all,base.model_res_country_state,,1,1,1,1
+access_order_video_all,order.video,model_order_video,,1,1,1,1
+access_order_document_all,order.document,model_order_document,,1,1,1,1
+access_formulier_customer_type_all,formulier.customer.type,model_formulier_customer_type,,1,1,1,1

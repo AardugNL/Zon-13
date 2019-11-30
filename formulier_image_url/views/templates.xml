@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Website Frontend Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/formulier_image_url/static/src/js/image_upload.js"/>
+        </xpath>
+    </template>
+
+    <template id="question_formulier_profile_ing" inherit_id="quotation_images_feedback.question_formulier_profile">
+        <xpath expr="//button[hasclass('edit_button')]" position="before">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <button type="button" aria-label="Url" class="fa fa-link pull-left fa-lg" title="Upload Image from Url" data-toggle="modal" data-target="#UrlLinkModal" style="margin-bottom: -12%;z-index: 2;position: relative;"></button>
+            <div class="modal fade" id="UrlLinkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Enter URL</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <label for="urlname" class="col-form-label">URL:</label>
+                                <input type="text" class="input-lg form-control image_url" id="urlname"/>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" t-att-rid="question_frm_id.id" class="btn btn-primary edit_from_url">Upload Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

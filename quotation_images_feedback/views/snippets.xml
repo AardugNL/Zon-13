@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippets_inherit" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="after">
+            <div id="quotation_snippet_structure" class="o_panel">
+                <div class="o_panel_header">
+                    <i class="fa fa-th-large"/> Quotation Snippets
+                </div>
+                <div class="o_panel_body" id="formulier_snippet_panel_body">
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="sale_order_portal_template_inh" inherit_id="sale.sale_order_portal_template" name="Add Imges">
+        <xpath expr="//div[1]" position="before">
+            <t t-set="cal" t-value="sale_order.fill_drawing_images()"/>
+        </xpath>
+    </template>
+</odoo>

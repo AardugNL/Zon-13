@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="foundation_image_1" model="foundation.image">
+            <field name="name">Fundering op staal met metselwerk</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_1.png"/>
+        </record>
+        <record id="foundation_image_2" model="foundation.image">
+            <field name="name">Fundering op staal voet van stampbeton</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_2.png"/>
+        </record>
+        <record id="foundation_image_3" model="foundation.image">
+            <field name="name">Strokenfundering Gewapend Beton</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_3.png"/>
+        </record>
+        <record id="foundation_image_4" model="foundation.image">
+            <field name="name">Strokenfundering met Verstijvingsrib</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_4.png"/>
+        </record>
+        <record id="foundation_image_5" model="foundation.image">
+            <field name="name">Puttenfundering met betonnen ringen</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_5.png"/>
+        </record>
+        <record id="foundation_image_6" model="foundation.image">
+            <field name="name">Rotterdamse Palenfundering</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_6.png"/>
+        </record>
+        <record id="foundation_image_7" model="foundation.image">
+            <field name="name">Amsterdamse Palenfundering</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_7.png"/>
+        </record>
+        <record id="foundation_image_8" model="foundation.image">
+            <field name="name">Palenfundering met Betonopzetter</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_8.png"/>
+        </record>
+        <record id="foundation_image_9" model="foundation.image">
+            <field name="name">Beton in EPS bekisting</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_9.jpg"/>
+        </record>
+        <record id="foundation_image_10" model="foundation.image">
+            <field name="name">Beton balk</field>
+            <field name="image" type="base64" file="formulier_type_1/static/src/images/image_10.png"/>
+        </record>
+        <record id="formulier_custom_type_1" model="formulier.customer.type">
+            <field name="name">Formulier one</field>
+            <field name="technical_name">formulier_one</field>
+        </record>
+    </data>
+</odoo>

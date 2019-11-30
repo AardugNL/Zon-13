@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="formulier_solar_quote">
+        <t t-if="question_frm_id.customer_type == 'formulier_three'">
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="energy_use">How much energy You use ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <input type="number" name="energy_use" id="energy_use" class="form-control" t-att-value="question_frm_id.energy_use"/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="location_correction">Location Correction</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <input type="number" name="location_correction" id="location_correction" class="form-control" t-att-value="question_frm_id.location_correction" placeholder="Dot value not allowed"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="location_calculation">Location Calculations</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <input type="number" name="location_calculation" class="form-control" t-att-value="question_frm_id.location_calculation" readonly=""/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.solar_type">Solar type</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control" id="solar_type" name="solar_type" multiple="multiple">
+                            <t t-foreach="SolarType" t-as="st">
+                                <option t-att-value="st.id" t-att-selected="st.id in question_frm_id.solar_type.ids">
+                                    <t t-esc="st.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group  form-field view_solar_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="solar_product_image" name='solar_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.solar_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <b><span id="solar_name" t-att-value="question_frm_id.solar_product.name"/></b>
+                        </div>
+                        <div class="col-md-2 col-sm-2 padding">
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary add_solar_qty update_solar_qty" aria-label="Add one" title="Add one" t-att-value="question_frm_id.solar_product.id">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 s_qty">1</h3>
+                            </div>
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary remove_solar_qty update_solar_qty" aria-label="Remove one" title="Remove one" t-att-value="question_frm_id.solar_product.id">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 solar_qty s_qty">1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field solar_product">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.solar_product">Which solar panel You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select name="solar_product" id="solar_product" style="width:100%;" class="dropdown_image">
+                            <t t-foreach="solarProducts" t-as="sp">
+                                <option t-att-value='sp.id' t-attf-data-image="/web/image/product.product/{{sp.id}}/image_1920" data-imagecss="flag" t-att-data-title="sp.name" t-att-selected="sp.id == question_frm_id.solar_product.id"><t t-esc="sp.name"/> <span class="ml2" t-esc="sp.ec_watt_piek"/></option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="solar_watt_piek">Solar Energy Watt Piek</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <input type="number" name="solar_watt_piek" class="form-control" t-att-value="question_frm_id.solar_watt_piek"/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="energy_wat_piek">Energy Wat Piek Calclulation</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <input type="number" name="energy_wat_piek" id="energy_wat_piek" class="form-control" t-att-value="question_frm_id.energy_wat_piek" readonly=""/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="need_converter">Do You need Converter ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="need_converter" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.need_converter">
+                                <t t-esc="question_frm_id.need_converter"/>
+                            </option>
+                            <t t-if="question_frm_id.need_converter != 'ja'">
+                                <option value='ja'>ja</option>
+                            </t>
+                            <t t-if="question_frm_id.need_converter != 'nee'">
+                                <option value='nee'>nee</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_converter_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="converter_product_image" name='converter_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.converter_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <b><span id="converter_name" t-att-value="question_frm_id.converter_product.name"/></b>
+                        </div>
+                        <div class="col-md-2 col-sm-2 padding">
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary add_converter_qty update_converter_qty" aria-label="Add one" title="Add one" t-att-value="question_frm_id.converter_product.id">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4">1</h3>
+                            </div>
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary remove_converter_qty update_converter_qty" aria-label="Remove one" title="Remove one" t-att-value="question_frm_id.converter_product.id">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 converter_qty">1</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field converter_field display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.converter_product">Which converter we need ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="converter_product" name="converter_product" style="width: 100%;">
+                            <t t-foreach="converterProducts" t-as="cp">
+                                <option t-att-value="cp.id" t-attf-data-image="/web/image/product.product/{{cp.id}}/image_1920" data-imagecss="flag" t-att-data-title="cp.name" t-att-selected="cp.id == question_frm_id.converter_product.id">
+                                    <t t-esc="cp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="need_optimiser">Do You need product Optimisers ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="need_optimiser" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.need_optimiser">
+                                <t t-esc="question_frm_id.need_optimiser"/>
+                            </option>
+                            <t t-if="question_frm_id.need_optimiser != 'ja'">
+                                <option value='ja'>ja</option>
+                            </t>
+                            <t t-if="question_frm_id.need_optimiser != 'nee'">
+                                <option value='nee'>nee</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_optimiser_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="optimiser_product_image" name='optimiser_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.optimiser_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <b><span id="optimiser_name" t-att-value="question_frm_id.optimiser_product.name"/></b>
+                        </div>
+                        <div class="col-md-2 col-sm-2 padding">
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary add_optimiser_qty update_optimiser_qty" aria-label="Add one" title="Add one" t-att-value="question_frm_id.optimiser_product.id">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 o_qty">1</h3>
+                            </div>
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary remove_optimiser_qty update_optimiser_qty" aria-label="Remove one" title="Remove one" t-att-value="question_frm_id.optimiser_product.id">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 o_qty optimiser_qty">1</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field optimiser_field display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.optimiser_product">Which optimiser You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="optimiser_product" name="optimiser_product" style="width: 100%;">
+                            <t t-foreach="optimiserProducts" t-as="op">
+                                <option t-att-value="op.id" t-attf-data-image="/web/image/product.product/{{op.id}}/image_1920" data-imagecss="flag" t-att-data-title="op.name" t-att-selected="op.id == question_frm_id.optimiser_product.id">
+                                    <t t-esc="op.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="pf_select_roof">Is it a flat roof or a slanted roof ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="pf_select_roof" id="pf_select_roof" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.pf_select_roof">
+                                <t t-esc="question_frm_id.pf_select_roof"/>
+                            </option>
+                            <t t-if="question_frm_id.pf_select_roof != 'Flat Roof'">
+                                <option value='Flat Roof'>Flat Roof</option>
+                            </t>
+                            <t t-if="question_frm_id.pf_select_roof != 'Slanted Roof'">
+                                <option value='Slanted Roof'>Slanted Roof</option>
+                            </t>
+                            <t t-if="question_frm_id.pf_select_roof != 'Mix Roof'">
+                                <option value='Mix Roof'>Mix Roof</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_flat_roof_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="flat_roof_product_image" name='flat_roof_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.flat_roof_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <b><span id="flat_roof_name" t-att-value="question_frm_id.flat_roof_product.name"/></b>
+                        </div>
+                        <div class="col-md-2 col-sm-2 padding">
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary add_roof_qty update_roof_qty" aria-label="Add one" title="Add one" t-att-value="question_frm_id.flat_roof_product.id">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 actual_flat_roof_qty">1</h3>
+                            </div>
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary remove_roof_qty update_roof_qty" aria-label="Remove one" title="Remove one" t-att-value="question_frm_id.flat_roof_product.id">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 roof_qty flat_roof_qty">1</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field flat_product display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.flat_roof_product">Which Flat roof system You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="flat_roof_product" name="flat_roof_product" style="width: 100%;">
+                            <t t-foreach="FlatRoofProducts" t-as="frp">
+                                <option t-att-value="frp.id" t-attf-data-image="/web/image/product.product/{{frp.id}}/image_1920" data-imagecss="flag" t-att-data-title="frp.name" t-att-selected="frp.id == question_frm_id.flat_roof_product.id">
+                                    <t t-esc="frp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_slanted_roof_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="slanted_roof_product_image" name='slanted_roof_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.slanted_roof_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <b><span id="slanted_roof_name" t-att-value="question_frm_id.slanted_roof_product.name"/></b>
+                        </div>
+                        <div class="col-md-2 col-sm-2 padding">
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary add_roof_qty update_roof_qty" aria-label="Add one" title="Add one" t-att-value="question_frm_id.slanted_roof_product.id">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 actual_slanted_roof_qty">1</h3>
+                            </div>
+                            <div class="row mt4 mb4 display">
+                                <a class="btn btn-primary remove_roof_qty update_roof_qty" aria-label="Remove one" title="Remove one" t-att-value="question_frm_id.slanted_roof_product.id">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <h3 class="ml4 mt4 mr4 mb4 roof_qty slanted_roof_qty">1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field slanted_product display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.slanted_roof_product">Which Slanted roof system You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="slanted_roof_product" name="slanted_roof_product" style="width: 100%;">
+                            <t t-foreach="SlantedRoofProducts" t-as="rp">
+                                <option t-att-value="rp.id" t-attf-data-image="/web/image/product.product/{{rp.id}}/image_1920" data-imagecss="flag" t-att-data-title="rp.name" t-att-selected="rp.id == question_frm_id.slanted_roof_product.id">
+                                    <t t-esc="rp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="installation_time">How many time needed for installation ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="installation_time" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.installation_time">
+                                <t t-esc="question_frm_id.installation_time"/>
+                            </option>
+                            <t t-if="question_frm_id.installation_time != '4 Hours'">
+                                <option value='4 Hours'>4 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '8 Hours'">
+                                <option value='8 Hours'>8 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '12 Hours'">
+                                <option value='12 Hours'>12 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '16 Hours'">
+                                <option value='16 Hours'>16 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '24 Hours'">
+                                <option value='24 Hours'>24 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '30 Hours'">
+                                <option value='30 Hours'>30 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '32 Hours'">
+                                <option value='32 Hours'>32 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '36 Hours'">
+                                <option value='36 Hours'>36 Hours</option>
+                            </t>
+                            <t t-if="question_frm_id.installation_time != '40 Hours'">
+                                <option value='40 Hours'>40 Hours</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_stekkers_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="stekkers_product_image" name='stekkers_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.stekkers_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <b><span id="stekkers_name" t-att-value="question_frm_id.stekkers_product.name"/></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.stekkers_product">Which stekkers You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="stekkers_product" name="stekkers_product" style="width: 100%;">
+                            <t t-foreach="stekkerProducts" t-as="sp">
+                                <option t-att-value="sp.id" t-attf-data-image="/web/image/product.product/{{sp.id}}/image_1920" data-imagecss="flag" t-att-data-title="sp.name" t-att-selected="sp.id == question_frm_id.stekkers_product.id">
+                                    <t t-esc="sp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_material_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="material_product_image" name='material_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.remain_material.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <b><span id="material_name" t-att-value="question_frm_id.remain_material.name"/></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.remain_material">Which Overige Materialen You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="remain_material" name="remain_material" style="width: 100%;">
+                            <t t-foreach="RemainMaterials" t-as="rp">
+                                <option t-att-value="rp.id" t-attf-data-image="/web/image/product.product/{{rp.id}}/image_1920" data-imagecss="flag" t-att-data-title="rp.name" t-att-selected="rp.id == question_frm_id.remain_material.id">
+                                    <t t-esc="rp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="need_discount_2">Do You need Discount 2 ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="need_discount_2" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.need_discount_2">
+                                <t t-esc="question_frm_id.need_discount_2"/>
+                            </option>
+                            <t t-if="question_frm_id.need_discount_2 != 'ja'">
+                                <option value='ja'>ja</option>
+                            </t>
+                            <t t-if="question_frm_id.need_discount_2 != 'nee'">
+                                <option value='nee'>nee</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field amount_range display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="amount_range">Aanpassing anders</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-sm-6">
+                    <input type="number" name="amount_range" class="form-control" t-att-value="question_frm_id.amount_range" min="1" placeholder="Dot value not allowed"/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="need_discount">Do You need Discount ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <select name="need_discount" t-attf-class="form-control">
+                            <option t-att-value="question_frm_id.need_discount">
+                                <t t-esc="question_frm_id.need_discount"/>
+                            </option>
+                            <t t-if="question_frm_id.need_discount != 'ja'">
+                                <option value='ja'>ja</option>
+                            </t>
+                            <t t-if="question_frm_id.need_discount != 'nee'">
+                                <option value='nee'>nee</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_discount_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="discount_product_image" name='discount_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.discount_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <b><span id="discount_name" t-att-value="question_frm_id.discount_product.name"/></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field discount_field display-none">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.discount_product">Select Discount</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="discount_product" name="discount_product" style="width: 100%;">
+                            <t t-foreach="DiscountProducts" t-as="disc">
+                                <option t-att-value="disc.id" t-attf-data-image="/web/image/product.product/{{disc.id}}/image_1920" data-imagecss="flag" t-att-data-title="disc.name" t-att-selected="disc.id == question_frm_id.discount_product.id">
+                                    <t t-esc="disc.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field discount_qty display-none">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="discount_qty">Discount Quantity</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <input type="number" name="discount_qty" class="form-control" t-att-value="question_frm_id.discount_qty" min="1"/>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group form-field view_vat_product" style="display:none;">
+                <div class="offset-lg-3 offset-md-3 col-lg-4 col-md-5 box-shadow-padding">
+                    <div class="row">
+                        <div class="oe_product_image col-md-3 col-sm-3">
+                            <img class="img img-fluid img-padding" id="vat_product_image" name='vat_product_image' t-attf-src="/web/image/product.product/{{question_frm_id.vat_refund_product.id}}/image_1920"/>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <b><span id="vat_name" t-att-value="question_frm_id.vat_refund_product.name"/></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.vat_refund_product">Which btw teruggave You want ?</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control dropdown_image" id="vat_refund_product" name="vat_refund_product" style="width: 100%;">
+                            <t t-foreach="vatRefundProducts" t-as="vp">
+                                <option t-att-value="vp.id" t-attf-data-image="/web/image/product.product/{{vp.id}}/image_1920" data-imagecss="flag" t-att-data-title="vp.name" t-att-selected="vp.id == question_frm_id.vat_refund_product.id">
+                                    <t t-esc="vp.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field vat_field">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="question_frm_id.quote_template_id">Choose your quote template</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group div_product">
+                        <select class="form-control" id="quote_template_id" name="quote_template_id">
+                            <t t-foreach="QuoteTemplate" t-as="template">
+                                <option t-att-value="template.id" t-att-selected="template.id == question_frm_id.quote_template_id.id">
+                                    <t t-esc="template.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field converter_price" style="display:none;">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="converter_price">Converter Price</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <input type="number" name="converter_price" id="converter_price" class="form-control" t-att-value="question_frm_id.converter_price"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field panel_price" style="display:none;">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="panel_price">Panel Price</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <input type="number" name="panel_price" id="panel_price" class="form-control" t-att-value="question_frm_id.panel_price"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field optimisers_price" style="display:none;">
+                <div class="col-lg-3 col-md-3  col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                    <label class="col-form-label" for="optimisers_price">Optimisers Price</label>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div t-attf-class="form-group">
+                        <input type="number" name="optimisers_price" id="optimisers_price" class="form-control" t-att-value="question_frm_id.optimisers_price"/>
+                    </div>
+                </div>
+            </div>
+            <div id="loading">
+                <img id="loading-image" src="http://cdn.nirmaltv.com/images/generatorphp-thumb.gif" alt="Loading..." />
+            </div>
+            <div class="form-group row" id="quote_create">
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <button class="btn btn-primary text-center o_website_eval_quote pull-right mt16" type="Button" t-att-value="question_frm_id.id">Quote Evaluation</button>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4">
+                    <button class="btn btn-primary text-center o_website_create_quote pull-right mt16" type="Button" t-att-value="question_frm_id.id">Create Quote</button>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

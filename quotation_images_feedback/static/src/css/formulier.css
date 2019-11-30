@@ -1,0 +1,16 @@
+.custom-image-size{
+    width: 40% !important;
+}
+.custom-image-size img{
+    max-height:150px;
+}
+.img-border-style{
+    border-style: groove;
+    height: 80%;
+}
+.backend_image_zoom img:hover{
+    transform: scale(4.9);
+    position: absolute;
+    z-index: 1;
+}
+

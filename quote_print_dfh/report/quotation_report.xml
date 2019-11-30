@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- online quote inherit -->
+        <template id="quotation_web_view_inherit" inherit_id="quote_print.quotation_web_view" name="Custom Inroduction">
+            <xpath expr="//div[@id='introduction']" position="before">
+                <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.report_layout == 'dfh_layout'">
+                    <t t-call="quote_print_dfh.online_quote_dfh_first_page"/>
+                    <br/>
+                    <t t-call="quote_print_dfh.online_quote_dfh_second_page"/>
+                </t>
+            </xpath>
+            <xpath expr="//div[@id='introduction']" position="attributes">
+                <attribute name="t-if">sale_order.sale_order_template_id and sale_order.sale_order_template_id.report_layout != 'dfh_layout'</attribute>
+            </xpath>
+            <xpath expr="//div[@id='informations']" position="attributes">
+                <attribute name="t-if">sale_order.sale_order_template_id and sale_order.sale_order_template_id.report_layout != 'dfh_layout'</attribute>
+            </xpath>
+        </template>
+
+        <!-- web quote report inherit -->
+        <template id="web_quotation_first_page_inherit" inherit_id="quote_print.web_quotation_first_page" name="Quotation Content Custom">
+            <xpath expr="//div[hasclass('page')]/div[hasclass('row')]" position="before">
+                <div t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.report_layout == 'dfh_layout'">
+                    <t t-call="quote_print_dfh.dfh_second_page"/>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

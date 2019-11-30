@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="web_kanban_custom_crm_lead_kanban">
+            <field name="name">crm.lead.web_kanban_custom</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <field name="company_currency" position="after">
+                    <field name="create_date" />
+                    <field name="date_action_last"/>
+                    <field name="date_closed"/>
+                    <field name="date_deadline"/>
+                    <field name="date_open"/>
+                    <field name="write_date"/>
+                    <field name="date_last_stage_update"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_crm_custom_tree" model="ir.ui.view">
+            <field name="name">crm.stage.custom.tree</field>
+            <field name="model">crm.stage.custom</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Kanban Custom">
+                    <field name="action_perform"/>
+                    <field name="action_when" />
+                    <field name="action_time" />
+                    <field name="action_color" />
+                    <field name="priority"/>
+                    <field name="crm_stage_id" readonly="1"/>
+                    <field name="send_mail"/>
+                    <field name="mail_action"/>
+                    <field name="template_id" attrs="{'required':[('send_mail','=',True)]}" domain="[('model', '=', 'crm.lead')]"/>
+               </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="web_kanban_custom_crm_lead_form">
+            <field name="name">crm_stage_web_kanban_custom.form</field>
+            <field name="model">crm.stage</field>
+            <field name="inherit_id" ref="crm.crm_stage_form"/>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='requirements']" position="after">
+                    <field name="custom_ids" context="{'default_crm_stage_id': active_id}"> </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

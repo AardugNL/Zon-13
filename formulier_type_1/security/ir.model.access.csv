@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_foundation_image_group_user,foundation_image group_use,model_foundation_image,,1,1,1,1
+access_foundation_image_selection_user,foundation_image_selection group_use,model_foundation_image_selection,,1,1,1,1

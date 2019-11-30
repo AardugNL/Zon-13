@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.crm</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Project Formulier" string="Project Formulier" data-key="formulier_type_3">
+                    <h2>Project Formulier</h2>
+                    <div class="row mt16 o_settings_container">
+                        <group string="Installation Charges" name="installation_charges">
+                            <group>
+                                <field name="cost_4_hours"/>
+                                <field name="cost_8_hours"/>
+                                <field name="cost_12_hours"/>
+                                <field name="cost_16_hours"/>
+                                <field name="cost_24_hours"/>
+                                <field name="cost_30_hours"/>
+                                <field name="cost_32_hours"/>
+                                <field name="cost_36_hours"/>
+                                <field name="cost_40_hours"/>
+                            </group>
+                            <group>
+                                <field name="sale_4_hours"/>
+                                <field name="sale_8_hours"/>
+                                <field name="sale_12_hours"/>
+                                <field name="sale_16_hours"/>
+                                <field name="sale_24_hours"/>
+                                <field name="sale_30_hours"/>
+                                <field name="sale_32_hours"/>
+                                <field name="sale_36_hours"/>
+                                <field name="sale_40_hours"/>
+                            </group>
+                        </group>
+                        <group string="Extra marge" name="extra_marge">
+                            <group>
+                                <field name="high_range"/>
+                                <field name="middle_range"/>
+                            </group>
+                            <group>
+                                <field name="basic_range"/>
+                                <field name="low_range"/>
+                            </group>
+                        </group>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_formulier_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'formulier_type_3'}</field>
+    </record>
+
+    <menuitem id="menu_formulier_configure_settings"
+        name="Configuration"
+        parent="quotation_images_feedback.question_formulier_menu_root"
+        sequence="1"
+        groups="base.group_system"/>
+
+    <menuitem id="menu_formulier_settings"
+        name="Settings"
+        parent="menu_formulier_configure_settings"
+        action="formulier_type_3.action_formulier_settings"
+        groups="base.group_system"
+        sequence="0"/>
+
+</odoo>

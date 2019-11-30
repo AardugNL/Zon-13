@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_question_formulier_form" model="ir.ui.view">
+        <field name="name">question.formulier.form</field>
+        <field name="model">question.formulier</field>
+        <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='opportunity_question']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Design questions</u></h2>
+                    </div>
+                    <group name="roof_surface" string="How many roof surfaces">
+                        <field name="roof_surface" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Home</u></h2>
+                    </div>
+                    <group name="is_permit_required" string="Is a permit required">
+                        <field name="is_permit_required" nolabel="1"/>
+                    </group>
+                    <group name="construction_year" string="Year of construction of the house">
+                        <field name="construction_year" nolabel="1"/>
+                    </group>
+                    <group name="any_roof_problem" string="Have you ever had any leaks or other problems with your roof?">
+                        <field name="any_roof_problem" nolabel="1"/>
+                    </group>
+                    <group name="is_buy_rent_property" string="Is it a rent or buy property?">
+                        <field name="is_buy_rent_property" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Connecting the inverter</u></h2>
+                    </div>
+                    <group name="string_1" string="String 1 (Note: always 6 panels or more in 1 string)">
+                        <field name="string_1" nolabel="1"/>
+                    </group>
+                    <group name="string_2" string="String 2 (Note: always 6 panels or more in 1 string)">
+                        <field name="string_2" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Accessibility of the home and the roof</u></h2>
+                    </div>
+                    <group name="is_free_space_scaffolding" string="Is there a free space for scaffolding?">
+                        <field name="is_free_space_scaffolding" nolabel="1"/>
+                    </group>
+                    <group name="is_provision_required" string="Is a special provision required (telehandler / lift / aerial platform)">
+                        <field name="is_provision_required" nolabel="1"/>
+                    </group>
+                    <group name="condition_scaffolding_place" string="What is the condition of the surface on which the scaffolding is placed?">
+                        <field name="condition_scaffolding_place" nolabel="1"/>
+                    </group>
+                    <group name="accessibility_rear" string="What is the accessibility of the rear">
+                        <field name="accessibility_rear" nolabel="1"/>
+                    </group>
+                    <group name="use_public_road" string="Use must be made of the public road for the erection of scaffolding or facilities">
+                        <field name="use_public_road" nolabel="1"/>
+                    </group>
+                    <group name="access_roof_neighbors" string="Access to the roof / territory of the neighbors is required">
+                        <field name="access_roof_neighbors" nolabel="1"/>
+                    </group>
+                    <group name="distance_bus_to_roof" string="Walking distance from bus to roof access">
+                        <field name="distance_bus_to_roof" nolabel="1"/>
+                    </group>
+                    <group name="direct_installation_scaffolding" string="Is there an extension / obstacle present that hinders the direct installation of scaffolding or roof lift?">
+                        <field name="direct_installation_scaffolding" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Roof</u></h2>
+                    </div>
+                    <group name="dak_type_of_roof" string="What type (s) of roof is it?">
+                        <field name="dak_type_of_roof" nolabel="1"/>
+                    </group>
+                    <group name="condition_of_roof" string="What is the condition of the roof?">
+                        <field name="condition_of_roof" nolabel="1"/>
+                    </group>
+                    <group name="asbestos_incorporated_roof" string="Is asbestos incorporated in the roof? And is the customer aware of the consequences?">
+                        <field name="asbestos_incorporated_roof" nolabel="1"/>
+                    </group>
+                    <group name="height_of_gutter" string="What is the height of the gutter?">
+                        <field name="height_of_gutter" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Slanted roof</u></h2>
+                    </div>
+                    <group name="slope" string="What is the slope?">
+                        <field name="slope" nolabel="1"/>
+                    </group>
+                    <group name="schuin_type_of_roof" string="What type (s) of roofing is it?">
+                        <field name="schuin_type_of_roof" nolabel="1"/>
+                    </group>
+                    <group name="are_pans_screwed_or_hooked" string="Are the pans screwed or hooked?">
+                        <field name="are_pans_screwed_or_hooked" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Flat roof</u></h2>
+                    </div>
+                    <group name="gravel_on_roof" string="Is there gravel on the roof?">
+                        <field name="gravel_on_roof" nolabel="1"/>
+                    </group>
+                    <group name="plat_type_roof" string="What type (s) of roofing is it?">
+                        <field name="plat_type_roof" nolabel="1"/>
+                    </group>
+                    <group name="roof_terminal_cabling" string="Is there a roof terminal for the string cabling">
+                        <field name="roof_terminal_cabling" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Fuse box</u></h2>
+                    </div>
+                    <group name="main_switch" string="Is there a main switch?">
+                        <field name="main_switch" nolabel="1"/>
+                    </group>
+                    <group name="is_space_install_earth_leakage" string="Is there a free space to install the earth leakage circuit breaker?">
+                        <field name="is_space_install_earth_leakage" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Inverter</u></h2>
+                    </div>
+                    <group name="location_of_inverter" string="Location of the inverter">
+                        <field name="location_of_inverter" nolabel="1"/>
+                    </group>
+                    <group name="is_space_inverter_cooling" string="Is there sufficient free space around the inverter for cooling / ventilation purposes?">
+                        <field name="is_space_inverter_cooling" nolabel="1"/>
+                    </group>
+                    <group name="is_sturdy_rear_wall" string="Is a sturdy rear wall available?">
+                        <field name="is_sturdy_rear_wall" nolabel="1"/>
+                    </group>
+                    <group name="washing_machine_use" string="Can a washing machine connection be used?">
+                        <field name="washing_machine_use" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Cabling</u></h2>
+                    </div>
+                    <group name="empty_pipe_use" string="Can an empty pipe be used?">
+                        <field name="empty_pipe_use" nolabel="1"/>
+                    </group>
+                    <group name="description_inverter" string="Description cable route panels -> inverter">
+                        <field name="description_inverter" nolabel="1"/>
+                    </group>
+                    <group name="description_cable_inverter" string="Description cable inverter -> meter box">
+                        <field name="description_cable_inverter" nolabel="1"/>
+                    </group>
+                    <group name="description_utp_cable" string="Description UTP cable converter -> meter box">
+                        <field name="description_utp_cable" nolabel="1"/>
+                    </group>
+                    <group name="want_mount_cable_himself" string="Does the customer want to mount a cable himself?">
+                        <field name="want_mount_cable_himself" nolabel="1"/>
+                    </group>
+                    <group name="diameter_of_cable" string="When using an existing cable what is the diameter of the cable?">
+                        <field name="diameter_of_cable" nolabel="1"/>
+                    </group>
+                    <group name="internet_connection_wired" string="The internet connection can be wired">
+                        <field name="internet_connection_wired" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Others</u></h2>
+                    </div>
+                    <group name="is_entrepreneurship" string="Is there any entrepreneurship?">
+                        <field name="is_entrepreneurship" nolabel="1"/>
+                    </group>
+                    <group name="name_on_bill" string="Does the name (incl. Initials) on the energy bill / contract match the name on the quote?">
+                        <field name="name_on_bill" nolabel="1"/>
+                    </group>
+                    <group name="vat_exemption_rules" string="Do you fall under VAT exemption rules?">
+                        <field name="vat_exemption_rules" nolabel="1"/>
+                    </group>
+                    <group name="preservation_product" string="Do you need other preservation products?">
+                        <field name="preservation_product" nolabel="1"/>
+                    </group>
+                    <group name="agreements_with_client" string="Other special agreements with client">
+                        <field name="agreements_with_client" nolabel="1"/>
+                    </group>
+                    <group name="note" string="Note">
+                        <field name="note" nolabel="1"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='opportunity_image']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                    <group>
+                        <field name="house_three" widget="image" class="custom-image-size"/>
+                        <field name="access_three" widget="image" class="custom-image-size"/>
+                        <field name="parking_spot_three" widget="image" class="custom-image-size"/>
+                        <field name="obstacles_three" widget="image" class="custom-image-size"/>
+                        <field name="scaffolding_site" widget="image" class="custom-image-size"/>
+                        <field name="roof1_three" widget="image" class="custom-image-size"/>
+                        <field name="roof_2" widget="image" class="custom-image-size"/>
+                        <field name="roof_3" widget="image" class="custom-image-size"/>
+                    </group>
+                    <group>
+                        <field name="meter_cupboard_1" widget="image" class="custom-image-size"/>
+                        <field name="meter_cupboard_2" widget="image" class="custom-image-size"/>
+                        <field name="place_inverter_comes" widget="image" class="custom-image-size"/>
+                        <field name="cable_gradient_panels_inverter" widget="image" class="custom-image-size"/>
+                        <field name="cable_converter_converter_meter" widget="image" class="custom-image-size"/>
+                        <field name="roof_plan" widget="image" class="custom-image-size"/>
+                        <field name="drawing_field_hand" widget="image" class="custom-image-size"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='task_question']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                    <div class="row text-center text-primary mb24 h2-width">
+                        <h3><span class="header-box-shadow">General</span></h3>
+                    </div>
+                    <group name="email_address" string="E-mail address">
+                        <field name="email_address" nolabel="1"/>
+                    </group>
+                    <group name="system_vendor_name" string="Vendor name of the system">
+                        <field name="system_vendor_name" nolabel="1"/>
+                    </group>
+                    <group name="commencement_work_date" string="Date of commencement of work">
+                        <field name="commencement_work_date" nolabel="1"/>
+                    </group>
+                    <group name="delivery_date" string="Delivery date">
+                        <field name="delivery_date" nolabel="1"/>
+                    </group>
+                    <group name="mechanic_name_1" string="Mechanic Name 1">
+                        <field name="mechanic_name_1" nolabel="1"/>
+                    </group>
+                    <group name="mechanic_name_2" string="Mechanic Name 2">
+                        <field name="mechanic_name_2" nolabel="1"/>
+                    </group>
+                    <group name="mechanic_name_3" string="Mechanic Name 3">
+                        <field name="mechanic_name_3" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Roofing</u></h2>
+                    </div>
+                    <group name="any_damage_detected_start" string="Have any damage already been detected at the start of the work?">
+                        <field name="any_damage_detected_start" nolabel="1"/>
+                    </group>
+                    <group name="solar_panels_installed" string="Have the solar panels been installed in accordance with the roof plan?">
+                        <field name="solar_panels_installed" nolabel="1"/>
+                    </group>
+                    <group name="extra_solar_panels_installed" string="Have additional solar panels been installed?">
+                        <field name="extra_solar_panels_installed" nolabel="1"/>
+                    </group>
+                    <group name="waterline_installed" string="Have all plugs from the waterline been installed?">
+                        <field name="waterline_installed" nolabel="1"/>
+                    </group>
+                    <group name="cables_separated" string="Are the plus and minus cables separated?">
+                        <field name="cables_separated" nolabel="1"/>
+                    </group>
+                    <group name="pans_pushed" string="Have all pans been pushed back?">
+                        <field name="pans_pushed" nolabel="1"/>
+                    </group>
+                    <group name="is_representatives_inspection" string="Is the inspection by the representatives correct?">
+                        <field name="is_representatives_inspection" nolabel="1"/>
+                    </group>
+                    <group name="is_roof_plan_fit" string="Does the roof plan fit?">
+                        <field name="is_roof_plan_fit" nolabel="1"/>
+                    </group>
+                    <group name="what_panel_installed" string="What panels have been installed?">
+                        <field name="what_panel_installed" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Electric</u></h2>
+                    </div>
+                    <group name="cabling_length" string="Length of the used string cabling?">
+                        <field name="cabling_length" nolabel="1"/>
+                    </group>
+                    <group name="cable_thickness" string="Applied cable thickness of string cabling?">
+                        <field name="cable_thickness" nolabel="1"/>
+                    </group>
+                    <group name="inverter_length" string="Length of the inverter wiring used -> meter box?">
+                        <field name="inverter_length" nolabel="1"/>
+                    </group>
+                    <group name="inverter_cable_thickness" string="Applied cable thickness of the inverter -> meter box?">
+                        <field name="inverter_cable_thickness" nolabel="1"/>
+                    </group>
+                    <group name="earthing_total_length" string="What is the earth cable length?">
+                        <field name="is_earthing_total_length"/>
+                        <field name="earthing_total_length" nolabel="1"/>
+                    </group>
+                    <group name="utp_total_length" string="What is the length of the UTP cable used?">
+                        <field name="is_utp_total_length"/>
+                        <field name="utp_total_length" nolabel="1"/>
+                    </group>
+                    <group name="measured_voltage" string="Measured string voltage - Value">
+                        <field name="measured_voltage" nolabel="1"/>
+                    </group>
+                    <group name="measured_panels_voltage" string="Measured String Voltage - Panels">
+                        <field name="measured_panels_voltage" nolabel="1"/>
+                    </group>
+                    <group name="measured_optimizers_voltage" string="Measured string voltage - Number of optimizers">
+                        <field name="measured_optimizers_voltage" nolabel="1"/>
+                    </group>
+                    <group name="internet_via" string="Internet connection established via?">
+                        <field name="internet_via" nolabel="1"/>
+                    </group>
+                    <group name="is_home_installation_ok" string="Is the home installation still OK after installing the earth leakage circuit breaker?">
+                        <field name="is_home_installation_ok" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Others</u></h2>
+                    </div>
+                    <group name="extra_panels" string="How many panels have been installed extra?">
+                        <field name="extra_panels" nolabel="1"/>
+                    </group>
+                    <group name="installation_damages" string="What damages have been detected or made during the installation process?">
+                        <field name="installation_damages" nolabel="1"/>
+                    </group>
+                    <group name="other_remarks" string="Other remarks">
+                        <field name="other_remarks" nolabel="1"/>
+                    </group>
+                    <div class="row text-center text-primary h2-width">
+                        <h2><u>Closure to be completed by the customer</u></h2>
+                    </div>
+                    <group name="is_engineers_work_safely" string="Did our engineers work safely with scaffolding or fall protection?">
+                        <field name="is_engineers_work_safely" nolabel="1"/>
+                    </group>
+                    <group name="is_workplace_clean" string="Has the workplace been left clean?">
+                        <field name="is_workplace_clean" nolabel="1"/>
+                    </group>
+                    <group name="is_sufficient_explanation" string="Have you received sufficient explanation during installation?">
+                        <field name="is_sufficient_explanation" nolabel="1"/>
+                    </group>
+                    <group name="setting_explanation" string="Did you have an explanation when setting up the monitoring app?">
+                        <field name="setting_explanation" nolabel="1"/>
+                    </group>
+                    <group name="any_comments" string="Do you have any comments for us?">
+                        <field name="any_comments" nolabel="1"/>
+                    </group>
+                    <group name="use_home_photos" string="Can we use photos of your home as a reference on the internet?">
+                        <field name="use_home_photos" nolabel="1"/>
+                    </group>
+                    <group name="other_interested_customers" string="Do you have other customers who are also interested in our services?">
+                        <field name="other_interested_customers" nolabel="1"/>
+                    </group>
+                    <group name="receive_order" string="order you receive a whopping € 100 application premium.">
+                        <field name="receive_order" nolabel="1"/>
+                    </group>
+                    <group name="other_discussed" string="Other discussed matters">
+                        <field name="other_discussed" nolabel="1"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='task_image']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                    <group>
+                        <field name="cables_together_1" widget="image" class="custom-image-size"/>
+                        <field name="cables_together_2" widget="image" class="custom-image-size"/>
+                        <field name="photo_roof_1" widget="image" class="custom-image-size"/>
+                        <field name="photo_roof_3" widget="image" class="custom-image-size"/>
+                        <field name="work_switch" widget="image" class="custom-image-size"/>
+                        <field name="inverter_in_operation" widget="image" class="custom-image-size"/>
+                        <field name="cupboard_opened" widget="image" class="custom-image-size"/>
+                        <field name="inverter_serial_number" widget="image" class="custom-image-size"/>
+                    </group>
+                    <group>
+                        <field name="cables_together_3" widget="image" class="custom-image-size"/>
+                        <field name="pans_pushed_back" widget="image" class="custom-image-size"/>
+                        <field name="photo_roof_2" widget="image" class="custom-image-size"/>
+                        <field name="outlet_inverter_roof" widget="image" class="custom-image-size"/>
+                        <field name="photo_placement_inverter" widget="image" class="custom-image-size"/>
+                        <field name="inverter_internet" widget="image" class="custom-image-size"/>
+                        <field name="cupboard_closed" widget="image" class="custom-image-size"/>
+                        <field name="optimizers_serial_number" widget="image" class="custom-image-size"/>
+                    </group>
+                </group>
+            </xpath>
+            <!-- <xpath expr="//page[@name='task_extra_image']" position="inside">
+                <field name="image_ids" mode="kanban"
+                    context="{'default_name': name, 'default_formulier_id': active_id}">
+                    <kanban string="Images">
+                        <field name="name"/>
+                        <field name="image"/>
+                        <templates>
+                            <t t-name="kanban-box">
+                                <div class="oe_kanban_global_click">
+                                    <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                    <div class="o_kanban_image">
+                                        <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                    </div>
+                                    <div class="oe_kanban_details">
+                                        <field name="name"/>
+                                    </div>
+                                </div>
+                            </t>
+                        </templates>
+                    </kanban>
+                    <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="image" filename="datas_fname" class="custom-image-size"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </xpath> -->
+
+            <xpath expr="//page[@name='opportunity_question']" position="after">
+                <page string="PF Quote" name="solar_quote" attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                    <group attrs="{'invisible': [('customer_type', '!=', 'formulier_three')]}">
+                        <group name="energy_use" string="How much energy You use ?">
+                            <field name="energy_use" nolabel="1"/>
+                        </group>
+                        <group name="location_correction" string="Location Correction">
+                            <field name="location_correction" nolabel="1"/>
+                        </group>
+                        <group name="location_calculation" string="Location Calculations">
+                            <field name="location_calculation" nolabel="1"/>
+                        </group>
+                        <group name="solar_type" string="Solar type">
+                            <field name="solar_type" widget="many2many_tags" options="{'no_create_edit': True}" />
+                        </group>
+                        <group name="solar_product" string="Which solar panel You want ?">
+                            <field name="solar_product" nolabel="1" domain="[('product_type', '=', 'Solar Panel')]"/>
+                        </group>
+                        <group name="solar_watt_piek" string="Solar Energy Watt Piek">
+                            <field name="solar_watt_piek" nolabel="1"/>
+                        </group>
+                        <group name="energy_wat_piek" string="Energy Wat Piek Calclulation">
+                            <field name="energy_wat_piek" nolabel="1"/>
+                        </group>
+                        <group name="need_optimiser" string="Do You need product Optimisers ?">
+                            <field name="need_optimiser" nolabel="1"/>
+                        </group>
+                        <group name="optimiser_product" string="Which optimiser You want ?">
+                            <field name="optimiser_product" nolabel="1" domain="[('product_type', '=', 'Optimisers')]" attrs="{'invisible': [('need_optimiser', '!=', 'ja')]}"/>
+                        </group>
+                        <group name="need_converter" string="Do You need Converter ?">
+                            <field name="need_converter" nolabel="1"/>
+                        </group>
+                        <group name="converter_product" string="Which converter we need ?" attrs="{'invisible': [('need_converter', '!=', 'ja')]}">
+                            <field name="converter_product" nolabel="1" domain="['&amp;', ('min_product_range', '&lt;=', energy_use), ('max_product_range', '&gt;=', energy_use), ('product_type', '=', 'Converter')]"/>
+                        </group>
+                        <group name="pf_select_roof" string="Is it a flat roof or a slanted roof ?">
+                            <field name="pf_select_roof" nolabel="1"/>
+                        </group>
+                        <group name="flat_roof_product" string="Which Flat roof system You want ?" attrs="{'invisible': [('pf_select_roof', 'not in', ['Flat Roof','Mix Roof'])]}">
+                            <field name="flat_roof_product" nolabel="1" domain="[('product_type', '=', 'Flat Roof')]"/>
+                        </group>
+                        <group name="slanted_roof_product" string="Which Slanted roof system You want ?" attrs="{'invisible': [('pf_select_roof', 'not in', ['Slanted Roof','Mix Roof'])]}">
+                            <field name="slanted_roof_product" nolabel="1" domain="[('product_type', '=', 'Slanted Roof')]"/>
+                        </group>
+                        <group name="installation_time" string="How many time needed for installation ?">
+                            <field name="installation_time" nolabel="1"/>
+                        </group>
+                        <group name="stekkers_product" string="Which stekkers You want ?">
+                            <field name="stekkers_product" nolabel="1" domain="[('product_type', '=', 'Stekkers')]"/>
+                        </group>
+                        <group name="remain_material" string="Which Overige Materialen You want ?">
+                            <field name="remain_material" nolabel="1" domain="[('product_type', '=', 'Overige Materialen')]"/>
+                        </group>
+                        <group name="vat_refund_product" string="Which btw teruggave You want ?">
+                            <field name="vat_refund_product" nolabel="1" domain="[('product_type', '=', 'BTW teruggave')]"/>
+                        </group>
+                        <group name="need_discount" string="Do You need Discount ?">
+                            <field name="need_discount" nolabel="1"/>
+                        </group>
+                        <group name="discount_product" string="Select Discount" attrs="{'invisible': [('need_discount', '!=', 'ja')]}">
+                            <field name="discount_product" nolabel="1" domain="[('product_type', '=', 'Discount')]"/>
+                        </group>
+                        <group name="discount_qty" attrs="{'invisible': [('need_discount', '!=', 'ja')]}">
+                            <field name="discount_qty"/>
+                        </group>
+                        <group name="need_discount_2" string="Do You need Discount 2 ?">
+                            <field name="need_discount_2" nolabel="1"/>
+                        </group>
+                        <group name="amount_range" attrs="{'invisible': [('need_discount_2', '!=', 'ja')]}">
+                            <field name="amount_range"/>
+                        </group>
+                        <group name="quote_template_id" string="Choose your quote template">
+                            <field name="quote_template_id" nolabel="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+         </field>
+    </record>
+
+ </odoo>

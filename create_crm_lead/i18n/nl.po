@@ -1,0 +1,325 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* create_crm_lead
+#
+msgid "" 
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-19 13:05+0000\n"
+"PO-Revision-Date: 2019-09-19 13:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n" 
+
+#. module: create_crm_lead
+#: model:mail.template,body_html:create_crm_lead.email_template_lead_create_welcome_mail
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+" <p>&nbsp;</p>\n"
+"<p>Geachte heer/mevrouw,<br />\n"
+"  <br />\n"
+"  Zojuist heeft u via een vergelijking site een offerte aanvraag gedaan voor energiebesparende maatregelen.   Energiecontrol NL biedt isolatie en zonnepanelen aan, en wij zouden u   hierbij graag van passend advies willen voorzien. Omdat elke woning   anders is, is het verstandig dat wij een keer bij u langs komen zodat   wij een offerte op maat kunnen aanbieden.<br />\n"
+"  <br />\n"
+"  Wellicht zit u niet te wachten op de vele bedrijven die bij u een adviesgesprek willen komen voeren, maar wilt u alleen een offerte die u kunt vergelijken. Zou u ons   dit dan kenbaar willen maken door deze email te beantwoorden? Wij nemen   dan geen telefonisch contact met u op, maar zorgen dat u op basis van   de door u verstrekte gegevens een offerte via de e-mail ontvangt.<br />\n"
+"  <br />\n"
+"<br />\n"
+"\n"
+"\n"
+"\n"
+"<strong>Wilt u graag telefonisch contact op een door u gekozen tijdstip? Klik dan op onderstaande banner.<strong>\n"
+"Een van onze adviseurs belt u op en met een minuut of 10 zijn vaak al uw vragen beantwoord.<br /><br />\n"
+"\n"
+"<a href=\"https://energie-control-nl.appointlet.com\"><img src=\"http://i63.tinypic.com/1zel56t.png\" data-appointlet-organization=\"energie-control-nl\"></a>\n"
+"\n"
+"<br /><br /><br />\n"
+"<strong>Onderstaande gegevens hebben wij nodig om een goede offerte voor u te maken:<strong><br />\n"
+"  <br />\n"
+"  <strong>Zonnepanelen</strong><br />\n"
+"  <br />\n"
+"</p>\n"
+"<div>- Hoeveel stroom verbruikt u op jaarbasis? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Wat is de afmeting van uw dak?</div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Is het een schuin of plat dak?</div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Wat is de ligging van uw dak, en is deze schaduwvrij?</div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Wenst u blauwe of zwarte zonnepanelen?</div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Zijn er verder nog zaken die u belangrijk vindt?<br />\n"
+"  <br />\n"
+"</div>\n"
+"<div><strong><br />\n"
+"</strong></div>\n"
+"<div><strong>Spouwmuurisolatie</strong><br />\n"
+"  <br />\n"
+"</div>\n"
+"<div>- Hoeveel m2 spouwmuurisolatie gaat het ongeveer om? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Is er een kruipruimte aanwezig? Hoeveel ventilatieroosters? Hoe breed is de spouw (cm)? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Type woning (tussenwoning, vrijstaand etc.) </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Hebben de buren geïsoleerd? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Heeft u een voorkeur voor een bepaalde soort isolatie?  </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div><strong><br />\n"
+"</strong></div>\n"
+"<div><strong>Vloerisolatie</strong></div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Hoeveel m2 vloerisolatie gaat het om? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Hoe hoog is de kruipruimte ongeveer? </div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>- Heeft u een voorkeur voor een bepaalde soort isolatie?<br />\n"
+"  <br />\n"
+"</div>\n"
+"<div><br />\n"
+"</div>\n"
+"<div>Wellicht   was deze aanvraag een misverstand en wilt u helemaal geen offerte of   informatie ontvangen van ons, laat het dan ons dan weten door te   reageren op deze e-mail.<br />\n"
+"  <br />\n"
+"  Alvast bedankt voor uw medewerking.</div>\n"
+"<p><strong>Energie Control NL</strong><br />\n"
+"Ten Cateweg 8<br />\n"
+"7642 LH Wierden<br />\n"
+"Tel. 0546 - 57 44 72<br />\n"
+"Email. <a href=\"mailto:klantenservice@energie-control.nl\" target=\"_blank\">klantenservice@energie-control.nl</a><br />\n"
+"Website. <a href=\"http://www.energie-control.nl/\" target=\"_blank\">www.energie-control.nl</a> <br />\n"
+"<br />\n"
+"<em>Veelzijdig in energie besparende oplossinge</em></p>\n"
+"</div>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: create_crm_lead
+#: model:mail.template,body_html:create_crm_lead.email_template_lead_create_welcome_new_mail
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+" <p>&nbsp;</p>\n"
+"<p>Geachte heer/mevrouw,<br />\n"
+"  <br />\n"
+"  Zojuist heeft u via een vergelijkingssite een offerte aanvraag gedaan voor energiebesparende maatregelen. Energie Control NL biedt zowel isolatie als zonnepanelen aan, en wij zouden u graag van passend advies willen voorzien. Omdat elke woning anders is, lijkt het ons verstandig om een keer bij u langs te komen zodat wij een offerte op maat kunnen aanbieden.\n"
+"  <br /><br />\n"
+"  Wellicht zit u niet te wachten op de vele bedrijven die bij u een adviesgesprek willen komen voeren, maar wilt u alleen een offerte die u kunt vergelijken. Zou u ons dit dan kenbaar willen maken door deze email te beantwoorden? Wij nemen dan geen telefonisch contact met u op, maar zorgen dat u op basis van de door u verstrekte gegevens een offerte via de e-mail ontvangt.\n"
+"  <br />\n"
+"<br />\n"
+"<strong>✪ Onze klanten beoordeelden ons gemiddeld met een 8,5!</strong><br/>\n"
+"<img src=\"/create_crm_lead/static/description/header.jpg\"/><br/><br/><br/>\n"
+"<strong><u>Onderstaande gegevens hebben wij nodig om een goede offerte voor u te kunnen opstellen</u></strong><br/><br/>\n"
+"<strong>Spouwmuurisolatie</strong><br/>\n"
+"&#10004; Hoeveel m² (vierkante meter) spouwmuurisolatie gaat het ongeveer om?<br />\n"
+"&#10004; Is er een kruipruimte aanwezig? Hoeveel ventilatieroosters?<br />\n"
+"&#10004; Hoe breed is de spouw (cm)?<br />\n"
+"&#10004; Type woning (tussenwoning, vrijstaand etc.)<br />\n"
+"&#10004; Hebben de buren geïsoleerd? Dit in verband met een eventuele afbakening.<br />\n"
+"&#10004; Heeft u een voorkeur voor een bepaalde soort isolatie? (Knauf supafil glaswol of verlijmde HR++ EPS Isolatieparels)<br /><br />\n"
+"\n"
+"<strong>Vloerisolatie</strong><br />\n"
+"&#10004; Hoeveel m² (vierkante meter) vloerisolatie gaat het om? <br />\n"
+"&#10004; Hoe hoog is de kruipruimte ongeveer? <br />\n"
+"&#10004; Wat voor type vloer is het? (Hout, beton, broodjesvloer etc.) <br />\n"
+"&#10004; Heeft u een voorkeur voor een bepaalde soort isolatie? (HR++ Bodemparels, PIF folie, PUR of Icynene) <br /><br />\n"
+"\n"
+"<strong>Dakisolatie</strong><br/>\n"
+"Het uitbrengen van een offerte voor dakisolatie op afstand is lastig, we laten hier liever een expert-adviseur ter plekke naar kijken. Wij isoleren daken met afgewerkte isolatiematerialen (Kingspan Therna, Isovlas Reno), PIF folie, PIR platen en PUR. Ook het tussenschot van uw dak of vloer kan door ons worden opgevuld met glaswol van Knauf Supafil. Als u een richtprijs wilt hebben, neemt u dan even telefonisch contact met ons op.\n"
+"<br/><br/><strong>Zonnepanelen</strong><br/>\n"
+"\n"
+"Het is ons beleid, alvorens we een offerte uitbrengen voor zonnepanelen, altijd eerst een adviseur bij de klant langs sturen om de mogelijkheden/wensen gezamenlijk met u te bespreken. Dit heeft te maken met het ruime assortiment en het feit dat iedere daksituatie verschillend is. Daarnaast kunnen we u tevens voorzien van een deskundig advies op maat. Misschien heeft u zelf nog vragen, deze kunnen we dan gelijktijdig met u doornemen.\n"
+"<br/></br>\n"
+"Wellicht was deze aanvraag een misverstand en wilt u helemaal geen offerte of informatie ontvangen van ons. In dit geval willen we u vragen even contact met ons op te nemen (hetzij per telefoon, hetzij via de mail), zodat we uw aanvraag uit ons systeem kunnen verwijderen.\n"
+"<br/><br/>\n"
+"Alvast bedankt voor uw medewerking.\n"
+"<br/><br/>\n"
+"Met vriendelijke groeten,<br/>\n"
+"Klantenservice Energie Control NL<br/><br/>\n"
+"<img src=\"/create_crm_lead/static/description/energycontrol.jpg\"/><br/><br/>\n"
+"Energie Control NL<br/>\n"
+"Ten Cateweg 8<br />\n"
+"7642 LH Wierden<br />\n"
+"Tel. 0546 - 57 44 72<br />\n"
+"Email. <a href=\"mailto:klantenservice@energie-control.nl\" target=\"_blank\">klantenservice@energie-control.nl</a><br />\n"
+"Website. <a href=\"http://www.energie-control.nl/\" target=\"_blank\">www.energie-control.nl</a> <br />\n"
+"</p>\n"
+"</div>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: create_crm_lead
+#: model:mail.template,subject:create_crm_lead.email_template_lead_create_welcome_mail
+#: model:mail.template,subject:create_crm_lead.email_template_lead_create_welcome_new_mail
+msgid "${object.company_id.name|safe} Lead (Ref: ${object.name or 'n/a' })"
+msgstr ""
+
+#. module: create_crm_lead
+#: model_terms:ir.ui.view,arch_db:create_crm_lead.lead_email_lead_category_tree
+msgid "Category"
+msgstr "Categorie"
+
+#. module: create_crm_lead
+#: model_terms:ir.ui.view,arch_db:create_crm_lead.lead_email_lead_source_tree
+msgid "Company"   
+msgstr "Bedrijf"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_mail_mail__company
+#: model:ir.model.fields,field_description:create_crm_lead.field_mail_message__company
+msgid "Company Name"
+msgstr "Bedrijfsnaam"
+
+#. module: create_crm_lead
+#: model:ir.model,name:create_crm_lead.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__content
+msgid "Content"
+msgstr "Inhoud"
+
+#. module: create_crm_lead
+#: model:ir.actions.server,name:create_crm_lead.action_fetchmail_create_lead
+msgid "Create lead from fetched email's body"
+msgstr "Create lead from fetched email's body"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__create_uid
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__create_date
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__display_name
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__domain
+msgid "Domain"
+msgstr "Domein"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_crm_lead__email_description
+#: model_terms:ir.ui.view,arch_db:create_crm_lead.inherited_crm_lead_form_email_desc_view_leads
+msgid "Email Description"
+msgstr "Email omschrijving" 
+
+#. module: create_crm_lead
+#: model:ir.model,name:create_crm_lead.model_lead_email_lead_category
+#: model_terms:ir.ui.view,arch_db:create_crm_lead.lead_email_lead_category_form
+msgid "Email Lead Category"
+msgstr "Email Lead Category"
+
+#. module: create_crm_lead
+#: model_terms:ir.ui.view,arch_db:create_crm_lead.lead_email_lead_source_form
+msgid "Email Lead Company"
+msgstr "Email Lead Company"
+
+#. module: create_crm_lead
+#: model:ir.model,name:create_crm_lead.model_lead_email_lead_source
+msgid "Email Lead Source"
+msgstr "Email Lead Source"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__id
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__id
+msgid "ID"
+msgstr "ID"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category____last_update
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__write_uid
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__write_date
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__lead_category
+msgid "Lead Category"
+msgstr "Aanvraag soort"
+
+#. module: create_crm_lead
+#: model:ir.actions.act_window,name:create_crm_lead.lead_email_lead_category
+#: model:ir.ui.menu,name:create_crm_lead.menu_lead_email_lead_category
+msgid "Lead Email Lead Category"
+msgstr "Lead Email Lead Category"
+
+#. module: create_crm_lead
+#: model:ir.actions.act_window,name:create_crm_lead.lead_email_lead_source
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__lead_email_lead_source
+#: model:ir.ui.menu,name:create_crm_lead.menu_lead_email_lead_source
+msgid "Lead Email Lead Source"
+msgstr "Lead Email Lead Source"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__lead_source
+msgid "Lead Source"
+msgstr "Aanvraag bron "
+
+#. module: create_crm_lead
+#: model:ir.model,name:create_crm_lead.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: create_crm_lead
+#: model:ir.model,name:create_crm_lead.model_mail_message
+msgid "Message"
+msgstr "Bericht"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_source__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: create_crm_lead
+#: model:ir.model.fields,field_description:create_crm_lead.field_lead_email_lead_category__priority
+msgid "Priority"
+msgstr "Prioriteit"
+
+#. module: create_crm_lead
+#: code:addons/create_crm_lead/models/crm_lead.py:0
+#, python-format
+msgid "sent mail is %s."
+msgstr "sent mail is %s."

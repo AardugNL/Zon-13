@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="web_quotation_content_custom" name="Quotation Content Custom">
+            <!-- First page of online quote report.-->
+            <t t-call="quote_print.web_quotation_first_page"/>
+            <p style="page-break-before:always;"> </p>
+
+            <t t-call="quote_print.external_layout_header_custom">
+                <div class="page">
+                    <!-- show the online quote template description-->
+                    <t t-if="sale_order.sale_order_template_id and
+                        not sale_order.sale_order_template_id.report_layout or
+                        sale_order.sale_order_template_id.report_layout != 'no_extra_space'">
+                        <div t-field="sale_order.website_description" class="oe_no_empty" style="margin-left: 30px;margin-right:30px;"/>
+                    </t>
+
+                    <!-- if sale order lines have description then it's also show-->
+                    <t t-foreach="sale_order.order_line" t-as="line">
+                        <a t-att-id="line.id"/>
+                        <t t-if="line.website_description and line.website_description != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'">
+                            <div t-att-class="'oe_no_empty' if line.website_description else 'oe_no_empty d-print-none'" t-field="line.website_description"/>
+                        </t>
+                    </t>
+
+                    <div style="margin-left: 30px;margin-right:30px;">
+                        <t t-if="sale_order.sale_order_template_id and not sale_order.sale_order_template_id.hide_pricing_tab and sale_order.amount_total &gt; 0 ">
+                            <t t-call="quote_print.pricing"/>
+                        </t>
+                    </div>
+                    <div style="margin-left: 30px;margin-right:30px;">
+                        <t t-if="sale_order.sale_order_template_id and not sale_order.sale_order_template_id.hide_pricing_tab and sale_order.amount_total &gt; 0 ">
+                            <t t-call="quote_print.optional_products_for_web_quote_report"/>
+                        </t>
+                    </div>
+                    <t t-if="sale_order.website_desc_footer and sale_order.website_desc_footer != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'">
+                        <div style="margin-top:100px;">
+                            <div t-field="sale_order.website_desc_footer" class="oe_no_empty" style="margin-left: 30px;margin-right:30px;"/>
+                        </div>
+                    </t>
+                    <t t-if="sale_order.website_desc_footer_bellow and sale_order.website_desc_footer_bellow != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'">
+                        <div style="margin-top:100px;">
+                            <div t-field="sale_order.website_desc_footer_bellow" class="oe_no_empty" style="margin-left: 30px;margin-right:30px;"/>
+                        </div>
+                    </t> 
+                </div>
+            </t>
+        </template>
+
+        <template id="custom_web_quote_print" name="Custom Header">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="50"/>
+                <t t-set="data_report_header_spacing" t-value="50"/>
+                <t t-foreach="docs" t-as="sale_order">
+                    <t t-call="quote_print.web_quotation_content_custom" t-lang="sale_order.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

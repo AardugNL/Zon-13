@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="sale_order_template_view_form">
+        <field name="name">sale.order.template.form</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page" position="after">
+                <page string="Videos" name="quotation_template_video">
+                    <field name="template_video_ids" mode="tree">
+                        <tree>
+                            <field name="name"/>
+                            <field name="video"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="video" filename="name" class="custom-image-size"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sale_order_form_view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Project Formulier" name="project_formulier">
+                    <group>
+                        <group>
+                            <field name="question_frm_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <field name="payment_term_id" position="after">
+                <field name="soort"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sale_order_template_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_form_quote_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sale_order_template_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="project_task_form_view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Project Formulier">
+                    <group>
+                        <group>
+                            <field name="question_frm_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="formulier_sale_action_quotations" model="ir.actions.act_window">
+        <field name="name">Quotations</field>
+        <field name="res_model">sale.order</field>
+        <field name="search_view_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+        <field name="domain">[('question_frm_id', '=', active_id)]</field>
+        <field name="context">{'search_default_question_frm_id': [active_id], 'default_question_frm_id': active_id}</field>
+    </record>
+    <record id="formulier_action_lead" model="ir.actions.act_window">
+        <field name="name">Lead</field>
+        <field name="res_model">crm.lead</field>
+        <field name="domain">[('question_frm_id', '=', active_id)]</field>
+        <field name="context">{'search_default_question_frm_id': [active_id], 'default_question_frm_id': active_id}</field>
+    </record>
+    <record id="formulier_action_task" model="ir.actions.act_window">
+        <field name="name">Task</field>
+        <field name="res_model">project.task</field>
+        <field name="domain">[('question_frm_id', '=', active_id)]</field>
+        <field name="context">{'search_default_question_frm_id': [active_id], 'default_question_frm_id': active_id}</field>
+    </record>
+</odoo>

@@ -1,0 +1,183 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_sales_person_report 
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-19 13:21+0000\n"
+"PO-Revision-Date: 2019-09-19 13:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_sales_person_report
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.crm_case_form_view_oppor_inherits
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: crm_sales_person_report
+#: model:ir.actions.act_window,name:crm_sales_person_report.action_crm_report_all
+#: model:ir.ui.menu,name:crm_sales_person_report.crm_sale_person_analysis_report_menu
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_report_search
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_report_tree
+msgid "CRM Sales Person Analysis"
+msgstr "CRM Sales Person Analysis"
+
+#. module: crm_sales_person_report
+#: model:ir.model,name:crm_sales_person_report.model_crm_sales_person_report
+msgid "CRM Statistics"
+msgstr "CRM Statistieken"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__phone_by
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__phone
+msgid "Call"
+msgstr "gebeld"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__phone_date
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__phone_date
+msgid "Call Date"
+msgstr "gebeld datum"
+
+#. module: crm_sales_person_report
+#: model:ir.filters,name:crm_sales_person_report.filter_crm_sales_person_phone
+msgid "Calls"
+msgstr "gebeld"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__deal_by
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__deal
+msgid "Deal"
+msgstr "order"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__deal_date
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__deal_date
+msgid "Deal Date"
+msgstr "order datum"
+
+#. module: crm_sales_person_report
+#: model:ir.filters,name:crm_sales_person_report.filter_crm_sales_person_deal
+msgid "Deals"
+msgstr "orders"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: crm_sales_person_report
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_report_search
+msgid "Group By"
+msgstr "Groepeer op"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: crm_sales_person_report
+#: model:ir.model,name:crm_sales_person_report.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__opportunity_by
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__opportunity
+msgid "Meeting"
+msgstr " bezoek"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__opportunity_date
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__opportunity_date
+msgid "Meeting Date"
+msgstr "bezoek datum"
+
+#. module: crm_sales_person_report
+#: model:ir.filters,name:crm_sales_person_report.filter_crm_sales_person_opp
+msgid "Meetings"
+msgstr " bezoek"
+
+#. module: crm_sales_person_report
+#: model:ir.filters,name:crm_sales_person_report.filter_crm_sales_person_quote
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__quote_by
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__quote
+msgid "Quote"
+msgstr "offerte"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__quote_date
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__quote_date
+msgid "Quote Date"
+msgstr "offerte datum"
+
+#. module: crm_sales_person_report
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_person_graph1
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_person_pivot
+msgid "Sales Analysis"
+msgstr "Sales Analysis"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__user_id
+#: model_terms:ir.ui.view,arch_db:crm_sales_person_report.view_crm_report_search
+msgid "Sales Person"
+msgstr "Sales Person"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__stage_name
+msgid "Stage"
+msgstr "Fase"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__phone_by_total
+msgid "Total Call"
+msgstr "Total Call"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__user_by_total
+msgid "Total Created"
+msgstr "Total Created"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__deal_by_total
+msgid "Total Deal"
+msgstr "Total order"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__opportunity_by_total
+msgid "Total Meeting"
+msgstr "Total  bezoek"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__quote_by_total
+msgid "Total Quote"
+msgstr "Total offerte"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__work_by_total
+msgid "Total Work"
+msgstr "Total uitvoering"
+
+#. module: crm_sales_person_report
+#: model:ir.filters,name:crm_sales_person_report.filter_crm_sales_person_work
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__work_by
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__work
+msgid "Work"
+msgstr "uitvoering"
+
+#. module: crm_sales_person_report
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_lead__work_date
+#: model:ir.model.fields,field_description:crm_sales_person_report.field_crm_sales_person_report__work_date
+msgid "Work Date"
+msgstr "uitvoering datum"

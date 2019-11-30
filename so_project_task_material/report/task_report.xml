@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="external_layout_header_custom_task">
+    <div class="header">
+        <div class="row mt16">
+            <div class="col-4 text-center">
+                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+            </div>
+            <div class="col-4 text-center">
+                <span t-field="doc.company_id.name"/>
+            </div>
+            <div class="col-4 text-center">
+                Page: <span class="page"/> / <span class="topage"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="article o_report_layout_standard"  t-att-data-oe-model="doc and doc._name" t-att-data-oe-id="doc and doc.id" t-att-data-oe-lang="doc and doc.env.context.get('lang')">
+        <t t-raw="0"/>
+    </div>
+    <div class="footer o_standard_footer">
+    </div>
+</template>
+
+<template id="report_project_task_document">
+    <t t-call="so_project_task_material.external_layout_header_custom_task">
+        <t t-set="doc" t-value="doc.with_context({'lang':user.lang})" />
+        <div class="page">
+            <table class="table table-sm">
+                <tr>
+                    <td><strong>Project</strong></td>
+                    <td>
+                        <span t-field="doc.project_id.name"/>
+                    </td>
+                    <td><strong>Assigned To</strong></td>
+                    <td>
+                        <span t-field="doc.user_id.name"/>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td><strong>Assigning Date</strong></td>
+                    <td>
+                        <span t-field="doc.date_start"/>
+                    </td>
+                    <td><strong>Deadline</strong></td>
+                    <td>
+                        <span t-field="doc.date_deadline"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td><strong>Task Name</strong></td>
+                    <td>
+                        <span t-field="doc.name"/>
+                    </td>
+                    <td><strong>Task Number</strong></td>
+                    <td>
+                        <!-- <span t-field="doc.task"/> -->
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td><strong>Start Date</strong></td>
+                    <td>
+                        <span t-field="doc.date_start"/>
+                    </td>
+                    <td><strong>Calendar Notes</strong></td>
+                    <td>
+                        <span t-field="doc.notes"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td><strong>Customer Name</strong></td>
+                    <td>
+                        <span t-field="doc.sale_order_id.partner_id.name"/>
+                    </td>
+                    <td><strong>Street And House Number</strong></td>
+                    <td>
+                        <span t-field="doc.sale_order_id.partner_id.street"/><!-- ,<span t-field="doc.consumed_material_ids.sale_id.partner_id.street_number"/>  -->
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td><strong>Zip And City</strong></td>
+                    <td>
+                        <span t-field="doc.sale_order_id.partner_id.zip"/>, <span t-field="doc.sale_order_id.partner_id.city"/>
+                    </td>
+                    <td><strong>Telephone Number</strong></td>
+                    <td>
+                        <span t-field="doc.sale_order_id.partner_id.phone"/>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td><strong>Email Address</strong></td>
+                    <td>
+                        <span t-field="doc.sale_order_id.partner_id.email"/>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- <h3>Planned Reasources</h3>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+               </thead>
+               <tbody>
+
+                    Lines associated
+                    <t t-foreach="doc.resource_ids" t-as="l">
+                        <tr>
+                            <td><span t-field="l.name"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table> -->
+
+            <h3>Planned material</h3>
+
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Unit of Measure</th>
+                    </tr>
+               </thead>
+               <tbody>
+
+                    <t t-foreach="doc.planned_material_ids" t-as="l">
+                        <tr>
+                            <td><span t-field="l.product_id.name"/></td>
+                            <td>
+                                <span t-field="l.name"/>
+                            </td>
+                            <td>
+                                <span t-field="l.planned_qty"/>
+                            </td>
+                            <td>
+                                <span t-field="l.product_uom.name"/>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+
+            <p>Signature:_______________________________</p>
+
+            <div class="oe_structure"/>
+        </div>
+    </t>
+</template>
+
+
+<template id="report_project_task">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="so_project_task_material.report_project_task_document" t-lang="user.lang"/>
+        </t>
+    </t>
+</template>
+
+<report 
+    id="report_task"
+    string="Task Bill of Materials"
+    model="project.task" 
+    report_type="qweb-pdf"
+    file="so_project_task_material.report_project_task" 
+    name="so_project_task_material.report_project_task" 
+/>
+
+<record id="so_project_task_material.report_task" model="ir.actions.report">
+    <field name="paperformat_id" ref="so_project_task_material.task_custom_header_paperformat"/>
+</record>
+</odoo>

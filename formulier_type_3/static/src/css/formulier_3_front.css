@@ -1,0 +1,24 @@
+.img-padding img{
+    padding: 0;
+}
+.display{
+    display: inline-flex;
+}
+.box-shadow-padding{
+    box-shadow: 1px 1px 1px 1px #6c99c7;
+    padding: 10px;
+}
+.display-margin-left{
+    display: none; 
+    margin-left: 41% !important;
+}
+.display-none{
+    display: none;
+}
+.padding{
+    padding: 0;
+}
+.header-box-shadow{
+    box-shadow: 0px 2px 5px 0px #6c99c7;
+    padding: 6px 8px;
+}

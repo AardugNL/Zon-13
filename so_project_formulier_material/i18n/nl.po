@@ -1,0 +1,125 @@
+# Dutch translation for Odoo Server 12.0
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * so_project_formulier_material
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-21 10:52+0000\n"
+"PO-Revision-Date: 2018-08-21 10:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.third_question_form_template_project
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.screw_piles_online_form
+msgid "Screw Piles"
+msgstr "Schroefpalen"
+
+#. module: so_project_formulier_material
+#: model:ir.model.fields,field_description:so_project_formulier_material.field_screw.piles__archived_torque
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.screw_piles_online_form
+msgid "Archived Torque"
+msgstr "Behaald Koppel"
+
+#. module: so_project_formulier_material
+#: model:ir.model.fields,field_description:so_project_formulier_material.field_screw.piles__remarks
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.screw_piles_online_form
+msgid "Remarks"
+msgstr "Opmerkingen"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.screw_piles_online_form
+msgid "Update screw piles"
+msgstr "Update schroefpalen"
+
+#. module: so_project_formulier_material
+#: model:ir.model.fields,field_description:so_project_formulier_material.field_screw.piles__image
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.screw_piles_online_form
+msgid "Image"
+msgstr "Afbeelding"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.material_online_form
+msgid "Price:"
+msgstr "prijs:"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.material_online_form
+msgid "Update"
+msgstr "bijwerken"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.material_online_form
+msgid "Add Product in sale order line"
+msgstr "Product toevoegen in verkooporderregel"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.material_online_form
+msgid "Add Line"
+msgstr "Lijn toevoegen"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.third_question_form_template_project
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Materials"
+msgstr "Materiaal"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.third_question_form_template_project
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Customer"
+msgstr "Klant"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Planned Material"
+msgstr "Gepland materiaal"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Consumed Material"
+msgstr "Verbruikt materiaal"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+# model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "According to plan"
+msgstr "Volgens plan"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+# model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "The garden has been left tidy"
+msgstr "De tuin is netjes achter gelaten"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+# model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "The walls have been left tidy"
+msgstr "De muren zijn netjes achter gelaten"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+# model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Damage to your property caused by us"
+msgstr "Door ons veroorzaakte beschadigingen aan  uw woning"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+# model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Are you satisfied with the progress of the work?"
+msgstr "Bent u tevreden over het verloop van de werkzaamheden"
+
+#. module: so_project_formulier_material
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.customer_questions_form
+#: model_terms:ir.ui.view,arch_db:so_project_formulier_material.view_formulier_form2_tm
+msgid "Comments"
+msgstr "Opmerkingen"

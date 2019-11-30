@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="question_formulier_image" name="Questions Form Image">
+    </template>
+    <template id="question_formulier_extra_image" name="Questions Form Extra Image">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="address">Images</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="question_image_upload_input" class="custom-file-upload">
+                    <input id="question_image_upload_input" name="question_image_upload_input" type="file" accept="image/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="myDiv">
+                    <t t-foreach="question_frm_id.image_ids" t-as="image">
+                        <t t-if="not image.is_task">
+                            <div class="col-lg-3 col-md-3 col-sm-3 mb4 mt4">
+                                <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{image.id}" t-attf-model="#{image._name}">×</button>
+                                <img class="img img-fluid extra_image custom-image-size" t-attf-src="/web/image/order.image/{{image.id}}/image" t-attf-id="#{image.id}"/>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="question_formulier_video" name="Questions Form Image">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="video">Videos</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="question_video_upload_input" class="custom-file-upload">
+                    <input id="question_video_upload_input" name="question_video_upload_input" type="file" accept="video/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="myVideo">
+                    <t t-foreach="question_frm_id.video_ids" t-as="record">
+                        <t t-if="not record.is_task">
+                            <div class="col-lg-4 col-md-4 col-sm-4 mb4 mt4 no-padding">
+                                <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{record.id}" t-attf-model="#{record._name}">×</button>
+                                <video class="col-lg-12 col-md-12 col-sm-12" 
+                                t-attf-src="/web/video/{{record.id}}" controls="" t-attf-title="{{record.name}}">
+                                </video>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="question_formulier_document" name="Questions Form Image">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="document">Documents</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="question_document_upload_input" class="custom-file-upload">
+                    <input id="question_document_upload_input" name="question_document_upload_input" type="file" accept="application/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="myDocuments">
+                    <t t-foreach="question_frm_id.document_ids" t-as="document">
+                        <div class="col-lg-2 col-md-3 col-sm-3 mb4 mt4">
+                            <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{document.id}" t-attf-model="#{document._name}">×</button>
+                            <a t-attf-href="/web/content?model=order.document&amp;field=file&amp;id={{document.id}}&amp;filename={{document.name}}&amp;download=true" class=" col-lg-12 col-md-12 col-sm-12" target="_blank">
+                                <span class="fa fa-file" style="font-size:80px;"/>
+                                <span t-esc="document.name" style="word-wrap: break-word;"/>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="question_formulier_task_extra_image" name="Task Form Extra Image">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="address">Images</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="task_image_upload_input" class="custom-file-upload">
+                    <input id="task_image_upload_input" name="task_image_upload_input" type="file" accept="image/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="TaskDiv">
+                    <t t-foreach="question_frm_id.image_ids" t-as="image">
+                        <t t-if="image.is_task">
+                            <div class="col-lg-3 col-md-3 col-sm-3 mb4 mt4">
+                                <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{image.id}" t-attf-model="#{image._name}">×</button>
+                                <img class="img img-fluid extra_image custom-image-size" t-attf-src="/web/image/order.image/{{image.id}}/image" t-attf-id="#{image.id}"/>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="question_formulier_task_video" name="Task Form Video">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="video">Videos</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="task_video_upload_input" class="custom-file-upload">
+                    <input id="task_video_upload_input" name="task_video_upload_input" type="file" accept="video/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="TaskVideo">
+                    <t t-foreach="question_frm_id.video_ids" t-as="record">
+                        <t t-if="record.is_task">
+                            <div class="col-lg-4 col-md-4 col-sm-4 mb4 mt4 no-padding">
+                                <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{record.id}" t-attf-model="#{record._name}">×</button>
+                                <video class="col-lg-12 col-md-12 col-sm-12" 
+                                t-attf-src="/web/video/{{record.id}}" controls="" t-attf-title="{{record.name}}">
+                                </video>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="question_formulier_task_document" name="Task Form Documents">
+        <div class="form-group row form-field mb4 mt24">
+            <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                <label class="col-form-label" for="document">Documents</label>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="task_document_upload_input" class="custom-file-upload">
+                    <input id="task_document_upload_input" name="task_document_upload_input" type="file" accept="application/*"/>
+                </label>
+                <input type="hidden" id="question_frm_id" name="question_frm_id" t-att-value="question_frm_id.id"/>
+            </div>
+        </div>
+        <div class="form-group row form-field">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row" id="TaskDocuments">
+                    <t t-foreach="question_frm_id.document_ids" t-as="document">
+                        <div class="col-lg-2 col-md-3 col-sm-3 mb4 mt4">
+                            <button type="button" class="close close_button pull-right" aria-label="close" t-attf-id="#{document.id}" t-attf-model="#{document._name}">×</button>
+                            <a t-attf-href="/web/content?model=formulier.task.document&amp;field=file&amp;id={{document.id}}&amp;filename={{document.name}}&amp;download=true" class=" col-lg-12 col-md-12 col-sm-12" target="_blank">
+                                <span class="fa fa-file" style="font-size:80px;"/>
+                                <span t-esc="document.name" style="word-wrap: break-word;"/>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="third_question_formulier_image" name="Third Questions Form Image">
+    </template>
+</odoo>

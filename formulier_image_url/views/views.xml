@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="crm_lead_form_view">
+            <field name="name">crm.lead.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group[4]" position="inside">
+                    <label for="image"/>
+                    <div>
+                        <field name="image" widget="image" class="custom-image-size" nolabel="1"/>
+                    </div>
+                    <field name="web_url"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_question_formulier_form_inh" model="ir.ui.view">
+            <field name="name">question.formulier.form</field>
+            <field name="model">question.formulier</field>
+            <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="web_url"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

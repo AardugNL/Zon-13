@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custom_header_footer.custom_header">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="header" style="margin-left:-15px;margin-right:-15px;">
+                <t t-if="doc">
+                    <t t-if="doc.sale_order_template_id">
+                        <t t-if="doc.sale_order_template_id.header_image">
+                            <img t-att-src="'data:image/png;base64,%s' % to_text(doc.sale_order_template_id.header_image)" style="max-height:150px;width:100%;"/>
+                        </t>
+                        <t t-if="not doc.sale_order_template_id.header_image">
+                            <img t-if="company.header_image" t-att-src="'data:image/png;base64,%s' % to_text(company.header_image)" style="max-height:150px;width:100%;"/>
+                        </t>
+                    </t>
+                    <t t-if="not doc.sale_order_template_id">
+                        <img t-if="company.header_image" t-att-src="'data:image/png;base64,%s' % to_text(company.header_image)" style="max-height:150px;width:100%;"/>
+                    </t>
+                </t>
+                <t t-if="not doc">
+                    <img t-if="company.header_image" t-att-src="'data:image/png;base64,%s' % to_text(company.header_image)" style="max-height:150px;width:100%;"/>
+                </t>
+            </div>
+        </template>
+        <template id="custom_header_footer.custom_footer">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="footer" style="margin-left:-15px;margin-right:-15px;">
+                <t t-if="doc">
+                    <t t-if="doc.sale_order_template_id">
+                        <t t-if="doc.sale_order_template_id.footer_image">
+                            <img t-att-src="'data:image/png;base64,%s' % to_text(doc.sale_order_template_id.footer_image)" style="max-height:235px;width:100%;"/>
+                        </t>
+                        <t t-if="not doc.sale_order_template_id.footer_image">
+                            <img t-if="company.footer_blank_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_blank_image)" style="max-height: 235px;width:100%;"/>
+                        </t>
+                    </t>
+                    <t t-if="not doc.sale_order_template_id">
+                        <img t-if="company.footer_blank_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_blank_image)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                </t>
+                <t t-if="not doc">
+                    <img t-if="company.footer_blank_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_blank_image)" style="max-height: 235px;width:100%;"/>
+                </t>
+            </div>
+        </template>
+
+        <template id="custom_footer_quote_print">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="footer" style="margin-left:-15px;margin-right:-15px;">
+               <t t-if="sale_order.sale_order_template_id">
+                    <t t-if="sale_order.sale_order_template_id.footer_image">
+                        <img t-att-src="'data:image/png;base64,%s' % to_text(sale_order.sale_order_template_id.footer_image)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                    <t t-elif= "sale_order.sale_order_template_id.isfooteradrsimg_first_page">
+                        <img t-if="company.footer_no_address_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_no_address_image)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                     <t t-else="else">
+                        <img t-if="company.footer_blank_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_blank_image)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                </t>
+                <t t-else="else">
+                    <img t-if="company.footer_blank_image" t-att-src="'data:image/png;base64,%s' % to_text(company.footer_blank_image)" style="max-height: 235px;width:100%;"/>
+                </t>
+            </div>
+        </template>
+
+        <template id="external_layout_header_custom">
+            <t t-call="custom_header_footer.custom_header" />
+            <div class="article o_report_layout_standard"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-call="web.address_layout"/>
+                <t t-raw="0"/>
+            </div>
+            <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.isfooteradrsimg_first_page">
+                <div class="footer"/>
+            </t>
+            <t t-else="else">
+                <t t-call="quote_print.custom_footer_quote_print"/>
+            </t>
+        </template>
+    </data>
+</odoo>

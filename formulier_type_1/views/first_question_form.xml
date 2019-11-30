@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="question_formulier_image" inherit_id="quotation_images_feedback.question_formulier_image">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_one'">
+                <div class="form-group row form-field" id="four_image_section">
+                    <input type="file" name="image_1" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_2" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_3" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_4" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_5" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_6" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_7" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="image_8" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="plattegrond_img" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="fundering_img" class="hide_input_image form-control o_website_form_input"/>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5 class="text-center">Left view of object</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_1" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_1"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 text-right">
+                        <h5 class="text-center">Front view of object</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id='image_2' t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5 class="text-center">Right view of object</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_3" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_3"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5 class="text-center">Level Measurement</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_4" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_4"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5 class="text-center">Accessibility for Crane</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_5" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_5"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5 class="text-center">Excavated Foundation</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_6" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_6"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5 class="text-center">Crack in Masonry</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_7" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_7"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5 class="text-center">Additional Information</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="image_8" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/image_8"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5 class="text-center">Plattegrond</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="plattegrond_img" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/plattegrond_img"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5 class="text-center">Sondering</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="fundering_img" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/fundering_img"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    <template id="first_question_form_template" inherit_id="quotation_images_feedback.first_question_form_template">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_one'">
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="house_info">Description of the House</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="house_info" class="form-control"><t t-esc="question_frm_id.house_info"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="goal_owner">Wish Owner</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="goal_owner" class="form-control"><t t-esc="question_frm_id.goal_owner"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="analysis_settlement">Our Analysis</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="analysis_settlement" class="form-control"><t t-esc="question_frm_id.analysis_settlement"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="faced_construction">Façade Construction</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="faced_construction" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.faced_construction">
+                                    <t t-esc="question_frm_id.faced_construction"/>
+                                </option>
+                                <t t-if="question_frm_id.faced_construction != 'Spouwmuur'">
+                                    <option value='Spouwmuur'>
+                                        Spouwmuur
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.faced_construction != 'Steensmuur'">
+                                    <option value='Steensmuur'>
+                                        Steensmuur
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.faced_construction != 'Halfsteensmuur met klamp'">
+                                    <option value='Halfsteensmuur met klamp'>
+                                        Halfsteensmuur met klamp
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="gebied">Area</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div t-attf-class="form-group">
+                            <select name="gebied" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.gebied">
+                                    <t t-esc="question_frm_id.gebied"/>
+                                </option>
+                                <t t-if="question_frm_id.gebied != 'Noord'">
+                                    <option value='Noord'>
+                                        Noord
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.gebied != 'Midden'">
+                                    <option value='Midden'>
+                                        Midden
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.gebied != 'Zuid'">
+                                    <option value='Zuid'>
+                                        Zuid
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 custom-text">
+                        <label class="col-form-label" for="floor_construction">Floor Construction bgg</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="floor_construction" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.floor_construction">
+                                    <t t-esc="question_frm_id.floor_construction"/>
+                                </option>
+                                <t t-if="question_frm_id.floor_construction != 'zie tekening'">
+                                    <option value='zie tekening'>
+                                        zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Beton ; plaat op zand - Vrij tussen muren'">
+                                    <option value='Beton ; plaat op zand - Vrij tussen muren'>
+                                        Beton ; plaat op zand - Vrij tussen muren
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Beton ; plaat op zand – verbonden aan muren'">
+                                    <option value='Beton ; plaat op zand – verbonden aan muren'>
+                                        Beton ; plaat op zand – verbonden aan muren
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Hout; vloerbalken oplegging – zijgevel'">
+                                    <option value='Hout; vloerbalken oplegging – zijgevel'>
+                                        Hout; vloerbalken oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Hout; vloerbalken oplegging – achtergevel'">
+                                    <option value='Hout; vloerbalken oplegging – achtergevel'>
+                                        Hout; vloerbalken oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Hout; vloerbalken oplegging – zie tekening'">
+                                    <option value='Hout; vloerbalken oplegging – zie tekening'>
+                                        Hout; vloerbalken oplegging – zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Broodjes; balken oplegging – zijgevel'">
+                                    <option value='Broodjes; balken oplegging – zijgevel'>
+                                        Broodjes; balken oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Broodjes; balken oplegging – achtergevel'">
+                                    <option value='Broodjes; balken oplegging – achtergevel'>
+                                        Broodjes; balken oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction != 'Broodjes; balken oplegging - zie tekening'">
+                                    <option value='Broodjes; balken oplegging - zie tekening'>
+                                        Broodjes; balken oplegging - zie tekening
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="floor_construction_verd">Floor Construction 1* verdieping</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="floor_construction_verd" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.floor_construction_verd">
+                                    <t t-esc="question_frm_id.floor_construction_verd"/>
+                                </option>
+                                <t t-if="question_frm_id.floor_construction_verd != 'zie tekening'">
+                                    <option value='zie tekening'>
+                                        zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Beton; kanaalplaat oplegging – zijgevel'">
+                                    <option value='Beton; kanaalplaat oplegging – zijgevel'>
+                                        Beton; kanaalplaat oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Beton; kanaalplaat oplegging – achtergevel'">
+                                    <option value='Beton; kanaalplaat oplegging – achtergevel'>
+                                        Beton; kanaalplaat oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Beton; kanaalplaat oplegging - zie tekening'">
+                                    <option value='Beton; kanaalplaat oplegging - zie tekening'>
+                                        Beton; kanaalplaat oplegging - zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Hout; vloerbalken oplegging – zijgevel'">
+                                    <option value='Hout; vloerbalken oplegging – zijgevel'>
+                                        Hout; vloerbalken oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Hout; vloerbalken oplegging – achtergevel'">
+                                    <option value='Hout; vloerbalken oplegging – achtergevel'>
+                                        Hout; vloerbalken oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Hout; vloerbalken oplegging – zie tekening'">
+                                    <option value='Hout; vloerbalken oplegging – zie tekening'>
+                                        Hout; vloerbalken oplegging – zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd != 'Niet van toepassing'">
+                                    <option value='Niet van toepassing'>
+                                        Niet van toepassing
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="floor_construction_verd_2">Floor Construction 2* verdieping</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="floor_construction_verd_2" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.floor_construction_verd_2">
+                                    <t t-esc="question_frm_id.floor_construction_verd_2"/>
+                                </option>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'zie tekening'">
+                                    <option value='zie tekening'>
+                                        zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Beton; kanaalplaat oplegging – zijgevel'">
+                                    <option value='Beton; kanaalplaat oplegging – zijgevel'>
+                                        Beton; kanaalplaat oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Beton; kanaalplaat oplegging – achtergevel'">
+                                    <option value='Beton; kanaalplaat oplegging – achtergevel'>
+                                        Beton; kanaalplaat oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Beton; kanaalplaat oplegging - zie tekening'">
+                                    <option value='Beton; kanaalplaat oplegging - zie tekening'>
+                                        Beton; kanaalplaat oplegging - zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Hout; vloerbalken oplegging – zijgevel'">
+                                    <option value='Hout; vloerbalken oplegging – zijgevel'>
+                                        Hout; vloerbalken oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Hout; vloerbalken oplegging – achtergevel'">
+                                    <option value='Hout; vloerbalken oplegging – achtergevel'>
+                                        Hout; vloerbalken oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Hout; vloerbalken oplegging – zie tekening'">
+                                    <option value='Hout; vloerbalken oplegging – zie tekening'>
+                                        Hout; vloerbalken oplegging – zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.floor_construction_verd_2 != 'Niet van toepassing'">
+                                    <option value='Niet van toepassing'>
+                                        Niet van toepassing
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="leads">Leads</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="leads" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.leads">
+                                    <t t-esc="question_frm_id.leads"/>
+                                </option>
+                                <t t-if="question_frm_id.leads != 'zie tekening'">
+                                    <option value='zie tekening'>
+                                        zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Beton; kanaalplaat oplegging – zijgevel'">
+                                    <option value='Beton; kanaalplaat oplegging – zijgevel'>
+                                        Beton; kanaalplaat oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Beton; kanaalplaat oplegging – achtergevel'">
+                                    <option value='Beton; kanaalplaat oplegging – achtergevel'>
+                                        Beton; kanaalplaat oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Beton; kanaalplaat oplegging - zie tekening'">
+                                    <option value='Beton; kanaalplaat oplegging - zie tekening'>
+                                        Beton; kanaalplaat oplegging - zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Hout; vloerbalken oplegging – zijgevel'">
+                                    <option value='Hout; vloerbalken oplegging – zijgevel'>
+                                        Hout; vloerbalken oplegging – zijgevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Hout; vloerbalken oplegging – achtergevel'">
+                                    <option value='Hout; vloerbalken oplegging – achtergevel'>
+                                        Hout; vloerbalken oplegging – achtergevel
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Hout; vloerbalken oplegging – zie tekening'">
+                                    <option value='Hout; vloerbalken oplegging – zie tekening'>
+                                        Hout; vloerbalken oplegging – zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.leads != 'Niet van toepassing'">
+                                    <option value='Niet van toepassing'>
+                                        Niet van toepassing
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="dakbouw">Dakbouw</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="dakbouw" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.dakbouw">
+                                    <t t-esc="question_frm_id.dakbouw"/>
+                                </option>
+                                <t t-if="question_frm_id.dakbouw != 'Zie tekening'">
+                                    <option value='Zie tekening'>
+                                        Zie tekening
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.dakbouw != 'Houten kapcontructie'">
+                                    <option value='Houten kapcontructie'>
+                                        Houten kapcontructie
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.dakbouw != 'Platdak Hout'">
+                                    <option value='Platdak Hout'>
+                                        Platdak Hout
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.dakbouw != 'Platdak Beton'">
+                                    <option value='Platdak Beton'>
+                                        Platdak Beton
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="roof_covering">Roof covering</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div t-attf-class="form-group">
+                            <select name="roof_covering" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.roof_covering">
+                                    <t t-esc="question_frm_id.roof_covering"/>
+                                </option>
+                                <t t-if="question_frm_id.roof_covering != 'dakpan'">
+                                    <option value='dakpan'>
+                                        dakpan
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.roof_covering != 'bitumen'">
+                                    <option value='bitumen'>
+                                        bitumen
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.roof_covering != 'glas'">
+                                    <option value='glas'>
+                                        glas
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.roof_covering != 'riet'">
+                                    <option value='riet'>
+                                        riet
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="foundation_construction_ids">Foundation Construction</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <div class="row">
+                            <t t-foreach="question_frm_id.foundation_construction_ids" t-as="foundation_image">
+                                <div class="col-lg-3 col-md-3  col-sm-3 mt8">
+                                    <input type="radio" name="foundation_name" t-att-value="foundation_image.id" class="mr4" t-att-checked="foundation_image.is_selected"><t t-esc="foundation_image.name"/></input>
+                                    <img class="img img-fluid foundation_image" t-attf-src="/web/image/foundation.image.selection/{{foundation_image.id}}/image"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="inspection_foundation_depth">Inspection well Foundation depth Groundwater</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="inspection_foundation_depth" class="form-control"><t t-esc="question_frm_id.inspection_foundation_depth"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="location_pipping_ground">Location of piping in the Ground (Info Residents)</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="location_pipping_ground" class="form-control"><t t-esc="question_frm_id.location_pipping_ground"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="possible_settings">Possible cause of Setting</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="possible_settings" class="form-control"><t t-esc="question_frm_id.possible_settings"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                        <label class="col-form-label" for="access">Aandacht / Knelpunten</label>
+                    </div>
+                </div>
+                <!-- 8 questions  -->
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="parkeren">Parkeren</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="parkeren" class="form-control"><t t-esc="question_frm_id.parkeren"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="toegang">Toegang</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="toegang" class="form-control"><t t-esc="question_frm_id.toegang"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="tuin">Tuin</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="tuin" class="form-control"><t t-esc="question_frm_id.tuin"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="bomen">Bomen</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="bomen" class="form-control"><t t-esc="question_frm_id.bomen"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="kraan">Kraan</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="kraan" class="form-control"><t t-esc="question_frm_id.kraan"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="grondwerk">Grondwerk</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="grondwerk" class="form-control"><t t-esc="question_frm_id.grondwerk"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="aanvullend">Aanvullend</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="aanvullend" class="form-control"><t t-esc="question_frm_id.aanvullend"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="action_resident">Action Resident</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="action_resident" class="form-control"><t t-esc="question_frm_id.action_resident"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="action_total_wall">Action Total Wall</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="action_total_wall" class="form-control"><t t-esc="question_frm_id.action_total_wall"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="level_measurement_result">Level Measurement Result on Supplied Construction Plan</label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <input type="text" rows="2" name="level_measurement_result" class="form-control" t-att-value="question_frm_id.level_measurement_result"/>
+                        <label  class="col-form-label text-muted">Note: Add Measurement in mm.</label>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="notes_calculation">Points for implementation</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <textarea rows="3" name="notes_calculation" class="form-control"><t t-esc="question_frm_id.notes_calculation"/></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="aantal_schroefpalen">Aantal Schroefpalen</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <input type="number" name="aantal_schroefpalen" class="form-control" t-att-value="question_frm_id.aantal_schroefpalen"/>
+                    </div>
+                </div>
+                 <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="schroefpaaldiameter">schroefpaal diameter</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="schroefpaaldiameter" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.schroefpaaldiameter">
+                                    <t t-esc="question_frm_id.schroefpaaldiameter"/>
+                                </option>
+                                <t t-if="question_frm_id.schroefpaaldiameter != '360'">
+                                    <option value='360'>
+                                        360
+                                    </option>
+                                </t>
+                                <t t-if="question_frm_id.schroefpaaldiameter != '260'">
+                                    <option value='260'>
+                                        260
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="sondering_diepte">Depth-bearing primer t.o. reference</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-6">
+                        <input type="number" name="sondering_diepte" class="form-control" t-att-value="question_frm_id.sondering_diepte"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="gkosten_funderingsherstel">Gkosten Funderingsherstel</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <input type="number" name="gkosten_funderingsherstel" class="form-control" t-att-value="question_frm_id.gkosten_funderingsherstel"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                        <label class="col-form-label" for="gkosten_scheurherstel">Gkosten Scheurherstel</label>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <input type="number" name="gkosten_scheurherstel" class="form-control" t-att-value="question_frm_id.gkosten_scheurherstel"/>
+                    </div>
+                </div>
+                <t t-if="user_id.has_group('base.group_user')">
+                    <div class="form-group row form-field">
+                        <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                            <label class="col-form-label" for="note_show">Extra information</label>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1">
+                            <input type="checkbox" class="form-control" id="note_show"/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field note_field" style="display:none;">
+                        <div class="col-lg-3 col-md-3 col-sm-3 custom-text">
+                            <label class="col-form-label" for="note">Note</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                            <textarea rows="3" name="note" class="form-control"><t t-esc="question_frm_id.note"/></textarea>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

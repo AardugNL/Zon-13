@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="question_formulier_image" inherit_id="quotation_images_feedback.question_formulier_image">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_three'">
+                <div class="form-group row form-field" id="formulier_3_form">
+                    <input type="file" name="house_three" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="access_three" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="parking_spot_three" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="obstacles_three" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="scaffolding_site" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="roof1_three" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="roof_2" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="roof_3" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="meter_cupboard_1" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="meter_cupboard_2" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="place_inverter_comes" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cable_gradient_panels_inverter" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cable_converter_converter_meter" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="roof_plan" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="drawing_field_hand" class="hide_input_image form-control o_website_form_input"/>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>House / Property</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="house_three" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/house_three"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Access</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id='access_three' t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/access_three"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Parking spot</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="parking_spot_three" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/parking_spot_three"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Obstacles</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="obstacles_three" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/obstacles_three"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Roof 1</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="roof1_three" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/roof1_three"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Roof 2</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="roof_2" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/roof_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Roof 3</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="roof_3" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/roof_3"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Scaffolding site</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="scaffolding_site" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/scaffolding_site"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Meter cupboard 1</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="meter_cupboard_1" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/meter_cupboard_1"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Meter cupboard 2</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="meter_cupboard_2" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/meter_cupboard_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Place where the inverter comes</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="place_inverter_comes" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/place_inverter_comes"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Cable gradient panels -> inverter</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="cable_gradient_panels_inverter" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cable_gradient_panels_inverter"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Cable converter converter -> meter box</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="cable_converter_converter_meter" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cable_converter_converter_meter"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Something special: Roof plan</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="roof_plan" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/roof_plan"/>
+                    </div>
+                </div>
+
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>A drawing field where you with your hand</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" style="max-width: -webkit-fill-available;" id="drawing_field_hand" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/drawing_field_hand"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    <template id="first_question_form_template" inherit_id="quotation_images_feedback.first_question_form_template">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_three'">
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Design questions</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="roof_surface">How many roof surfaces</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="roof_surface" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.roof_surface">
+                                    <t t-esc="question_frm_id.roof_surface"/>
+                                </option>
+                                <t t-if="question_frm_id.roof_surface != '1'">
+                                    <option value='1'>1</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_surface != '2'">
+                                    <option value='2'>2</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_surface != '3'">
+                                    <option value='3'>3</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_surface != '4'">
+                                    <option value='4'>4</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_surface != 'meer dan 4'">
+                                    <option value='meer dan 4'>meer dan 4</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Home</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_permit_required">Is a permit required</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_permit_required" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_permit_required">
+                                    <t t-esc="question_frm_id.is_permit_required"/>
+                                </option>
+                                <t t-if="question_frm_id.is_permit_required != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_permit_required != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="construction_year">Year of construction of the house</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="construction_year" class="form-control" t-att-value="question_frm_id.construction_year"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="any_roof_problem">Have you ever had any leaks or other problems with your roof?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="any_roof_problem" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.any_roof_problem">
+                                    <t t-esc="question_frm_id.any_roof_problem"/>
+                                </option>
+                                <t t-if="question_frm_id.any_roof_problem != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.any_roof_problem != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_buy_rent_property">Is it a rent or buy property?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_buy_rent_property" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_buy_rent_property">
+                                    <t t-esc="question_frm_id.is_buy_rent_property"/>
+                                </option>
+                                <t t-if="question_frm_id.is_buy_rent_property != 'koop'">
+                                    <option value='koop'>koop</option>
+                                </t>
+                                <t t-if="question_frm_id.is_buy_rent_property != 'huur'">
+                                    <option value='huur'>huur</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Connecting the inverter</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="string_1">String 1 (Note: always 6 panels or more in 1 string)</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="string_1" class="form-control" t-att-value="question_frm_id.string_1"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="string_2">String 2 (Note: always 6 panels or more in 1 string)</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="string_2" class="form-control" t-att-value="question_frm_id.string_2"/>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Accessibility of the home and the roof</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_free_space_scaffolding">Is there a free space for scaffolding?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_free_space_scaffolding" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_free_space_scaffolding">
+                                    <t t-esc="question_frm_id.is_free_space_scaffolding"/>
+                                </option>
+                                <t t-if="question_frm_id.is_free_space_scaffolding != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_free_space_scaffolding != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_provision_required">Is a special provision required (telehandler / lift / aerial platform)</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_provision_required" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_provision_required">
+                                    <t t-esc="question_frm_id.is_provision_required"/>
+                                </option>
+                                <t t-if="question_frm_id.is_provision_required != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_provision_required != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="condition_scaffolding_place">What is the condition of the surface on which the scaffolding is placed?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="condition_scaffolding_place" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.condition_scaffolding_place">
+                                    <t t-esc="question_frm_id.condition_scaffolding_place"/>
+                                </option>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Gras'">
+                                    <option value='Gras'>Gras</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Tuin'">
+                                    <option value='Tuin'>Tuin</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Zand'">
+                                    <option value='Zand'>Zand</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Straat'">
+                                    <option value='Straat'>Straat</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Geen steiger te plaatsen'">
+                                    <option value='Geen steiger te plaatsen'>Geen steiger te plaatsen</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_scaffolding_place != 'Geen steiger nodig'">
+                                    <option value='Geen steiger nodig'>Geen steiger nodig</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="accessibility_rear">What is the accessibility of the rear</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="accessibility_rear" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.accessibility_rear">
+                                    <t t-esc="question_frm_id.accessibility_rear"/>
+                                </option>
+                                <t t-if="question_frm_id.accessibility_rear != 'Brandgang'">
+                                    <option value='Brandgang'>Brandgang</option>
+                                </t>
+                                <t t-if="question_frm_id.accessibility_rear != 'Door de garage'">
+                                    <option value='Door de garage'>Door de garage</option>
+                                </t>
+                                <t t-if="question_frm_id.accessibility_rear != 'Vrije rondgang'">
+                                    <option value='Vrije rondgang'>Vrije rondgang</option>
+                                </t>
+                                <t t-if="question_frm_id.accessibility_rear != 'Door de woning'">
+                                    <option value='Door de woning'>Door de woning</option>
+                                </t>
+                                <t t-if="question_frm_id.accessibility_rear != 'N.V.T.'">
+                                    <option value='N.V.T.'>N.V.T.</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="use_public_road">Use must be made of the public road for the erection of scaffolding or facilities</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="use_public_road" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.use_public_road">
+                                    <t t-esc="question_frm_id.use_public_road"/>
+                                </option>
+                                <t t-if="question_frm_id.use_public_road != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.use_public_road != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="access_roof_neighbors">Access to the roof / territory of the neighbors is required</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="access_roof_neighbors" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.access_roof_neighbors">
+                                    <t t-esc="question_frm_id.access_roof_neighbors"/>
+                                </option>
+                                <t t-if="question_frm_id.access_roof_neighbors != 'Nee'">
+                                    <option value='Nee'>Nee</option>
+                                </t>
+                                <t t-if="question_frm_id.access_roof_neighbors != 'Ja er is toestemming'">
+                                    <option value='Ja er is toestemming'>Ja er is toestemming</option>
+                                </t>
+                                <t t-if="question_frm_id.access_roof_neighbors != 'Ja maar er is nog geen toestemming'">
+                                    <option value='Ja maar er is nog geen toestemming'>Ja maar er is nog geen toestemming</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="distance_bus_to_roof">Walking distance from bus to roof access</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="distance_bus_to_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.distance_bus_to_roof">
+                                    <t t-esc="question_frm_id.distance_bus_to_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '0-10'">
+                                    <option value='0-10'>0-10</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '10-25'">
+                                    <option value='10-25'>10-25</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '25-50'">
+                                    <option value='25-50'>25-50</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '50-100'">
+                                    <option value='50-100'>50-100</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '100-250'">
+                                    <option value='100-250'>100-250</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '250-500'">
+                                    <option value='250-500'>250-500</option>
+                                </t>
+                                <t t-if="question_frm_id.distance_bus_to_roof != '500+'">
+                                    <option value='500+'>500+</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="direct_installation_scaffolding">Is there an extension / obstacle present that hinders the direct installation of scaffolding or roof lift?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="direct_installation_scaffolding" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.direct_installation_scaffolding">
+                                    <t t-esc="question_frm_id.direct_installation_scaffolding"/>
+                                </option>
+                                <t t-if="question_frm_id.direct_installation_scaffolding != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.direct_installation_scaffolding != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                                <t t-if="question_frm_id.direct_installation_scaffolding != 'Ja, zie foto/video'">
+                                    <option value='Ja, zie foto/video'>Ja, zie foto/video</option>
+                                </t>
+                                <t t-if="question_frm_id.direct_installation_scaffolding != 'Ja, klant zorgt voor oplossing'">
+                                    <option value='Ja, klant zorgt voor oplossing'>Ja, klant zorgt voor oplossing</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Roof</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="dak_type_of_roof">What type (s) of roof is it?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="dak_type_of_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.dak_type_of_roof">
+                                    <t t-esc="question_frm_id.dak_type_of_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.dak_type_of_roof != 'Schuin'">
+                                    <option value='Schuin'>Schuin</option>
+                                </t>
+                                <t t-if="question_frm_id.dak_type_of_roof != 'Plat'">
+                                    <option value='Plat'>Plat</option>
+                                </t>
+                                <t t-if="question_frm_id.dak_type_of_roof != 'Schuin / Dak'">
+                                    <option value='Schuin / Dak'>Schuin / Dak</option>
+                                </t>
+                                <t t-if="question_frm_id.dak_type_of_roof != 'Zadeldak'">
+                                    <option value='Zadeldak'>Zadeldak</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="condition_of_roof">What is the condition of the roof?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="condition_of_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.condition_of_roof">
+                                    <t t-esc="question_frm_id.condition_of_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.condition_of_roof != 'goed'">
+                                    <option value='goed'>goed</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_of_roof != 'matig'">
+                                    <option value='matig'>matig</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_of_roof != 'slecht'">
+                                    <option value='slecht'>slecht</option>
+                                </t>
+                                <t t-if="question_frm_id.condition_of_roof != 'onbekend'">
+                                    <option value='onbekend'>onbekend</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="asbestos_incorporated_roof">Is asbestos incorporated in the roof? And is the customer aware of the consequences?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="asbestos_incorporated_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.asbestos_incorporated_roof">
+                                    <t t-esc="question_frm_id.asbestos_incorporated_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.asbestos_incorporated_roof != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.asbestos_incorporated_roof != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                                <t t-if="question_frm_id.asbestos_incorporated_roof != 'ja klant op de hoogte van de gevogen'">
+                                    <option value='ja klant op de hoogte van de gevogen'>ja klant op de hoogte van de gevogen</option>
+                                </t>
+                                <t t-if="question_frm_id.asbestos_incorporated_roof != 'ja klant niet op de hoogte van de gevogen'">
+                                    <option value='ja klant niet op de hoogte van de gevogen'>ja klant niet op de hoogte van de gevogen</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="height_of_gutter">What is the height of the gutter?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="height_of_gutter" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.height_of_gutter">
+                                    <t t-esc="question_frm_id.height_of_gutter"/>
+                                </option>
+                                <t t-if="question_frm_id.height_of_gutter != '0-2.5 m1'">
+                                    <option value='0-2.5 m1'>0-2.5 m1</option>
+                                </t>
+                                <t t-if="question_frm_id.height_of_gutter != '2.5-4 m1'">
+                                    <option value='2.5-4 m1'>2.5-4 m1</option>
+                                </t>
+                                <t t-if="question_frm_id.height_of_gutter != '4-6 m1'">
+                                    <option value='4-6 m1'>4-6 m1</option>
+                                </t>
+                                <t t-if="question_frm_id.height_of_gutter != '6-8 m1'">
+                                    <option value='6-8 m1'>6-8 m1</option>
+                                </t>
+                                <t t-if="question_frm_id.height_of_gutter != '8-10 m1'">
+                                    <option value='8-10 m1'>8-10 m1</option>
+                                </t>
+                                <t t-if="question_frm_id.height_of_gutter != '10+'">
+                                    <option value='10+'>10+</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Slanted roof</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="slope">What is the slope?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="slope" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.slope">
+                                    <t t-esc="question_frm_id.slope"/>
+                                </option>
+                                <t t-if="question_frm_id.slope != '0-20 graden'">
+                                    <option value='0-20 graden'>0-20 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '20-30 graden'">
+                                    <option value='20-30 graden'>20-30 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '30-40 graden'">
+                                    <option value='30-40 graden'>30-40 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '40-50 graden'">
+                                    <option value='40-50 graden'>40-50 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '50-60 graden'">
+                                    <option value='50-60 graden'>50-60 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '60-70 graden'">
+                                    <option value='60-70 graden'>60-70 graden</option>
+                                </t>
+                                <t t-if="question_frm_id.slope != '70+ graden'">
+                                    <option value='70+ graden'>70+ graden</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="schuin_type_of_roof">What type (s) of roofing is it?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="schuin_type_of_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.schuin_type_of_roof">
+                                    <t t-esc="question_frm_id.schuin_type_of_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Pannen'">
+                                    <option value='Pannen'>Pannen</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Bitumen'">
+                                    <option value='Bitumen'>Bitumen</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Golfplaten'">
+                                    <option value='Golfplaten'>Golfplaten</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Staal'">
+                                    <option value='Staal'>Staal</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Leien'">
+                                    <option value='Leien'>Leien</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Zink'">
+                                    <option value='Zink'>Zink</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'Overige'">
+                                    <option value='Overige'>Overige</option>
+                                </t>
+                                <t t-if="question_frm_id.schuin_type_of_roof != 'ASBEST'">
+                                    <option value='ASBEST'>ASBEST</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="are_pans_screwed_or_hooked">Are the pans screwed or hooked?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="are_pans_screwed_or_hooked" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.are_pans_screwed_or_hooked">
+                                    <t t-esc="question_frm_id.are_pans_screwed_or_hooked"/>
+                                </option>
+                                <t t-if="question_frm_id.are_pans_screwed_or_hooked != 'geschroefd'">
+                                    <option value='geschroefd'>geschroefd</option>
+                                </t>
+                                <t t-if="question_frm_id.are_pans_screwed_or_hooked != 'gehaakt'">
+                                    <option value='gehaakt'>gehaakt</option>
+                                </t>
+                                <t t-if="question_frm_id.are_pans_screwed_or_hooked != 'beide'">
+                                    <option value='beide'>beide</option>
+                                </t>
+                                <t t-if="question_frm_id.are_pans_screwed_or_hooked != 'anders'">
+                                    <option value='anders'>anders</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Flat roof</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="gravel_on_roof">Is there gravel on the roof?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="gravel_on_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.gravel_on_roof">
+                                    <t t-esc="question_frm_id.gravel_on_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.gravel_on_roof != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.gravel_on_roof != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="plat_type_roof">What type (s) of roofing is it?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="plat_type_roof" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.plat_type_roof">
+                                    <t t-esc="question_frm_id.plat_type_roof"/>
+                                </option>
+                                <t t-if="question_frm_id.plat_type_roof != 'Bitumen'">
+                                    <option value='Bitumen'>Bitumen</option>
+                                </t>
+                                <t t-if="question_frm_id.plat_type_roof != 'EPDM'">
+                                    <option value='EPDM'>EPDM</option>
+                                </t>
+                                <t t-if="question_frm_id.plat_type_roof != 'PVC'">
+                                    <option value='PVC'>PVC</option>
+                                </t>
+                                <t t-if="question_frm_id.plat_type_roof != 'Overige'">
+                                    <option value='Overige'>Overige</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="roof_terminal_cabling">Is there a roof terminal for the string cabling</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="roof_terminal_cabling" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.roof_terminal_cabling">
+                                    <t t-esc="question_frm_id.roof_terminal_cabling"/>
+                                </option>
+                                <t t-if="question_frm_id.roof_terminal_cabling != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_terminal_cabling != 'Nee aanleggen ECNL'">
+                                    <option value='Nee aanleggen ECNL'>Nee aanleggen ECNL</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_terminal_cabling != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                                <t t-if="question_frm_id.roof_terminal_cabling != 'Nee klant draagt hier zorg voor'">
+                                    <option value='Nee klant draagt hier zorg voor'>Nee klant draagt hier zorg voor</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Inverter</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="location_of_inverter">Location of the inverter</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="location_of_inverter" class="form-control"><t t-esc="question_frm_id.location_of_inverter"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_space_inverter_cooling">Is there sufficient free space around the inverter for cooling / ventilation purposes?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_space_inverter_cooling" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_space_inverter_cooling">
+                                    <t t-esc="question_frm_id.is_space_inverter_cooling"/>
+                                </option>
+                                <t t-if="question_frm_id.is_space_inverter_cooling != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_space_inverter_cooling != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_sturdy_rear_wall">Is a sturdy rear wall available?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_sturdy_rear_wall" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_sturdy_rear_wall">
+                                    <t t-esc="question_frm_id.is_sturdy_rear_wall"/>
+                                </option>
+                                <t t-if="question_frm_id.is_sturdy_rear_wall != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_sturdy_rear_wall != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="washing_machine_use">Can a washing machine connection be used?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="washing_machine_use" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.washing_machine_use">
+                                    <t t-esc="question_frm_id.washing_machine_use"/>
+                                </option>
+                                <t t-if="question_frm_id.washing_machine_use != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.washing_machine_use != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Cabling</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="empty_pipe_use">Can an empty pipe be used?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="empty_pipe_use" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.empty_pipe_use">
+                                    <t t-esc="question_frm_id.empty_pipe_use"/>
+                                </option>
+                                <t t-if="question_frm_id.empty_pipe_use != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.empty_pipe_use != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="description_inverter">Description cable route panels -> inverter</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="description_inverter" class="form-control"><t t-esc="question_frm_id.description_inverter"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="description_cable_inverter">Description cable inverter -> meter box</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="description_cable_inverter" class="form-control"><t t-esc="question_frm_id.description_cable_inverter"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="description_utp_cable">Description UTP cable converter -> meter box</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="description_utp_cable" class="form-control"><t t-esc="question_frm_id.description_utp_cable"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="want_mount_cable_himself">Does the customer want to mount a cable himself?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="want_mount_cable_himself" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.want_mount_cable_himself">
+                                    <t t-esc="question_frm_id.want_mount_cable_himself"/>
+                                </option>
+                                <t t-if="question_frm_id.want_mount_cable_himself != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.want_mount_cable_himself != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="diameter_of_cable">When using an existing cable what is the diameter of the cable?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="diameter_of_cable" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.diameter_of_cable">
+                                    <t t-esc="question_frm_id.diameter_of_cable"/>
+                                </option>
+                                <t t-if="question_frm_id.diameter_of_cable != '3*2.5mm2'">
+                                    <option value='3*2.5mm2'>3*2.5mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.diameter_of_cable != '5*2.5mm2'">
+                                    <option value='5*2.5mm2'>5*2.5mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.diameter_of_cable != '3*4mm2'">
+                                    <option value='3*4mm2'>3*4mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.diameter_of_cable != '5*4mm2'">
+                                    <option value='5*4mm2'>5*4mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.diameter_of_cable != '5*6mm2'">
+                                    <option value='5*6mm2'>5*6mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.diameter_of_cable != '5*10mm2'">
+                                    <option value='5*10mm2'>5*10mm2</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="internet_connection_wired">The internet connection can be wired</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="internet_connection_wired" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.internet_connection_wired">
+                                    <t t-esc="question_frm_id.internet_connection_wired"/>
+                                </option>
+                                <t t-if="question_frm_id.internet_connection_wired != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.internet_connection_wired != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Others</span></h3>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="is_entrepreneurship">Is there any entrepreneurship?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_entrepreneurship" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.is_entrepreneurship">
+                                    <t t-esc="question_frm_id.is_entrepreneurship"/>
+                                </option>
+                                <t t-if="question_frm_id.is_entrepreneurship != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_entrepreneurship != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="name_on_bill">Does the name (incl. Initials) on the energy bill / contract match the name on the quote?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="name_on_bill" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.name_on_bill">
+                                    <t t-esc="question_frm_id.name_on_bill"/>
+                                </option>
+                                <t t-if="question_frm_id.name_on_bill != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.name_on_bill != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field" style="margin-left: 0;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="vat_exemption_rules">Do you fall under VAT exemption rules?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="vat_exemption_rules" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.vat_exemption_rules">
+                                    <t t-esc="question_frm_id.vat_exemption_rules"/>
+                                </option>
+                                <t t-if="question_frm_id.vat_exemption_rules != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.vat_exemption_rules != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="preservation_product">Do you need other preservation products?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="preservation_product" t-attf-class="form-control" readonly="">
+                                <option t-att-value="question_frm_id.preservation_product">
+                                    <t t-esc="question_frm_id.preservation_product"/>
+                                </option>
+                                <t t-if="question_frm_id.preservation_product != 'Nee'">
+                                    <option value='Nee'>Nee</option>
+                                </t>
+                                <t t-if="question_frm_id.preservation_product != 'Ja niet geinteresseerd'">
+                                    <option value='Ja niet geinteresseerd'>Ja niet geinteresseerd</option>
+                                </t>
+                                <t t-if="question_frm_id.preservation_product != 'Ja geinteresseerd'">
+                                    <option value='Ja geinteresseerd'>Ja geinteresseerd</option>
+                                </t>
+                                <t t-if="question_frm_id.preservation_product != 'Ja offerte'">
+                                    <option value='Ja offerte'>Ja offerte</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="agreements_with_client">Other special agreements with client</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="agreements_with_client" class="form-control"><t t-esc="question_frm_id.agreements_with_client"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 text-right">
+                        <label class="col-form-label" for="note">Note</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="note" class="form-control"><t t-esc="question_frm_id.note"/></textarea>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

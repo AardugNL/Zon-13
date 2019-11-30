@@ -1,0 +1,47 @@
+# Dutch translation for Odoo Server 12.0
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * opportunity_formulier_meeting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-21 10:52+0000\n"
+"PO-Revision-Date: 2018-08-21 10:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: opportunity_formulier_meeting
+#: code:addons/opportunity_formulier_meeting/models/crm_meeting.py:50
+#, python-format
+msgid "Opportunity Note:"
+msgstr "Notities"
+
+#. module: opportunity_formulier_meeting
+#: code:addons/opportunity_formulier_meeting/models/crm_meeting.py:48
+#, python-format
+msgid "Customer Mobile:"
+msgstr "Mobiel"
+
+#. module: opportunity_formulier_meeting
+#: code:addons/opportunity_formulier_meeting/models/crm_meeting.py:46
+#, python-format
+msgid "Customer Phone:"
+msgstr "Telefoon"
+
+#. module: opportunity_formulier_meeting
+#: code:addons/opportunity_formulier_meeting/models/crm_meeting.py:44
+#, python-format
+msgid "Address:"
+msgstr "Bezoekadres"
+
+#. module: opportunity_formulier_meeting
+#: code:addons/opportunity_formulier_meeting/models/crm_meeting.py:33
+#, python-format
+msgid "Customer Name:"
+msgstr "Naam klant"

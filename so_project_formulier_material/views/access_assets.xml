@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Website Frontend Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/so_project_formulier_material/static/src/js/material_formulier.js"/>
+            <script type="text/javascript" src="/so_project_formulier_material/static/src/js/screw_piles.js"/>
+            </xpath>
+    </template>
+
+</odoo>

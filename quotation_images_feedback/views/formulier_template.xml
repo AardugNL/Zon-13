@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="question_formulier_template" name="Questions Form">
+        <t t-call="web.login_layout">
+            <t t-if="user_id.has_group('base.group_user')">
+                <div t-ignore="true" class="text-center">
+                    This is a preview of the customer portal.
+                    <t t-set="backend_url" t-value="'/web#return_label=Website&amp;model=%s&amp;id=%s&amp;action=%s&amp;view_type=form' % (question_frm_id._name, question_frm_id.id, question_frm_id.env.ref('quotation_images_feedback.action_question_formulier_form').id)"/>
+                    <a t-att-href="backend_url">
+                        <i class="fa fa-arrow-right"/> Back to edit mode 
+                    </a>
+                    <t t-if="question_frm_id.lead_id">
+                       OR 
+                       <t t-set="backend_url" t-value="'/web#return_label=Website&amp;model=%s&amp;id=%s&amp;action=%s&amp;view_type=form' % (question_frm_id.lead_id._name, question_frm_id.lead_id.id, question_frm_id.lead_id.env.ref('quotation_images_feedback.action_crm_lead_form_view').id)"/>
+                        <a t-att-href="backend_url">
+                            <i class="fa fa-arrow-right"/> Back to Opportunity
+                        </a>
+                    </t>
+                </div>
+            </t>
+            <div class="row mt-3">
+                <section id="forms" class="col">
+                     <form t-attf-action="/question/formulier/submit/#{question_frm_id.id}/" method="POST" data-model_name="question.formulier" class=" s_website_form form-horizontal"  enctype="multipart/form-data">
+                        <t t-if="question_frm_id.state in ['opportunity','opportunity_output']">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h2>First Phase 
+                                        <t t-if="question_frm_id.state == 'opportunity_output'">
+                                            [Already Submitted]
+                                        </t>
+                                    </h2>
+                                </div>
+                            </div>
+                            <t t-call="quotation_images_feedback.opportunity_tab_template"/>
+                        </t>
+                        <t t-if="question_frm_id.state in ['quotation','quotation_output']">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h2>Second Phase 
+                                        <t t-if="question_frm_id.state == 'quotation_output'">
+                                            [Already Submitted]
+                                        </t>
+                                    </h2>
+                                </div>
+                            </div>
+                            <t t-call="quotation_images_feedback.quote_tab_template"/>
+                        </t>
+                        <t t-if="question_frm_id.state in ['task','task_output']">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h2>Third Phase 
+                                        <t t-if="question_frm_id.state == 'task_output'">
+                                            [Already Submitted]
+                                        </t>
+                                    </h2>
+                                </div>
+                            </div>
+                            <t t-call="quotation_images_feedback.task_tab_template"/>
+                        </t>
+                        <div class="form-group row">
+                            <div class="col-md-8 col-lg-7">
+                                <button class="btn btn-primary text-center o_website_form_send pull-right mt16 formulier_submit" type="submit" >Save</button>
+                            </div>
+                            <div class="col-md-4 col-lg-4 mt8">
+                                <span id="o_website_form_result"></span>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </t>
+    </template>
+    <template id="portal_back_in_edit_mode_inherit" inherit_id="portal.portal_back_in_edit_mode" name="Back to Opportunity">
+        <xpath expr="//div" position="inside">
+            <t t-if="user_id.has_group('base.group_user')">
+                <t t-if="sale_order and sale_order.opportunity_id">
+                    <t t-set="backend_url" t-value="'/web#return_label=Website&amp;model=%s&amp;id=%s&amp;action=%s&amp;view_type=form' % (sale_order.opportunity_id._name, sale_order.opportunity_id.id, sale_order.opportunity_id.env.ref('quotation_images_feedback.action_crm_lead_form_view').id)"/>
+                    OR <a t-att-href="backend_url"> <i class="fa fa-arrow-right"/> Back to Opportunity</a>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

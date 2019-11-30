@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_question_formulier_form" model="ir.ui.view">
+        <field name="name">question.formulier.form</field>
+        <field name="model">question.formulier</field>
+        <field name="arch" type="xml">
+            <form string="Project Formulier">
+                <header>
+                    <button string=" Goto Website Form" class="oe_highlight" type="object" name="goto_website_form" icon="fa-globe"/>
+                    <button string="Opportunity Stage" class="oe_highlight" type="object" name="opportunity_stage" attrs="{'invisible': [('state', '=', 'opportunity')]}"/>
+                    <button string="Quotation Stage" class="oe_highlight" type="object" name="quotation_stage" attrs="{'invisible': [('state', '=', 'quotation')]}"/>
+                    <button string="Task Stage" class="oe_highlight" type="object" name="task_stage"  attrs="{'invisible': [('state', '=', 'task')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box mb16" name="button_box">
+                        <button name="toggle_active" type="object"
+                                class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"
+                                options='{"terminology": "archive"}' icon="fa-archive"/>
+                        </button>
+                        <button class="oe_stat_button" type="action"
+                            name="%(formulier_sale_action_quotations)d" icon="fa-pencil-square-o">
+                            <div class="o_stat_info">
+                                <field name="sale_number" class="o_stat_value"/>
+                                <span class="o_stat_text"> Quotation(s) </span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="action"
+                            name="%(formulier_action_lead)d" icon="fa-star">
+                            <div class="o_stat_info">
+                                <field name="lead_number" class="o_stat_value"/>
+                                <span class="o_stat_text"> Opportunities </span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="action"
+                            name="%(formulier_action_task)d" icon="fa-tasks">
+                            <div class="o_stat_info">
+                                <field name="task_number" class="o_stat_value"/>
+                                <span class="o_stat_text"> Tasks </span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title custom_title pull-left mt24">
+                        <group>
+                            <field name="lead_id"/>
+                        </group>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Formulier Name"/>
+                            <h1><field name="name" placeholder="Describe the Formulier..."/></h1>
+                        </div>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="customer_type"/>
+                        </group>
+                    </div>
+                    <div class="pull-right">
+                        <field name="image" widget="image" class="custom-image-size"/>
+                        <div class="mt8">Overview photo object</div>
+                    </div>
+                    <group style="margin:0;">
+                        <group style="margin:0;">
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                <field name="city" placeholder="City" class="o_address_city"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                            </div>
+                        </group>
+                        <group style="margin:0;">
+                            <field name="date_opportunity"/>
+                            <field name="date_report"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="phone" widget="phone"/>
+                            <field name="mobile" widget="phone"/>
+                        </group>
+                        <group>
+                           <field name="time"/>
+                        </group>
+                    </group>
+                    <notebook class="backend_image_zoom">
+                        <page name="opportunity" string="Opportunity">
+                            <notebook>
+                                <page string="Opportunity Questions" name="opportunity_question">
+                                </page>
+                                <page string="Opportunity Images" name="opportunity_image">
+                                </page>
+                                <page string="Opportunity Extra Images" name="opportunity_extra_image">
+                                    <field name="image_ids" mode="kanban"
+                                        context="{'default_name': name, 'default_formulier_id': active_id}">
+                                        <kanban string="Images">
+                                            <field name="name"/>
+                                            <field name="image"/>
+                                            <templates>
+                                                <t t-name="kanban-box">
+                                                    <div class="oe_kanban_global_click">
+                                                        <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                                        <div class="o_kanban_image">
+                                                            <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                                        </div>
+                                                        <div class="oe_kanban_details">
+                                                            <field name="name"/>
+                                                        </div>
+                                                    </div>
+                                                </t>
+                                            </templates>
+                                        </kanban>
+                                        <form>
+                                            <sheet>
+                                                <group>
+                                                    <group>
+                                                        <field name="name"/>
+                                                        <field name="image" filename="datas_fname" class="custom-image-size"/>
+                                                    </group>
+                                                </group>
+                                            </sheet>
+                                        </form>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page name="quotation" string="Quote">
+                            <notebook>
+                                <page string="Quote Questions" name="quotation_question">
+                                </page>
+                                <page string="Quote Images" name="quotation_image">
+                                </page>
+                                <page string="Quote Extra Images" name="quotation_extra_image">
+                                </page>
+                            </notebook>
+                        </page>
+                        <page name="task" string="Task">
+                            <notebook>
+                                <page string="Task Questions" name="task_question">
+                                </page>
+                                <page string="Task Images" name="task_image">
+                                </page>
+                                <page string="Task Extra Images" name="task_extra_image">
+                                </page>
+                                <page string="Task Products" name="task_product">
+                                </page>
+                                <page string="Task Hours" name="task_hours">
+                                </page>
+                            </notebook>
+                        </page>
+                        <page name="implementation" string="Implementation">
+                            <notebook>
+                            </notebook>
+                        </page>
+                        <page string="Videos" name="formulier_video">
+                            <field name="video_ids" mode="tree">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="video"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="video" filename="name" class="custom-image-size"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Documents" name="formulier_document">
+                            <field name="document_ids" mode="tree">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="file"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="file" filename="name" class="custom-image-size"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_question_formulier_tree" model="ir.ui.view">
+        <field name="name">question.formulier.tree</field>
+        <field name="model">question.formulier</field>
+        <field name="arch" type="xml">
+            <tree string="Project Formulier">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="customer_type"/>
+                <field name="city"/>
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <field name="phone"/>
+                <field name="mobile"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_question_formulier_form" model="ir.actions.act_window">
+        <field name="name">Project Formulier</field>
+        <field name="res_model">question.formulier</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a Project Formulier.
+          </p>
+        </field>
+    </record>
+    <menuitem id="question_formulier_menu_root"
+            name="Project Formulier"
+            web_icon="quotation_images_feedback,static/src/images/icon.png"
+            sequence="4"/>
+    <menuitem id="question_formulier_menu"
+            parent="question_formulier_menu_root"
+            action="action_question_formulier_form"
+            sequence="1"/>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id="report_web_quotation_custom"
+            string="Web Quotation"
+            model="sale.order"
+            report_type="qweb-pdf"
+            file="quote_print.quotation_report"
+            name="quote_print.custom_web_quote_print"/>
+
+    <report id="report_web_quote_cover"
+            string="Cover Image Report"
+            model="sale.order.template"
+            report_type="qweb-pdf"
+            file="quote_print.cover_image_report"
+            name="quote_print.report_quote_cover"/>
+
+    <report id="report_web_quote_close"
+            string="Close Image Report"
+            model="sale.order.template"
+            report_type="qweb-pdf"
+            file="quote_print.close_image_report"
+            name="quote_print.report_quote_close"/>
+
+    <record id="quote_print.report_web_quote_close" model="ir.actions.report">
+        <field name="paperformat_id" ref="quote_print.quote_print_close_paperformat"/>
+    </record>
+
+    <record id="quote_print.report_web_quote_cover" model="ir.actions.report">
+        <field name="paperformat_id" ref="quote_print.quote_print_cover_paperformat"/>
+    </record>
+
+    <record id="quote_print.report_web_quotation_custom" model="ir.actions.report">
+        <field name="paperformat_id" ref="quote_print.quote_print_custom_header_paperformat"/>
+    </record>
+
+</odoo>

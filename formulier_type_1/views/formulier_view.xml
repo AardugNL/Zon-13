@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_question_formulier_form" model="ir.ui.view">
+        <field name="name">question.formulier.form</field>
+        <field name="model">question.formulier</field>
+        <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='opportunity_question']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_one')]}">
+                    <group name="description_house" string="Description of the house">
+                        <field name="house_info" nolabel="1"/>
+                    </group>
+                    <group name="goal_owner" string="Wish Owner">
+                        <field name="goal_owner" nolabel="1"/>
+                    </group>
+                     <group name="analysis_settlement" string="Our Analysis">
+                        <field name="analysis_settlement" nolabel="1"/>
+                    </group>
+                    <group name="faced_construction" string="Façade construction">
+                        <field name="faced_construction" nolabel="1"/>
+                    </group>
+                     <group name="floor_construction" string="Floor Construction bgg">
+                        <field name="floor_construction" nolabel="1"/>
+                    </group>
+                    <group name="floor_construction_verd" string="Floor Construction 1* verdieping">
+                        <field name="floor_construction_verd" nolabel="1"/>
+                    </group>
+                    <group name="floor_construction_verd_2" string="Floor Construction 2* verdieping">
+                        <field name="floor_construction_verd_2" nolabel="1"/>
+                    </group>
+                    <group name="leads" string="Leads">
+                        <field name="leads" nolabel="1"/>
+                    </group>
+                    <group name="dakbouw" string="Dakopbouw">
+                        <field name="dakbouw" nolabel="1"/>
+                    </group>
+                    <group name="roof_covering" string="Roof covering">
+                        <field name="roof_covering" nolabel="1"/>
+                    </group>
+                    <group name="gebied" string="Area">
+                        <field name="gebied" nolabel="1"/>
+                    </group>
+                    <div style="width:100%;">
+                        <div class="o_horizontal_separator">Foundation Construction</div>
+                        <field name="foundation_construction_ids" mode="tree,form">
+                            <tree>
+                                <field name="is_selected" style="width:30px;"/>
+                                <field name="name"/>
+                                <field name="image"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="image" class="custom-image-size"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </div>
+                    <group name="inspection_foundation_depth" string="Inspection well Foundation depth Groundwater">
+                        <field name="inspection_foundation_depth" nolabel="1"/>
+                    </group>
+                    <group name="location_pipping_ground" string="Location of piping in the ground (info residents)">
+                        <field name="location_pipping_ground" nolabel="1"/>
+                    </group>
+                    <group name="possible_settings" string="Possible cause of Setting">
+                        <field name="possible_settings" nolabel="1"/>
+                    </group>
+                    <!-- <label>Aandacht / Knelpunten</label> -->
+                    <group name="parkeren" string="Parkeren">
+                        <field name="parkeren" nolabel="1"/>
+                    </group>
+                    <group name="toegang" string="Toegang">
+                        <field name="toegang" nolabel="1"/>
+                    </group>
+                    <group name="tuin" string="Tuin">
+                        <field name="tuin" nolabel="1"/>
+                    </group>
+                    <group name="bomen" string="Bomen">
+                        <field name="bomen" nolabel="1"/>
+                    </group>
+                    <group name="kraan" string="Kraan">
+                        <field name="kraan" nolabel="1"/>
+                    </group>
+                    <group name="grondwerk" string="Grondwerk">
+                        <field name="grondwerk" nolabel="1"/>
+                    </group>
+                    <group name="aanvullend" string="Aanvullend">
+                        <field name="aanvullend" nolabel="1"/>
+                    </group>
+                    <group name="action_resident" string="Action Resident">
+                        <field name="action_resident" nolabel="1"/>
+                    </group>
+                    <group  name="action_total_wall" string="Action Total Wall">
+                        <field name="action_total_wall" nolabel="1"/>
+                    </group>
+                    <div name="level_measurement_result" style="margin-top:14px;">
+                        <div class="o_horizontal_separator">Level Measurement Result on Supplied Construction Plan</div>
+                        <div><b>Note:</b> Add Measurement in mm.</div>
+                        <field name="level_measurement_result" nolabel="1"/>
+                    </div>
+                    <group name="notes_calculation" string="Points for implementation">
+                        <field name="notes_calculation" nolabel="1"/>
+                    </group>
+                    <group>
+                        <field name="aantal_schroefpalen"/>
+                        <field name="schroefpaaldiameter"/>
+                    </group>
+                    <group>
+                        <field name="sondering_diepte"/>
+                        <field name="gkosten_funderingsherstel"/>
+                        <field name="gkosten_scheurherstel"/>
+                    </group>
+                    <group  name="note" string="Note">
+                        <field name="note" nolabel="1"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='opportunity_image']" position="inside">
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_one')]}">
+                    <group>
+                        <field name="image_1" widget="image" class="custom-image-size"/>
+                        <field name="image_2" widget="image" class="custom-image-size"/>
+                        <field name="image_3" widget="image" class="custom-image-size"/>
+                        <field name="image_4" widget="image" class="custom-image-size"/>
+                    </group>
+                    <group>
+                        <field name="image_5" widget="image" class="custom-image-size"/>
+                        <field name="image_6" widget="image" class="custom-image-size"/>
+                        <field name="image_7" widget="image" class="custom-image-size"/>
+                        <field name="image_8" widget="image" class="custom-image-size"/>
+                    </group>
+                </group>
+                <group attrs="{'invisible': [('customer_type', '!=', 'formulier_one')]}">
+                    <group>
+                        <field name="plattegrond_img" widget="image" class="custom-image-size"/>
+                        <field name="fundering_img" widget="image" class="custom-image-size"/>
+                        <field name="blueprint_img" widget="image" class="custom-image-size"/>
+                    </group>
+                    <group>
+                        <field name="lot_img" widget="image" class="custom-image-size"/>
+                        <field name="extra_drawing_1_img" widget="image" class="custom-image-size"/>
+                        <field name="extra_drawing_2_img" widget="image" class="custom-image-size"/>
+                    </group>
+                </group>
+            </xpath>
+         </field>
+    </record>
+ </odoo>

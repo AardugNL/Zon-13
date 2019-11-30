@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="third_question_form_template" inherit_id="quotation_images_feedback.third_question_form_template">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_three'">
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">General</span></h3>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="email_address">E-mail address</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="email_address" class="form-control" t-att-value="question_frm_id.email_address"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="system_vendor_name">Vendor name of the system</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="system_vendor_name" class="form-control" t-att-value="question_frm_id.system_vendor_name"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="commencement_work_date">Date of commencement of work</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="date" name="commencement_work_date" class="form-control" t-att-value="question_frm_id.commencement_work_date"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="delivery_date">Delivery date</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="date" name="delivery_date" class="form-control" t-att-value="question_frm_id.delivery_date"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="mechanic_name_1">Mechanic Name 1</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="mechanic_name_1" class="form-control" t-att-value="question_frm_id.mechanic_name_1"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="mechanic_name_2">Mechanic Name 2</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="mechanic_name_2" class="form-control" t-att-value="question_frm_id.mechanic_name_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="mechanic_name_3">Mechanic Name 3</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="mechanic_name_3" class="form-control" t-att-value="question_frm_id.mechanic_name_3"/>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Roofing</span></h3>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="any_damage_detected_start">Have any damage already been detected at the start of the work?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="any_damage_detected_start" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.any_damage_detected_start">
+                                    <t t-esc="question_frm_id.any_damage_detected_start"/>
+                                </option>
+                                <t t-if="question_frm_id.any_damage_detected_start != 'ja'">
+                                    <option value='ja'></option>
+                                </t>
+                                <t t-if="question_frm_id.any_damage_detected_start != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="solar_panels_installed">Have the solar panels been installed in accordance with the roof plan?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="solar_panels_installed" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.solar_panels_installed">
+                                    <t t-esc="question_frm_id.solar_panels_installed"/>
+                                </option>
+                                <t t-if="question_frm_id.solar_panels_installed != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.solar_panels_installed != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="extra_solar_panels_installed">Have additional solar panels been installed?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="extra_solar_panels_installed" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.extra_solar_panels_installed">
+                                    <t t-esc="question_frm_id.extra_solar_panels_installed"/>
+                                </option>
+                                <t t-if="question_frm_id.extra_solar_panels_installed != 'Yes, enter the amount for other'">
+                                    <option value='Yes, enter the amount for other'>Yes, enter the amount for other</option>
+                                </t>
+                                <t t-if="question_frm_id.extra_solar_panels_installed != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="waterline_installed">Have all plugs from the waterline been installed?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="waterline_installed" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.waterline_installed">
+                                    <t t-esc="question_frm_id.waterline_installed"/>
+                                </option>
+                                <t t-if="question_frm_id.waterline_installed != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.waterline_installed != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="cables_separated">Are the plus and minus cables separated?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="cables_separated" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.cables_separated">
+                                    <t t-esc="question_frm_id.cables_separated"/>
+                                </option>
+                                <t t-if="question_frm_id.cables_separated != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.cables_separated != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="pans_pushed">Have all pans been pushed back?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="pans_pushed" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.pans_pushed">
+                                    <t t-esc="question_frm_id.pans_pushed"/>
+                                </option>
+                                <t t-if="question_frm_id.pans_pushed != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.pans_pushed != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_representatives_inspection">Is the inspection by the representatives correct?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_representatives_inspection" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_representatives_inspection">
+                                    <t t-esc="question_frm_id.is_representatives_inspection"/>
+                                </option>
+                                <t t-if="question_frm_id.is_representatives_inspection != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_representatives_inspection != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_roof_plan_fit">Does the roof plan fit?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_roof_plan_fit" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_roof_plan_fit">
+                                    <t t-esc="question_frm_id.is_roof_plan_fit"/>
+                                </option>
+                                <t t-if="question_frm_id.is_roof_plan_fit != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_roof_plan_fit != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="what_panel_installed">What panels have been installed?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="what_panel_installed" class="form-control" t-att-value="question_frm_id.what_panel_installed"/>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Electric</span></h3>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="cabling_length">Length of the used string cabling?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="cabling_length" class="form-control" t-att-value="question_frm_id.cabling_length"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="cable_thickness">Applied cable thickness of string cabling?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="cable_thickness" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.cable_thickness">
+                                    <t t-esc="question_frm_id.cable_thickness"/>
+                                </option>
+                                <t t-if="question_frm_id.cable_thickness != '4mm2'">
+                                    <option value='4mm2'>4mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.cable_thickness != '6mm2'">
+                                    <option value='6mm2'>6mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.cable_thickness != '10mm2'">
+                                    <option value='10mm2'>10mm2</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="inverter_length">Length of the inverter wiring used -> meter box?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="inverter_length" class="form-control" t-att-value="question_frm_id.inverter_length"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="inverter_cable_thickness">Applied cable thickness of string cabling?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="inverter_cable_thickness" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.inverter_cable_thickness">
+                                    <t t-esc="question_frm_id.inverter_cable_thickness"/>
+                                </option>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '3x2,5mm2'">
+                                    <option value='3x2,5mm2'>3x2,5mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '5x2,5mm2'">
+                                    <option value='5x2,5mm2'>5x2,5mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '3x4mm2'">
+                                    <option value='3x4mm2'>3x4mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '5x4mm2'">
+                                    <option value='5x4mm2'>5x4mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '5x6mm2'">
+                                    <option value='5x6mm2'>5x6mm2</option>
+                                </t>
+                                <t t-if="question_frm_id.inverter_cable_thickness != '5x10mm2'">
+                                    <option value='5x10mm2'>5x10mm2</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_earthing_total_length">Has the earthing been checked for correct installation?</label>
+                    </div>
+                     <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_earthing_total_length" t-attf-class="form-control" >
+                                <option t-att-value="question_frm_id.is_earthing_total_length">
+                                    <t t-esc="question_frm_id.is_earthing_total_length"/>
+                                </option>
+                                <t t-if="question_frm_id.is_earthing_total_length != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_earthing_total_length != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field is_earthing_total_length" style="display:none;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="earthing_total_length">What is the earth cable length?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="earthing_total_length" class="form-control" t-att-value="question_frm_id.earthing_total_length"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_utp_total_length">Is the UTP cable connected correctly?</label>
+                    </div>
+                     <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_utp_total_length" t-attf-class="form-control" >
+                                <option t-att-value="question_frm_id.is_earthing_total_length">
+                                    <t t-esc="question_frm_id.is_utp_total_length"/>
+                                </option>
+                                <t t-if="question_frm_id.is_utp_total_length != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_utp_total_length != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field earthing is_utp_total_length" style="display:none;">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="utp_total_length">What is the length of the UTP cable used?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="utp_total_length" class="form-control" t-att-value="question_frm_id.utp_total_length"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="measured_voltage">Measured string voltage - Value</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="measured_voltage" class="form-control" t-att-value="question_frm_id.measured_voltage"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="measured_panels_voltage">Measured String Voltage - Panels</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="measured_panels_voltage" class="form-control" t-att-value="question_frm_id.measured_panels_voltage"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="measured_optimizers_voltage">Measured string voltage - Number of optimizers</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="measured_optimizers_voltage" class="form-control" t-att-value="question_frm_id.measured_optimizers_voltage"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="internet_via">Internet connection established via?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="internet_via" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.internet_via">
+                                    <t t-esc="question_frm_id.internet_via"/>
+                                </option>
+                                <t t-if="question_frm_id.internet_via != 'UTP'">
+                                    <option value='UTP'>UTP</option>
+                                </t>
+                                <t t-if="question_frm_id.internet_via != 'WiFi'">
+                                    <option value='WiFi'>WiFi</option>
+                                </t>
+                                <t t-if="question_frm_id.internet_via != 'Socket boxes'">
+                                    <option value='Socket boxes'>Socket boxes</option>
+                                </t>
+                                <t t-if="question_frm_id.internet_via != 'Customer arranges itself'">
+                                    <option value='Customer arranges itself'>Customer arranges itself</option>
+                                </t>
+                                <t t-if="question_frm_id.internet_via != 'No internet i.o.m. customer agreement'">
+                                    <option value='No internet i.o.m. customer agreement'>No internet i.o.m. customer agreement</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_home_installation_ok">Is the home installation still OK after installing the earth leakage circuit breaker?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_home_installation_ok" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_home_installation_ok">
+                                    <t t-esc="question_frm_id.is_home_installation_ok"/>
+                                </option>
+                                <t t-if="question_frm_id.is_home_installation_ok != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_home_installation_ok != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Others</span></h3>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="extra_panels">How many panels have been installed extra?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="number" name="extra_panels" class="form-control" t-att-value="question_frm_id.extra_panels"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="installation_damages">What damages have been detected or made during the installation process?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="installation_damages" class="form-control"><t t-esc="question_frm_id.installation_damages"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="other_remarks">Other remarks</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="other_remarks" class="form-control"><t t-esc="question_frm_id.other_remarks"/></textarea>
+                    </div>
+                </div>
+                <div class="text-center text-primary mb24">
+                    <h3><span class="header-box-shadow">Closure to be completed by the customer</span></h3>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_engineers_work_safely">Did our engineers work safely with scaffolding or fall protection?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_engineers_work_safely" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_engineers_work_safely">
+                                    <t t-esc="question_frm_id.is_engineers_work_safely"/>
+                                </option>
+                                <t t-if="question_frm_id.is_engineers_work_safely != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_engineers_work_safely != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_workplace_clean">Has the workplace been left clean?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_workplace_clean" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_workplace_clean">
+                                    <t t-esc="question_frm_id.is_workplace_clean"/>
+                                </option>
+                                <t t-if="question_frm_id.is_workplace_clean != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_workplace_clean != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="is_sufficient_explanation">Have you received sufficient explanation during installation?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="is_sufficient_explanation" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.is_sufficient_explanation">
+                                    <t t-esc="question_frm_id.is_sufficient_explanation"/>
+                                </option>
+                                <t t-if="question_frm_id.is_sufficient_explanation != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.is_sufficient_explanation != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="setting_explanation">Did you have an explanation when setting up the monitoring app?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="setting_explanation" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.setting_explanation">
+                                    <t t-esc="question_frm_id.setting_explanation"/>
+                                </option>
+                                <t t-if="question_frm_id.setting_explanation != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.setting_explanation != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="any_comments">Do you have any comments for us?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="any_comments" class="form-control"><t t-esc="question_frm_id.any_comments"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="use_home_photos">Can we use photos of your home as a reference on the internet?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div t-attf-class="form-group">
+                            <select name="use_home_photos" t-attf-class="form-control">
+                                <option t-att-value="question_frm_id.use_home_photos">
+                                    <t t-esc="question_frm_id.use_home_photos"/>
+                                </option>
+                                <t t-if="question_frm_id.use_home_photos != 'ja'">
+                                    <option value='ja'>ja</option>
+                                </t>
+                                <t t-if="question_frm_id.use_home_photos != 'nee'">
+                                    <option value='nee'>nee</option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="other_interested_customers">Do you have other customers who are also interested in our services?</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="other_interested_customers" class="form-control"><t t-esc="question_frm_id.other_interested_customers"/></textarea>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="receive_order">order you receive a whopping € 100 application premium.</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" name="receive_order" class="form-control" t-att-value="question_frm_id.receive_order"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-lg-offset-2 col-md-offset-2 text-right">
+                        <label class="col-form-label" for="other_discussed">Other discussed matters</label>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <textarea rows="3" name="other_discussed" class="form-control"><t t-esc="question_frm_id.other_discussed"/></textarea>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="third_question_formulier_image" inherit_id="quotation_images_feedback.third_question_formulier_image">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_three'">
+                <div class="form-group row form-field" id="formulier_3_images">
+                    <input type="file" name="cables_together_1" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cables_together_2" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cables_together_3" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="pans_pushed_back" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="photo_roof_1" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="photo_roof_2" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="photo_roof_3" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="outlet_inverter_roof" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="work_switch" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="photo_placement_inverter" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="inverter_in_operation" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="inverter_internet" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cupboard_opened" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="cupboard_closed" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="inverter_serial_number" class="hide_input_image form-control o_website_form_input"/>
+                    <input type="file" name="optimizers_serial_number" class="hide_input_image form-control o_website_form_input"/>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Are the plus and minus cables together 1</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="cables_together_1" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cables_together_1"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Are the plus and minus cables together 2</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="cables_together_2" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cables_together_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Are the plus and minus cables together 3</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="cables_together_3" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cables_together_3"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>All pans pushed back</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="pans_pushed_back" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/pans_pushed_back"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Overview photo roof 1</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="photo_roof_1" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/photo_roof_1"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Overview photo roof 2</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="photo_roof_2" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/photo_roof_2"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Overview photo roof 3</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="photo_roof_3" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/photo_roof_3"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Photo roof outlet inverter -> roof</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="outlet_inverter_roof" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/outlet_inverter_roof"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Photo opened work switch</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="work_switch" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/work_switch"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Overview photo placement inverter + work switch</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="photo_placement_inverter" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/photo_placement_inverter"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Photo display inverter in operation</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="inverter_in_operation" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/inverter_in_operation"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Photo display inverter internet</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="inverter_internet" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/inverter_internet"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Photo meter cupboard opened with automatic</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="cupboard_opened" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cupboard_opened"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Meter cupboard closed</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="cupboard_closed" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/cupboard_closed"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-right">
+                        <h5>Photo serial number inverter</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="inverter_serial_number" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/inverter_serial_number"/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                        <h5>Photo serial numbers optimizers (Readable!)</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                        <img class="img img-fluid" id="optimizers_serial_number" t-attf-src="/web/image/question.formulier/{{question_frm_id.id}}/optimizers_serial_number"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

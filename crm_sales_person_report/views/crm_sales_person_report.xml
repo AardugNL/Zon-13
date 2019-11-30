@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    	<record id="view_crm_person_graph1" model="ir.ui.view">
+             <field name="name">crm.sales.person.report.graph</field>
+             <field name="model">crm.sales.person.report</field>
+             <field name="arch" type="xml">
+                 <graph string="Sales Analysis" stacked="True">
+                 </graph>
+             </field>
+        </record>
+
+        <record id="view_crm_person_pivot" model="ir.ui.view">
+            <field name="name">crm.sales.person.report.pivot</field>
+            <field name="model">crm.sales.person.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Sales Analysis" disable_linking="True">
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_crm_report_tree" model="ir.ui.view">
+             <field name="name">crm.sales.person.reporttree</field>
+             <field name="model">crm.sales.person.report</field>
+             <field name="arch" type="xml">
+                 <tree string="CRM Sales Person Analysis">
+                     <field name="phone"/>
+                     <field name="opportunity"/>
+                     <field name="quote"/>
+                     <field name="deal" />
+                     <field name="work" />
+                 </tree>
+             </field>
+        </record>
+        
+        <record id="filter_crm_sales_person_work" model="ir.filters">
+            <field name="name">Work</field>
+            <field name="model_id">crm.sales.person.report</field>
+            <field name="user_id" eval="False"/>
+            <field name="context">{'group_by': ['work'], 'col_group_by': ['work_date'], 'measures': ['work_by_total']}</field>
+        </record>
+
+        <record id="filter_crm_sales_person_deal" model="ir.filters">
+            <field name="name">Deals</field>
+            <field name="model_id">crm.sales.person.report</field>
+            <field name="user_id" eval="False"/>
+            <field name="context">{'group_by': ['deal'], 'col_group_by': ['deal_date'], 'measures': ['deal_by_total']}</field>
+        </record>
+
+        <record id="filter_crm_sales_person_opp" model="ir.filters">
+            <field name="name">Meetings</field>
+            <field name="model_id">crm.sales.person.report</field>
+            <field name="user_id" eval="False"/>
+            <field name="context">{'group_by': ['opportunity'], 'col_group_by': ['opportunity_date'], 'measures': ['opportunity_by_total']}</field>
+        </record>
+        <record id="filter_crm_sales_person_quote" model="ir.filters">
+            <field name="name">Quote</field>
+            <field name="model_id">crm.sales.person.report</field>
+            <field name="user_id" eval="False"/>
+            <field name="context">{'group_by': ['quote'], 'col_group_by': ['quote_date'], 'measures': ['quote_by_total']}</field>
+        </record>
+        <record id="filter_crm_sales_person_phone" model="ir.filters">
+            <field name="name">Calls</field>
+            <field name="model_id">crm.sales.person.report</field>
+            <field name="user_id" eval="False"/>
+            <field name="context">{'group_by': ['phone'], 'col_group_by': ['phone_date'], 'measures': ['phone_by_total']}</field>
+        </record>
+
+
+        <record id="view_crm_report_search" model="ir.ui.view">
+            <field name="name">crm.sales.person.report.search</field>
+            <field name="model">crm.sales.person.report</field>
+            <field name="arch" type="xml">
+                <search string="CRM Sales Person Analysis">
+                    <group expand="1" string="Group By">
+                        <filter string="Sales Person" name="User ID" context="{'group_by':'user_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_crm_report_all" model="ir.actions.act_window">
+            <field name="name">CRM Sales Person Analysis</field>
+            <field name="res_model">crm.sales.person.report</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">pivot,tree,graph</field>
+            <field name="search_view_id" ref="view_crm_report_search"/>
+            <field name="view_id" ref="view_crm_person_pivot"/>
+            <field name="context">{'group_by': ['user_id'], 'col_group_by': ['date'], 'measures': ['work_by_total']}</field>
+            <field name="help"></field>
+        </record>
+
+        <menuitem
+                id="crm_sale_person_analysis_report_menu"
+                name="CRM Sales Person Analysis"
+                parent="crm.crm_menu_report"
+                action="action_crm_report_all"
+                sequence="11"
+                />
+    </data>
+</odoo>

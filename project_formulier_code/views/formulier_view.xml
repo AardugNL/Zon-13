@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="question_formulier_code_form_view">
+            <field name="name">question.formulier.code.form</field>
+            <field name="model">question.formulier</field>
+            <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" class="oe_inline" />
+                    <label for="code" string=" - " class="oe_inline" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="question_formulier_code_tree_view">
+            <field name="name">question.formulier.code.tree</field>
+            <field name="model">question.formulier</field>
+            <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_tree" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" />
+                </field>
+            </field>
+        </record>
+</odoo>
+

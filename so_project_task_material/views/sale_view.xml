@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_order_form_tm" model="ir.ui.view">
+            <field name="name">sale.order.form.tm</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header/button[@name='action_cancel']" position="before">
+                    <button name="material_to_task" type="object" string="Material To Task" states="sale"/>
+                    <!-- <button name="action_confirm" states="material_to_task" string="Confirm Sale" class="btn-primary o_sale_confirm" type="object" /> -->
+                    <!-- <button name="304" string="Create Invoice" type="action" class="btn-primary" attrs="{'invisible': [('state', '!=', 'material_to_task')]}"/> -->
+                    <button name="print_quotation" string="Print" type="object" states="material_to_task"/>
+                    <button name="action_quotation_send" string="Send by Email" type="object" states="material_to_task"/>
+                    <button name="action_cancel" states="material_to_task" type="object" string="Cancel"/>
+                </xpath>
+                <xpath expr="//header/field[@name='state']" position="attributes">
+                    <attribute name="statusbar_visible">draft,sent,material_to_task,sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/form/group/group[1]/field[@name='tax_id']" position="after">
+                    <field name="planned_qty" readonly="1"/>
+                    <field name="tm"/>
+                    <field name="id" invisible="1"/>
+                    <field name="task_id" context="{'return_order_line_id': id}"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                    <field name="planned_qty" readonly="1"/>
+                    <field name="tm"/>
+                    <field name="id" invisible="1"/>
+                    <field name="task_id" context="{'return_order_line_id': id}"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='qty_delivered']" position="attributes">
+                    <attribute name="attrs">{'column_invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])], 'readonly': [('qty_delivered_method', '!=', 'manual')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='qty_invoiced']" position="attributes">
+                    <attribute name="attrs">{'column_invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/form/group/group/label[@for='qty_delivered']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/form/group/group/div[2]" position="attributes">
+                    <attribute name="attrs">{'invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/form/group/group/label[@for='qty_invoiced']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/form/group/group/div[3]" position="attributes">
+                    <attribute name="attrs">{'invisible': [('parent.state', 'not in', ['sale', 'done', 'material_to_task'])]}</attribute>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>

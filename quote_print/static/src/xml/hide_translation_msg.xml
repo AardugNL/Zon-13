@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="translation-alert">
+
+        <t t-jquery="t" t-operation="replace">
+        </t>
+    </t>
+
+    <t t-extend="notification-box">
+        <t t-jquery="div" t-operation="replace">
+        </t>
+    </t>
+</templates>

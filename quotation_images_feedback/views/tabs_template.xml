@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="opportunity_tab_template" name="Opportunity tabs">
+        <section class="s_tabs" id="opportunity_id">
+            <div class="container">
+                <div class="row s_col_no_bgcolor">
+                    <div class="col-lg-10 offset-lg-1 pb16">
+                        <div class="card bg-white">
+                             <!-- <button type="button" class="navbar-toggler visible-xs" data-toggle="collapse" data-target="#opportunity_menu_collapse">
+                                <span class="navbar-toggler-icon"/>
+                            </button> -->
+                            <!-- <div class="card-header" id="opportunity_menu_collapse"> -->
+
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs custom_tabs" role="tablist">
+                                    <li class="nav-item active">
+                                        <a class="nav-link active"
+                                            id="nav_tabs_basis_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_basis_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_basis_question_form"
+                                            aria-selected="true">Basis AAA</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_question_form"
+                                            aria-selected="true">General Questions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_image_form"
+                                            aria-selected="false">Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_extra_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_extra_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_extra_image_form"
+                                            aria-selected="false">Extra Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_video"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_video_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_video_form"
+                                            aria-selected="false">Videos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_document"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_document_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_document_form"
+                                            aria-selected="false">Documents</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div class="tab-pane fade show active"
+                                    id="nav_tabs_basis_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_basis_question">
+                                    <t t-call="quotation_images_feedback.question_formulier_profile"/>
+                                </div>
+                                <div class="tab-pane fade show"
+                                    id="nav_tabs_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_question">
+                                    <t t-call="quotation_images_feedback.first_question_form_template"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_image">
+                                    <t t-call="quotation_images_feedback.question_formulier_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_extra_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_extra_image">
+                                    <t t-call="quotation_images_feedback.question_formulier_extra_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_video_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_video">
+                                    <t t-call="quotation_images_feedback.question_formulier_video"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_document_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_document">
+                                    <t t-call="quotation_images_feedback.question_formulier_document"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="quote_tab_template" name="Quote tabs">
+        <section class="s_tabs" id="quote_tab">
+            <div class="container">
+                <div class="row s_col_no_bgcolor">
+                    <div class="col-lg-10 offset-lg-1 pb16">
+                        <div class="card bg-white">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs custom_tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active"
+                                            id="nav_tabs_basis_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_basis_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_basis_question_form"
+                                            aria-selected="true">Basis</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_op_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_op_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_op_question_form"
+                                            aria-selected="true">Opportunity Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_question_form"
+                                            aria-selected="true">Quotation Questions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_image_form"
+                                            aria-selected="false">Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_extra_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_extra_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_extra_image_form"
+                                            aria-selected="false">Extra Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_video"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_video_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_video_form"
+                                            aria-selected="false">Videos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_quote_document"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_quote_document_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_quote_document_form"
+                                            aria-selected="false">Documents</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div class="tab-pane fade show active"
+                                    id="nav_tabs_basis_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_basis_question">
+                                    <t t-call="quotation_images_feedback.question_formulier_profile"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_op_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_op_question_form">
+                                    <t t-call="quotation_images_feedback.first_question_form_template"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_question">
+                                    <t t-call="quotation_images_feedback.second_question_form_template"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_image">
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_extra_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_extra_image">
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_video_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_video">
+                                    <t t-call="quotation_images_feedback.question_formulier_video"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_quote_document_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_quote_document">
+                                    <t t-call="quotation_images_feedback.question_formulier_document"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="task_tab_template" name="Task tabs">
+        <section class="s_tabs" id="task_tabs">
+            <div class="container">
+                <div class="row s_col_no_bgcolor">
+                    <div class="col-lg-10 offset-lg-1 pb16">
+                        <div class="card bg-white">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs custom_tabs" role="tablist" id="tabs">
+                                    <li class="nav-item active">
+                                        <a class="nav-link active"
+                                            id="nav_tabs_basis_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_basis_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_basis_question_form"
+                                            aria-selected="true">Basis</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_op_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_op_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_op_question_form"
+                                            aria-selected="true">Opportunity Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_question"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_question_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_question_form"
+                                            aria-selected="true">Task Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_image_form"
+                                            aria-selected="false">Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_extra_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_extra_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_extra_image_form"
+                                            aria-selected="false">Extra Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_video"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_video_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_video_form"
+                                            aria-selected="false">Videos</a>
+                                    </li>
+                                    <li class="nav-item task_document">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_document"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_document_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_document_form"
+                                            aria-selected="false">Documents</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_op_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_op_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_op_image_form"
+                                            aria-selected="true">Opportunity Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_op_extra_image"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_op_extra_image_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_op_extra_image_form"
+                                            aria-selected="true">Opportunity Extra Images</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            id="nav_tabs_task_op_video"
+                                            data-toggle="tab"
+                                            href="#nav_tabs_task_op_video_form"
+                                            role="tab"
+                                            aria-controls="nav_tabs_task_op_video_form"
+                                            aria-selected="true">Opportunity Video</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div class="tab-pane fade show active"
+                                    id="nav_tabs_basis_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_basis_question">
+                                    <t t-call="quotation_images_feedback.question_formulier_profile"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_op_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_op_question">
+                                    <t t-call="quotation_images_feedback.first_question_form_template"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_question_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_question">
+                                    <t t-call="quotation_images_feedback.third_question_form_template"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_image">
+                                    <t t-call="quotation_images_feedback.third_question_formulier_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_extra_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_extra_image">
+                                    <t t-call="quotation_images_feedback.question_formulier_task_extra_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_video_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_video">
+                                    <t t-call="quotation_images_feedback.question_formulier_task_video"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_document_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_document">
+                                    <t t-call="quotation_images_feedback.question_formulier_task_document"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_op_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_op_image">
+                                    <t t-call="quotation_images_feedback.question_formulier_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_op_extra_image_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_op_extra_image">
+                                    <t t-call="quotation_images_feedback.question_formulier_extra_image"/>
+                                </div>
+                                <div class="tab-pane fade"
+                                    id="nav_tabs_task_op_video_form"
+                                    role="tabpanel"
+                                    aria-labelledby="nav_tabs_task_op_video">
+                                    <t t-call="quotation_images_feedback.question_formulier_video"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

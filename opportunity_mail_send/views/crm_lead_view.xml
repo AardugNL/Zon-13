@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="ec_category_tree" model="ir.ui.view">
+            <field name="name">opportunity.mail.configure.tree</field>
+            <field name="model">opportunity.mail.configure</field>
+            <field name="arch" type="xml">
+                <tree string="Opportunity mail configuration" editable="bottom">
+                    <field name="name"/>
+                    <field name="lead_lead_source"/>
+                    <field name="lead_category"/>
+                    <field name="email_template_id"/>
+                    <field name="zip_range_from"/>
+                    <field name="zip_range_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_opportunity_mail_config" model="ir.actions.act_window">
+            <field name="name">Opportunity mail configure</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">opportunity.mail.configure</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_opportunity_mail_config"
+                id="menu_opportunity_mail_config" name="Opportunity mail configure" 
+                parent="crm.crm_menu_config" sequence="0"/>
+
+    </data>
+</odoo>

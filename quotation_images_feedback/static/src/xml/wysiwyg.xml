@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Media Dialog (allows to choose an img/pictogram/video) -->
+    <div t-name="wysiwyg.widgets.media">
+        <ul class="nav nav-tabs" role="tablist">
+            <li t-if="!widget.options.noImages" class="nav-item"><a t-attf-class="nav-link #{widget.isImageActive() ? 'active' : ''}" id="editor-media-image-tab" data-toggle="tab" href="#editor-media-image" role="tab" aria-controls="editor-media-image" t-att-aria-selected="widget.isImageActive().toString()">Image</a></li>
+            <li t-if="!widget.options.noDocuments" class="nav-item"><a t-attf-class="nav-link #{widget.isDocumentActive() ? 'active' : ''}" id="editor-media-document-tab" data-toggle="tab" href="#editor-media-document" role="tab" aria-controls="editor-media-document" t-att-aria-selected="widget.isDocumentActive().toString()">Document</a></li>
+            <li t-if="!widget.options.noIcons" class="nav-item"><a t-attf-class="nav-link #{widget.isIconActive() ? 'active' : ''}" id="editor-media-icon-tab" data-toggle="tab" href="#editor-media-icon" role="tab" aria-controls="editor-media-icon" t-att-aria-selected="widget.isIconActive().toString()">Pictogram</a></li>
+            <li t-if="!widget.options.noVideos" class="nav-item"><a t-attf-class="nav-link #{widget.isVideoActive() ? 'active' : ''}" id="editor-media-video-tab" data-toggle="tab" href="#editor-media-video" role="tab" aria-controls="editor-media-video" t-att-aria-selected="widget.isVideoActive().toString()">Video</a></li>
+            <li t-if="!widget.options.noRecordImages" class="nav-item"><a t-attf-class="nav-link #{widget.isRecordImageActive() ? 'active' : ''}" id="editor-media-record_image-tab" data-toggle="tab" href="#editor-media-record_image" role="tab" aria-controls="editor-media-record_image" t-att-aria-selected="widget.isRecordImageActive().toString()">CID</a></li>
+            <li t-if="!widget.options.noRecordDocuments" class="nav-item"><a t-attf-class="nav-link #{widget.isRecordDocumentActive() ? 'active' : ''}" id="editor-media-record_document-tab" data-toggle="tab" href="#editor-media-record_document" role="tab" aria-controls="editor-media-record_document" t-att-aria-selected="widget.isRecordDocumentActive().toString()">CDD</a></li>
+            <li t-if="!widget.options.noRecordVideos" class="nav-item"><a t-attf-class="nav-link #{widget.isRecordVideoActive() ? 'active' : ''}" id="editor-media-record_video-tab" data-toggle="tab" href="#editor-media-record_video" role="tab" aria-controls="editor-media-record_video" t-att-aria-selected="widget.isRecordVideoActive().toString()">CVD</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div t-if="!widget.options.noImages" t-attf-class="tab-pane fade #{widget.isImageActive() ? 'show active': ''}" id="editor-media-image" role="tabpanel" aria-labelledby="editor-media-image-tab"/>
+            <div t-if="!widget.options.noDocuments" t-attf-class="tab-pane fade #{widget.isDocumentActive() ? 'show active': ''}" id="editor-media-document" role="tabpanel" aria-labelledby="editor-media-document-tab"/>
+            <div t-if="!widget.options.noIcons" t-attf-class="tab-pane fade #{widget.isIconActive() ? 'show active': ''}" id="editor-media-icon" role="tabpanel" aria-labelledby="editor-media-icon-tab"/>
+            <div t-if="!widget.options.noVideos" t-attf-class="tab-pane fade #{widget.isVideoActive() ? 'show active': ''}" id="editor-media-video" role="tabpanel" aria-labelledby="editor-media-video-tab"/>
+            <div t-if="!widget.options.noRecordImages" t-attf-class="tab-pane fade #{widget.isRecordImageActive() ? 'show active': ''}" id="editor-media-record_image" role="tabpanel" aria-labelledby="editor-media-record_image-tab"/>
+            <div t-if="!widget.options.noRecordDocuments" t-attf-class="tab-pane fade #{widget.isRecordDocumentActive() ? 'show active': ''}" id="editor-media-record_document" role="tabpanel" aria-labelledby="editor-media-record_document-tab"/>
+            <div t-if="!widget.options.noRecordVideos" t-attf-class="tab-pane fade #{widget.isRecordVideoActive() ? 'show active': ''}" id="editor-media-record_video" role="tabpanel" aria-labelledby="editor-media-record_video-tab"/>
+        </div>
+    </div>
+
+    <!-- Image choosing part of the Media Dialog -->
+    <t t-name="quotation_images_feedback.widgets.image">
+        <form action="#">
+            <div class="form-inline align-items-center py-4">
+                <t t-call="wysiwyg.widgets.media.search">
+                    <t t-set="searchPlaceholder">Search</t>
+                </t>
+            </div>
+            <div class="record-data">
+            </div>
+        </form>
+    </t>
+    <t t-name="quotation_images_feedback.widgets.image.existing.attachments">
+        <div class="o_we_existing_attachments o_we_images">
+            <div class="row mx-auto">
+                <t t-foreach="rows.data" t-as="field">
+                    <div class="o_existing_attachment_cell position-relative m-2" t-attf-data-id="#{field}">
+                        <div class="d-flex align-items-center h-100">
+                            <img class="img img-fluid o_we_attachment_highlight" t-attf-src="/web/image/question.formulier/#{rows.formulier_id}/#{field}" t-attf-data-src="/web/image/question.formulier/#{rows.formulier_id}/#{field}" t-attf-data-id="#{field}"/>
+                        </div>
+                    </div>
+                </t>
+                <t t-foreach="rows.image_ids[0]" t-as="img">
+                    <div class="o_existing_attachment_cell position-relative m-2" t-attf-data-id="#{img}">
+                        <div class="d-flex align-items-center h-100">
+                            <img class="img img-fluid o_we_attachment_highlight" t-attf-src="/web/image/order.image/#{img}/image" t-attf-data-src="/web/image/order.image/#{img}/image" t-attf-data-id="#{img}"/>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+    <t t-name="quotation_images_feedback.widgets.document.existing.attachments">
+        <div class="o_we_existing_attachments o_we_documents">
+            <div class="row mx-auto">
+                <t t-foreach="rows.document_ids" t-as="doc">
+                    <div class="o_existing_attachment_cell position-relative m-2" t-attf-data-id="#{doc[0]}">
+                        <div class="d-flex align-items-center h-100">
+                            <div t-attf-data-src="/web/content?model=order.document&amp;field=file&amp;id=#{doc[0]}&amp;filename=#{doc[1]}&amp;download=true" class="o_we_attachment_highlight col-lg-12 col-md-12" t-attf-data-title='#{doc[1]}' t-attf-title='#{doc[1]}'>
+                                <span class="fa fa-file" style="font-size:80px;"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+    <t t-name="quotation_images_feedback.widgets.video.existing.attachments">
+        <div class="o_we_existing_attachments o_we_documents">
+            <div class="row mx-auto">
+                <t t-foreach="rows.video_ids" t-as="video">
+                    <div class="o_existing_attachment_cell position-relative col-lg-3 col-md-3" t-attf-data-id="#{video[0]}">
+                        <div class="d-flex align-items-center h-100">
+                            <video class="col-lg-12 col-md-12 o_we_attachment_highlight" 
+                                t-attf-data-src="/web/video/#{video[0]}" 
+                                t-attf-src="/web/video/#{video[0]}" 
+                                t-attf-title='#{video[1]}' controls="">
+                            </video>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

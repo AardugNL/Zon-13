@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="material_tab" inherit_id="quotation_images_feedback.task_tab_template">
+        <xpath expr="//ul/li[hasclass('task_document')]" position="after">
+            <li class="nav-item">
+                <a class="nav-link"
+                    id="nav_tabs_material"
+                    data-toggle="tab"
+                    href="#nav_tabs_material_form"
+                    role="tab"
+                    aria-controls="nav_tabs_material_form"
+                    aria-selected="true">Materials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    id="nav_tabs_screw_piles"
+                    data-toggle="tab"
+                    href="#nav_tabs_screw_piles_form"
+                    role="tab"
+                    aria-controls="nav_tabs_screw_piles_form"
+                    aria-selected="true">Screw Piles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    id="nav_tabs_task_general"
+                    data-toggle="tab"
+                    href="#nav_tabs_task_general_form"
+                    role="tab"
+                    aria-controls="nav_tabs_task_general_form"
+                    aria-selected="true">General</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    id="nav_tabs_task_customer"
+                    data-toggle="tab"
+                    href="#nav_tabs_task_customer_form"
+                    role="tab"
+                    aria-controls="nav_tabs_task_customer_form"
+                    aria-selected="true">Customer</a>
+            </li>
+        </xpath>
+        <xpath expr="//div[hasclass('card-body')]" position="inside">
+            <div class="tab-pane fade show"
+                id="nav_tabs_material_form"
+                role="tabpanel"
+                aria-labelledby="nav_tabs_material">
+                <t t-call="so_project_formulier_material.material_online_form"/>
+            </div>
+            <div class="tab-pane fade show"
+                id="nav_tabs_screw_piles_form"
+                role="tabpanel"
+                aria-labelledby="nav_tabs_screw_piles">
+                <t t-call="so_project_formulier_material.screw_piles_online_form"/>
+            </div>
+            <div class="tab-pane fade show"
+                id="nav_tabs_task_general_form"
+                role="tabpanel"
+                aria-labelledby="nav_tabs_task_general">
+            </div>
+            <div class="tab-pane fade show"
+                id="nav_tabs_task_customer_form"
+                role="tabpanel"
+                aria-labelledby="nav_tabs_task_customer">
+                <t t-call="so_project_formulier_material.customer_questions_form"/>
+            </div>
+        </xpath>
+    </template>
+    <template id="material_online_form">
+        <div class="container" style="margin:0 8%;">
+            <div class="row">
+                <t t-foreach="question_frm_id.consumed_material_ids" t-as="record">
+                    <div class="col-md-3 ml8 mr8 form-group row form-field" id="material_data">
+                        <div class="row" style="box-shadow:1px 1px 1px 1px #6c99c7; padding:10px;">
+                            <div class="oe_product_image col-md-3">
+                                <img class="img img-fluid" t-attf-src="/web/image/product.product/{{record.product_id.id}}/image"/>
+                            </div>
+                            <div class="col-md-6">
+                                <b><span t-esc="record.product_id.name"/></b>
+                                <p>Price: <span t-esc="record.sale_line_id.price_unit" style="white-space: nowrap;" t-options="{'widget': 'monetary','display_currency': record.sale_line_id.currency_id}"/></p>
+                            </div>
+                            <div class="col-md-3" style="padding: 0;">
+                                <div class="row mt4 mb4">
+                                    <a class="btn btn-primary add_qty update_qty" aria-label="Add one" title="Add one" t-att-value="record.id">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <h3 class="ml4 mt4 mr4 mb4" t-esc="int(record.sale_line_id.planned_qty)"/>
+                                </div>
+                                <div class="row mt4 mb4">
+                                    <a class="btn btn-primary remove_qty update_qty" aria-label="Remove one" title="Remove one" t-att-value="record.id">
+                                        <i class="fa fa-minus"></i>
+                                    </a>
+                                    <h3 class="ml4 mt4 mr4 mb4 consumed_qty" t-esc="int(record.consumed_qty)"/>
+                                </div>
+                                <div class="row mt8 mb4">
+                                    <a class="btn btn-primary all_update_qty" title="update quantity" t-att-value="record.id">
+                                        Update
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-2 text-right">
+            </div>
+            <div class="col-lg-10 col-md-10">
+                Add Product in sale order line
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-2 text-right">
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div t-attf-class="form-group div_product">
+                    <select id="product_id" name="product_id" class="form-control" readonly="">
+                        <t t-foreach="products" t-as="p">
+                            <option t-att-value="p.id">
+                                <t t-esc="p.name"/>
+                            </option>
+                        </t>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-2">
+                <input type="number" name="product_qty" placeholder="QTY" class="form-control" value="1" min="1"/>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <a class="btn btn-primary add_product" title="add product" t-att-value="question_frm_id.id">
+                    Add Line
+                </a>
+            </div>
+        </div>
+    </template>
+    <template id="screw_piles_online_form">
+        <div class="container" style="margin:0 8%;">
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 text-right">
+                    <label class="col-form-label" for="screw_piles_ids">Screw Piles</label>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div t-attf-class="form-group div_screw_piles">
+                        <select id="screw_piles_ids" name="screw_piles_ids" t-attf-class="form-control" readonly="">
+                            <option value=""></option>
+                            <t t-foreach="question_frm_id.screw_piles_ids" t-as="piles">
+                                <option t-att-value="piles.id">
+                                    <t t-esc="piles.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 text-right">
+                    <label class="col-form-label" for="sawn_length">Sawn Length</label>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <input type="number" name="sawn_length" class="form-control" placeholder="In CM"/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 text-right">
+                    <label class="col-form-label" for="archived_torque">Archived Torque</label>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <input type="number" name="archived_torque" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 text-right">
+                    <label class="col-form-label" for="add_work">Add Work</label>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <textarea rows="3" name="add_work" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row form-field">
+                <div class="col-lg-3 col-md-3 text-right">
+                    <label class="col-form-label" for="remarks">Remarks</label>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <textarea rows="3" name="remarks" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row form-field" id="formulier_2_form">
+                <input type="file" name="image" class="hide_input_image form-control o_website_form_input"/>
+                <div class="col-lg-3 col-md-3 text-right">
+                    <h5>Image</h5>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <button aria-label="Edit" class="fa fa-pencil pull-right fa-lg edit_button" title="Edit" ></button>
+                    <img class="img img-fluid screw_image" id="image" src=""/>
+                </div>
+            </div>
+            <div class="row mt8 col-lg-8 col-md-8 col-sm-8 col-xs-8 pull-right mb4">
+                <a class="btn btn-primary update_screw_piles" title="update screw piles">
+                    Update screw piles
+                </a>
+            </div>
+        </div>
+    </template>
+</odoo>

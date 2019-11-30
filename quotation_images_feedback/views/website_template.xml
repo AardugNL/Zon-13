@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Project Formulier show in /my/home -->
+    <template id="portal_my_home_project_formulier" name="Portal My Home : Project Formulier" inherit_id="portal.portal_my_home" priority="50">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="question_formulier_count" t-call="portal.portal_docs_entry">
+                <t t-set="title">Project Formulier</t>
+                <t t-set="url" t-value="'/my/formulier'"/>
+                <t t-set="count" t-value="question_formulier_count"/>
+            </t>
+        </xpath>
+    </template>
+    <template id="portal_my_project_formulier" name="My Project Formulier">
+        <t t-call="portal.portal_layout">
+            <t t-if="not formuliers">
+                <p>There are currently no Project Formulier for your account.</p>
+            </t>
+            <t t-if="formuliers" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Project Formulier</th>
+                        <th class="text-center">URL</th>
+                        <th class="text-right">State</th>
+                    </tr>
+                </thead>
+                <t t-foreach="formuliers" t-as="formulier">
+                    <tr>
+                        <td>
+                            <a t-att-href="'/question/formulier/%s' % formulier.id"><t t-esc="formulier.name"/></a>
+                        </td>
+                        <td class="text-center">
+                            <a t-att-href="'/question/formulier/%s' % formulier.id">/question/formulier/<t t-esc="formulier.id"/>
+                            </a>
+                        </td>
+                        <td class="text-right"><span t-field="formulier.state"/></td>
+                    </tr>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

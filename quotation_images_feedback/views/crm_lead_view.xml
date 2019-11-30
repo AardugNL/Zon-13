@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="crm_lead_form_view">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button string="Create Project Formulier"
+                    name="create_project_formulier"
+                    type="object"
+                    class="btn btn-primary"
+                    attrs="{'invisible':['|',('question_frm_id','!=',False), ('type', '=', 'lead')]}"/>
+                <button string="Project Formulier"
+                    name="project_formulier_view"
+                    type="object"
+                    class="btn btn-primary"
+                    attrs="{'invisible':[('question_frm_id','=',False)]}"/>
+                <button string="Online Project Formulier"
+                    name="project_formulier_online"
+                    type="object"
+                    class="btn btn-primary"
+                    attrs="{'invisible':[('question_frm_id','=',False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="soort"/>
+                <field name="customer_type"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Project Formulier">
+                    <group>
+                        <group>
+                            <field name="question_frm_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="action_crm_lead_form_view" model="ir.actions.act_window">
+        <field name="name">Opportunity</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="crm_lead_form_view"/>
+    </record>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <template id="assets_editor" inherit_id="website.assets_editor"  name="Custom Editor">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/quotation_images_feedback/static/src/js/custom.js"/>
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Website Frontend Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/quotation_images_feedback/static/src/js/change_state.js"/>
+            <script type="text/javascript" src="/quotation_images_feedback/static/src/js/image_upload.js"/>
+            <link rel="stylesheet" href="/quotation_images_feedback/static/src/less/custom_style.css"/>
+            <link rel="stylesheet" type="text/css" href="/quotation_images_feedback/static/src/css/dd.css" />
+            <script type="text/javascript" src="/quotation_images_feedback/static/src/js/jquery.dd.js"></script>
+        </xpath>
+    </template>
+
+    <!-- backend css -->
+    <template id="assets_backend" name="Project Formulier assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/quotation_images_feedback/static/src/css/formulier.css"/>
+        </xpath>
+    </template>
+    <template id="website_form_inherit" name="Website Form Assets Inherit" inherit_id="website_form.assets_frontend">
+        <xpath expr="script[@src='/website_form/static/src/js/website_form.js']" position="replace"> 
+           <script type="text/javascript" src="/quotation_images_feedback/static/src/js/website_form.js"></script> 
+        </xpath>
+   </template>
+</odoo>

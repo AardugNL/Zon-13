@@ -1,0 +1,91 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * partner_salutation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-03 07:02+0000\n"
+"PO-Revision-Date: 2019-10-03 07:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_salutation
+#: model:ir.model.fields.selection,name:partner_salutation.selection__crm_lead__informal_salutation__best
+#: model:ir.model.fields.selection,name:partner_salutation.selection__res_partner__informal_salutation__best
+msgid "Best"
+msgstr "Beste"
+
+#. module: partner_salutation
+#: model:ir.model.fields.selection,name:partner_salutation.selection__crm_lead__formal_salutation__dear
+#: model:ir.model.fields.selection,name:partner_salutation.selection__res_partner__formal_salutation__dear
+msgid "Dear"
+msgstr "Geachte"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__firstname
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__firstname
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__firstname
+msgid "First name"
+msgstr "Voornaam"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__formal_salutation_result
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__formal_partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__formal_partner_salutation
+msgid "Formal Partner Salutation"
+msgstr "Formele Begroeting"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__formal_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__formal_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__formal_salutation
+msgid "Formal Salutation"
+msgstr "Formele Aanhef"
+
+#. module: partner_salutation
+#: model:ir.model.fields.selection,name:partner_salutation.selection__crm_lead__informal_salutation__hello
+#: model:ir.model.fields.selection,name:partner_salutation.selection__res_partner__informal_salutation__hello
+msgid "Hello"
+msgstr "Hallo"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__informal_salutation_result
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__informal_partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__informal_partner_salutation
+msgid "Informal Partner Salutation"
+msgstr "Informele Begroeting"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__informal_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__informal_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__informal_salutation
+msgid "Informal Salutation"
+msgstr "Informele Aanhef"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_crm_lead__lastname
+#: model:ir.model.fields,field_description:partner_salutation.field_res_partner__lastname
+#: model:ir.model.fields,field_description:partner_salutation.field_res_users__lastname
+msgid "Last name"
+msgstr "Achternaam"
+
+#. module: partner_salutation
+#: model:ir.model,name:partner_salutation.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: partner_salutation
+#: model:ir.model,name:partner_salutation.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: partner_salutation
+#: model:ir.model.fields,field_description:partner_salutation.field_sale_order__salutation_type
+msgid "Salutation Type"
+msgstr ""

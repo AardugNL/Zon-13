@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_email_server_form_add_action" model="ir.ui.view">
+            <field name="name">fetchmail.server.form.add.action</field>
+            <field name="model">fetchmail.server</field>
+            <field name="inherit_id" ref="fetchmail.view_email_server_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='object_id']" position="after">
+                    <field name="action_id" groups="base.group_no_one"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

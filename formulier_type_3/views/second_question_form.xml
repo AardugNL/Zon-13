@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="second_question_form_template" inherit_id="quotation_images_feedback.second_question_form_template">
+        <xpath expr="." position="inside">
+            <t t-if="question_frm_id.customer_type == 'formulier_three'">
+
+            </t>
+        </xpath>
+    </template>
+</odoo>

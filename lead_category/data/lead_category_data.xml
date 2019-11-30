@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <record id="lead_category_1" model="lead.category">
+            <field name="name">vloer</field>
+        </record>
+
+        <record id="lead_category_2" model="lead.category">
+            <field name="name">muur</field>
+        </record>
+
+        <record id="lead_category_3" model="lead.category">
+            <field name="name">dak</field>
+        </record>
+
+        <record id="lead_category_4" model="lead.category">
+            <field name="name">PV</field>
+        </record>
+        
+        <record id="lead_category_5" model="lead.category">
+            <field name="name">MIX</field>
+        </record>
+    </data>
+</odoo>

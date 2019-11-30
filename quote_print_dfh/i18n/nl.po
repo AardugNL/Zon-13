@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * quote_print_dfh
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-03 06:06+0000\n"
+"PO-Revision-Date: 2019-10-03 06:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_second_page
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Adres:</strong>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_second_page
+msgid "<b>Reference: </b>"
+msgstr "<b>Referentie: </b>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+msgid "<b>Concerns: </b>"
+msgstr "<b>Betreft: </b>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Dear"
+msgstr "Geachte"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Warmly thanks for your inspection assignment"
+msgstr "Hartelijk dank voor uw inspectie opdracht."
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Enclosed you will find our report of our findings regarding the above object."
+msgstr "Bijgaand treft u onze rapportage aan van onze bevindingen met betrekking tot het bovengenoemde object."
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "The report is based on the documentation provided and the findings of our technical advisor"
+msgstr "De rapportage is gebaseerd op de aangeleverde documentatie en de bevindingen van onze technisch adviseur"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "on site. The report also discusses a target price for the recovery work."
+msgstr "ter plaatse. In de rapportage wordt er ook gesproken over een richtprijs voor de herstel werkzaamheden."
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Trusting us to have informed you accordingly, we are staying,"
+msgstr "Vertrouwende u hiermee een passend te hebben geïnformeerd, verblijven wij,"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Sincerely,"
+msgstr "Met vriendelijke groet,"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "Sustainable foundation repair"
+msgstr "Duurzaam funderingsherstel"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "<span>Reporting</span>"
+msgstr "<span>Rapportage</span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+msgid "<br/>\n"
+"                    <span><b>Date of inspection: </b></span>"
+msgstr "<br/>\n"
+"                    <span><b>Datum inspectie: </b></span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+msgid "<br/>\n"
+"                    <span><b>Date of reporting: </b></span>"
+msgstr "<br/>\n"
+"                    <span><b>Datum rapportage: </b></span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_second_page
+msgid "<b>Author: </b>"
+msgstr "<b>Auteur: </b>"
+
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+msgid "<b>Concerns: </b>\n"
+"                        <span>Reporting our findings regarding your </span>"
+msgstr "<b>Betreft: </b>\n"
+"                        <span>Rapportage van onze bevindingen betreffende uw </span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "<span> part of your building</span>"
+msgstr "<span> deel van uw gebouw.</span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_second_page
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_first_page
+msgid "<span>Findings regarding your </span>"
+msgstr "<span>Bevindingen betreffende uw </span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.dfh_first_page
+msgid "<span> part of your building.</span>"
+msgstr "<span> deel van uw gebouw.</span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_second_page
+msgid "<br/>\n"
+"                        <span><b>Date of inspection: </b></span>"
+msgstr "<br/>\n"
+"                        <span><b>Datum inspectie: </b></span>"
+
+#. module: quote_print_dfh
+#: model_terms:ir.ui.view,arch_db:quote_print_dfh.online_quote_dfh_second_page
+msgid "<br/>\n"
+"                        <span><b>Date of reporting: </b></span>"
+msgstr "<br/>\n"
+"                        <span><b>Datum rapportage:  </b></span>"
+

@@ -1,0 +1,30 @@
+<section class="oe_container ">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>Feature</b></h4>
+        <div class="col-xs-1"></div>
+        <div class="text-center" style="font-size: 20px;font-family:Noto Sans CJK TC Thin;">
+            Send different Mail with different format(template) to customer on Convert lead to opportunity based on some fields comparision.
+        </div>
+     </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_row oe_spaced">
+            <h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>How It Works</b></h4>
+            <div class="col-xs-12 text-center" style="background:#875A7B;border-radius:5px;margin-top:10px">
+                <span style="font-size:25px;color:#FFF"><b>Create records in new model (opportunity.mail.configure)</b></span>
+            </div>
+            <div class="col-xs-12" style="margin-top:10px">
+                <img src="image_1.png" width="800" height="400"/>
+            </div>
+            <div>
+                <ul>
+                    <li>Add some field in new model, it's same field of crm lead records.</li>
+                    <li>user can create many records with different fields value</li>
+                    <li>it's use for select email template for send mail to customer on convert of lead to opportunity</li>
+                    <li>here show range of zip field, lead have also zip name field, if lead have zip field value then system get first 2 word of that field value and compare with 'opportunity.mail.configure' records range fields, if lead zip first 2 word come between range from and range to then only template use for send mail </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

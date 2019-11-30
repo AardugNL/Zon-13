@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="ir.ui.view" id="opportunity_code_form_view">
+            <field name="name">opportunity.code.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" class="oe_inline" />
+                    <label for="code" string=" - " class="oe_inline" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="opportunity_code_tree_view">
+            <field name="name">opportunity.code.tree</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="opportunity_code_kanban_view">
+            <field name="name">opportunity.code.kanban</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="opportunity_code_search_view">
+            <field name="name">opportunity.code.search</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+            <field name="arch" type="xml">
+                <field name="name" position="replace"/>
+                <field name="tag_ids" position="before">
+                    <field name="name" string="Opportunity" filter_domain="['|','|','|','|',('partner_id','ilike',self),('partner_name','ilike',self),('email_from','ilike',self),('name', 'ilike', self),('code', 'ilike', self)]"/>
+                </field>
+            </field>
+        </record>
+</odoo>
+

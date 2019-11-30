@@ -1,0 +1,1113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * formulier_type_3
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-03 07:20+0000\n"
+"PO-Revision-Date: 2019-10-03 07:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Design questions</span>"
+msgstr "<span class=\"header-box-shadow\">Ontwerpvragen</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "How many roof surfaces"
+msgstr "Hoeveel dakvlakken"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Home</span>"
+msgstr "<span class=\"header-box-shadow\">Woning</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is a permit required"
+msgstr "Is er een vergunning nodig"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Year of construction of the house"
+msgstr "Bouwjaar van de woning"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Have you ever had any leaks or other problems with your roof?"
+msgstr "Heeft u ooit lekkages of andere problemen gehad met uw dak "
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is it a rent or buy property?"
+msgstr "Is het een huur of koop woning?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Connecting the inverter</span>"
+msgstr "<span class=\"header-box-shadow\">Aansluiten omvormer</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "String 1 (Note: always 6 panels or more in 1 string)"
+msgstr "String 1 ( Let op: altijd 6 panelen of meer in 1 string )"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "String 2 (Note: always 6 panels or more in 1 string)"
+msgstr "String 2 ( Let op: altijd 6 panelen of meer in 1 string )"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Accessibility of the home and the roof</span>"
+msgstr "<span class=\"header-box-shadow\">Bereikbaarheid van de woning en het dak</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there a free space for scaffolding?"
+msgstr "Is er een vrije ruimte voor opstelling van een steiger aanwezig?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is a special provision required (telehandler / lift / aerial platform)"
+msgstr "Is er een speciale voorziening nodig ( verreiker / lift / hoogwerker )"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What is the condition of the surface on which the scaffolding is placed?"
+msgstr "Wat is de toestand van de ondergrond waar de steiger op geplaatst wordt"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What is the accessibility of the rear"
+msgstr "Hoe is de bereikbaarheid van de achterzijde"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Use must be made of the public road for the erection of scaffolding or facilities"
+msgstr "Dient er gebruik gemaakt te worden van de openbare weg voor de opstelling van steiger of voorziening"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Access to the roof / territory of the neighbors is required"
+msgstr "Is toegang tot het dak/grondgebied van de buren nodig"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Walking distance from bus to roof access"
+msgstr "Loopafstand van bus naar daktoegang"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there an extension / obstacle present that hinders the direct installation of scaffolding or roof lift?"
+msgstr "Is er een aanbouw/opstakels aanwezig die de directe opstelling van steiger of daklift belemmert"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Roof</span>"
+msgstr "<span class=\"header-box-shadow\">Dak</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What type (s) of roof is it?"
+msgstr "Welk type(n) dak betreft het"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What is the condition of the roof?"
+msgstr "Wat is de staat van het dak?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is asbestos incorporated in the roof? And is the customer aware of the consequences?"
+msgstr "Zit er asbest in het dak verwerkt? En is de klant op de hoogte van de gevolgen?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What is the height of the gutter?"
+msgstr "Wat is de hoogte van de goot?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Slanted roof</span>"
+msgstr "<span class=\"header-box-shadow\">Schuin Dak</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What is the slope?"
+msgstr "Wat is de hellingshoek?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What type of roofing is it?"
+msgstr "Welk type dakbedekking betreft het "
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Are the pans screwed or hooked?"
+msgstr "Zijn de pannen geschroefd of gehaakt?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Flat roof</span>"
+msgstr "<span class=\"header-box-shadow\">Plat Dak</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there gravel on the roof?"
+msgstr "Is er grind aanwezig op het dak?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "What type (s) of roofing is it?"
+msgstr "Welk type(n) dakbedekking betreft het "
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there a roof terminal for the string cabling"
+msgstr "Zit er een dakdoorvoer voor de stringbekabeling"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Fuse box</span>"
+msgstr "<span class=\"header-box-shadow\">Meterkast</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there a main switch?"
+msgstr "Is er een hoofdschakelaar aanwezig?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there a free space to install the earth leakage circuit breaker?"
+msgstr "Is er een vrije ruimte om de aardlekautomaat te plaatsen?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Inverter</span>"
+msgstr "<span class=\"header-box-shadow\">Omvormer</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Location of the inverter"
+msgstr "Plaats van de omvormer"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there sufficient free space around the inverter for cooling / ventilation purposes?"
+msgstr "Is er voldoende vrije ruimte om de omvormer t.b.v. koeling/ventilatie? "
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is a sturdy rear wall available?"
+msgstr "Is er een stevige achterwand beschikbaar?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Can a washing machine connection be used?"
+msgstr "Kan moet er gebruik gemaakt worden van een wasmachine aansluiting?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Cabling</span>"
+msgstr "<span class=\"header-box-shadow\">Bekabeling</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Can an empty pipe be used?"
+msgstr "Kan er gebruik worden gemaakt van een loze leiding?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Description cable route panels -> inverter"
+msgstr "Beschrijving kabel route panelen -> omvormer"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Description cable inverter -> meter box"
+msgstr "Beschrijving kabel omvormer -> meterkast"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Description UTP cable converter -> meter box"
+msgstr "Beschrijving UTP kabel omvormer -> meterkast"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Does the customer want to mount a cable himself?"
+msgstr "Wil de klant zelf een kabel monteren?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "When using an existing cable what is the diameter of the cable?"
+msgstr "Bij gebruik van een bestaande kabel wat is de diameter van de kabel?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "The internet connection can be wired"
+msgstr "Kan de internetverbinding bekabeld tot stand worden gebracht"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "<span class=\"header-box-shadow\">Others</span>"
+msgstr "<span class=\"header-box-shadow\">Overige</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Is there any entrepreneurship?"
+msgstr "Is er enige sprake van ondernemerschap?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Does the name (incl. Initials) on the energy bill / contract match the name on the quote?"
+msgstr "Komt de naam (incl. initialen) op de energierekening/contract overeen met de naar op de offerte?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Do you fall under VAT exemption rules?"
+msgstr "Valt u onder uitzonderingsregels BTW?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+msgid "Note"
+msgstr "Notities"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.first_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model:ir.model.fields,field_description:formulier_type_3.field_sale_order__agreements_with_client
+#: model:ir.model.fields,field_description:formulier_type_3.field_project_task__agreements_with_client
+msgid "Other special agreements with client"
+msgstr "Overige speciale afspraken met opdrachtgever"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Roof 1"
+msgstr "Dak 1"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__house_three
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "House / Property"
+msgstr "Woning / Pand "
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__access
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Access"
+msgstr "Toegang"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__parking_spot_three
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Parking spot"
+msgstr "Parkeerplaats"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__obstacles_three
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Obstacles"
+msgstr "Opstakels"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__scaffolding_site
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Scaffolding site"
+msgstr "Opstelplek Steiger"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof_2
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Roof 2"
+msgstr "Dak 2"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Roof 3"
+msgstr "Dak 3"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__meter_cupboard_1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Meter cupboard 1"
+msgstr "Meterkast 1"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__meter_cupboard_2
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Meter cupboard 2"
+msgstr "Meterkast 2"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__place_inverter_comes
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Place where the inverter comes"
+msgstr "Plaats waar de omvormer komt"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cable_gradient_panels_inverter
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Cable gradient panels -> inverter"
+msgstr "Kabel verloop panelen -> omvormer"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cable_converter_converter_meter
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Cable converter converter -> meter box"
+msgstr "Kabel verloop omvormer -> meterkast"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof_plan
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "Something special: Roof plan"
+msgstr "Iets speciaals: Dakplan"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__drawing_field_hand
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.question_formulier_image
+msgid "A drawing field where you with your hand"
+msgstr "Een tekenveld waarbij je met je hand"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__any_damage_detected__0
+msgid "Yes, I fill in the others for what was damaged"
+msgstr "Ja ik vul bij overige in wat er beschadigd was"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__system_vendor_name
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Vendor name of the system"
+msgstr "Naam verkoper van het systeem"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__email_address
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "E-mail address"
+msgstr "E-mailadres"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__mechanic_name_1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Mechanic Name 1"
+msgstr "Naam Monteur 1"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__mechanic_name_2
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Mechanic Name 2"
+msgstr "Naam Monteur 2"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__mechanic_name_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Mechanic Name 3"
+msgstr Naam Monteur 3"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__commencement_work_date
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Date of commencement of work"
+msgstr "Datum start werkzaamheden"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__delivery_date
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Delivery date"
+msgstr "Datum oplevering"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__any_damage_detected
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have any damage already been detected at the start of the work?"
+msgstr "Zijn er reeds aanwezige beschadigingen geconstateerd bij aanvang werkzaamheden?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__solar_panels_installed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have the solar panels been installed in accordance with the roof plan?"
+msgstr "Zijn de zonnepanelen conform dakplan geplaatst?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__extra_solar_panels_installed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have additional solar panels been installed?"
+msgstr "Zijn er extra zonnepanelen gemonteerd?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__extra_solar_panels_installed__0
+msgid "Yes, enter the amount for other"
+msgstr "Ja vul bij overig in hoeveel"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__waterline_installed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have all plugs from the waterline been installed?"
+msgstr "Zijn alle stekkers uit de waterlijn gemonteerd?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cables_separated
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Are the plus and minus cables separated?"
+msgstr "Liggen de plus- en minkabels uit elkaar?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__pans_pushed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have all pans been pushed back?"
+msgstr "Zijn alle pannen terug geschoven?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_representatives_inspection
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Is the inspection by the representatives correct?"
+msgstr "Is de schouw door de vertegenwoordigers juist?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_roof_plan_fit
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Does the roof plan fit?"
+msgstr "Past het dakplan?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__what_panel_installed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "What panels have been installed?"
+msgstr "Wat voor panelen zijn er geplaatst?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "<span class=\"header-box-shadow\">General</span>"
+msgstr "<span class=\"header-box-shadow\">Algemeen</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "<span class=\"header-box-shadow\">Roofing</span>"
+msgstr "<span class=\"header-box-shadow\">Dakwerk</span>"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "<span class=\"header-box-shadow\">Electric</span>"
+msgstr "<span class=\"header-box-shadow\">Elektrisch</span>"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cabling_length
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Length of the used string cabling?"
+msgstr "Lengte van de gebruikte stringbekabeling?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cable_thickness
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Applied cable thickness of string cabling?"
+msgstr "Toegepaste kabel dikte stringbekabeling?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__inverter_length
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Length of the inverter wiring used -> meter box?"
+msgstr "Lengte van de gebruikte bekabeling van de omvormer -> meterkast?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__inverter_cable_thickness
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Applied cable thickness of the inverter -> meter box?"
+msgstr "Toegepaste kabel dikte van de omvormer -> meterkast?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__earthing_total_length
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Is the earthing correctly mounted and what total length has been used?"
+msgstr "Is de aarding juist gemonteerd en welke totale lengte is toegepast?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__utp_total_length
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Is the UTP cable installed correctly and what total length has been used?"
+msgstr "Is de UTP kabel juist gemonteerd en welke totale lengte is toegepast?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__measured_voltage
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Measured string voltage - Value"
+msgstr "Gemeten stringspanning - Waarde"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__measured_panels_voltage
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Measured String Voltage - Panels"
+msgstr "Gemeten stringspanning - Panelen"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__measured_optimizers_voltage
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Measured string voltage - Number of optimizers"
+msgstr "Gemeten stringspanning - Aantal optimizers"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__internet_via
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Internet connection established via?"
+msgstr "Internetverbinding tot stand gebracht via?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__internet_via__2
+msgid "Socket boxes"
+msgstr "Stopcontact kastjes"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__internet_via__3
+msgid "Customer arranges itself"
+msgstr "Regelt klant zelf"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__internet_via__4
+msgid "No internet i.o.m. customer agreement"
+msgstr "Geen internet i.o.m. akkoord klant"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_home_installation_ok
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Is the home installation still OK after installing the earth leakage circuit breaker?"
+msgstr "Is de huisinstallatie nog in orde na het plaatsen van de aardlekautomaat?"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "<span class=\"header-box-shadow\">Others</span>"
+msgstr "<span class=\"header-box-shadow\">Overige</span>"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__extra_panels
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "How many panels have been installed extra?"
+msgstr "Hoeveel panelen zijn er extra gemonteerd?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__installation_damages
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "What damages have been detected or made during the installation process?"
+msgstr "Welke beschadigingen zijn er geconstateerd of gemaakt tijdens het installatie proces?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__other_remarks
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Other remarks"
+msgstr "Overige opmerkingen"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "<span class=\"header-box-shadow\">Closure to be completed by the customer</span>"
+msgstr "<span class=\"header-box-shadow\">Afsluiting in te vullen door de de klant</span>"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_engineers_work_safely
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Did our engineers work safely with scaffolding or fall protection?"
+msgstr "Hebben onze monteurs veilig gewerkt met steigers of valbeveiliging?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_workplace_clean
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Has the workplace been left clean?"
+msgstr "Is de werkplek schoon achtergelaten?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__is_sufficient_explanation
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Have you received sufficient explanation during installation?"
+msgstr "Heeft u voldoende uitleg gekregen bij de installatie?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__setting_explanation
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Did you have an explanation when setting up the monitoring app?"
+msgstr "Heeft u uitleg gehad bij het instellen van de monitorings app?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__any_comments
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Do you have any comments for us?"
+msgstr "Heeft u nog opmerkingen voor ons?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__use_home_photos
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Can we use photos of your home as a reference on the internet?"
+msgstr "Mogen wij foto's van uw woning gebruiken als referentie op internet?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__other_interested_customers
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Do you have other customers who are also interested in our services?"
+msgstr "Heeft u nog andere klanten welke ook geïnteresseerd zijn in onze diensten? Bij eventuele"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__receive_order
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "order you receive a whopping € 100 application premium."
+msgstr "opdracht ontvangt u maar liefst € 100,- aanbrengpremie."
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__other_discussed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_form_template
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Other discussed matters"
+msgstr "Overige besproken zaken"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cables_together_1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Are the plus and minus cables together 1"
+msgstr "Liggen de plus- min kabels bij elkaar 1"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cables_together_2
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Are the plus and minus cables together 2"
+msgstr "Liggen de plus- min kabels bij elkaar 2"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cables_together_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Are the plus and minus cables together 3"
+msgstr "Liggen de plus- min kabels bij elkaar 3"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__pans_pushed_back
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "All pans pushed back"
+msgstr "Alle pannen terug geschoven"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__photo_roof_1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Overview photo roof 1"
+msgstr "Overzichts foto dak 1"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__photo_roof_2
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Overview photo roof 2"
+msgstr "Overzichts foto dak 2"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__photo_roof_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Overview photo roof 3"
+msgstr "Overzichts foto dak 3"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__outlet_inverter_roof
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo roof outlet inverter -> roof"
+msgstr "Foto dakdoorvoer omvormer -> dak"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__work_switch
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo opened work switch"
+msgstr "Foto geopende werkschakelaar"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__photo_placement_inverter
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Overview photo placement inverter + work switch"
+msgstr "Overzichtsfoto plaatsing omvomer + werkschakelaar"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__inverter_in_operation
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo display inverter in operation"
+msgstr "Foto display omvormer in werking"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__inverter_internet
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo display inverter internet"
+msgstr "Foto display omvormer internet"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cupboard_opened
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo meter cupboard opened with automatic"
+msgstr "Foto meterkast geopend voorzien van automaat"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__cupboard_closed
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Meter cupboard closed"
+msgstr "Foto meterkast gesloten"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__optimizers_serial_number
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo serial numbers optimizers (Readable!)"
+msgstr "Foto serienummers optimizers (Leesbaar!)"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__inverter_serial_number
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.third_question_formulier_image
+msgid "Photo serial number inverter"
+msgstr "Foto serienummer omvormer"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__energy_use
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "How much energy You use ?"
+msgstr "Hoeveel energie gebruik je ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_product_template__product_type
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__pf_solar_quote_type
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "PF quote type"
+msgstr "PF offerte type"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__0
+msgid "Solar Panel"
+msgstr "Zonnepaneel"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__1
+msgid "Converter"
+msgstr "omvormer"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__3
+msgid "Flat Roof"
+msgstr "Plat dak"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__4
+msgid "Slanted Roof"
+msgstr "Schuin Dak"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__5
+msgid "Mix Roof"
+msgstr "Meerdere Daken"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__product_type__2
+msgid "Discount"
+msgstr "Korting"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__energy_wat_piek
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Energy Wat Piek Calclulation"
+msgstr "Energie Watt Piek Berekening"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__need_converter
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Do You need Converter ?"
+msgstr "Heeft u converter nodig ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__converter_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which converter we need ?"
+msgstr "Welke converter hebben we nodig ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_product_template__min_product_range
+msgid "Minimum Range"
+msgstr "Minimum bereik"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_product_template__max_product_range
+msgid "Maximum Range"
+msgstr "Maximum bereik"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_product_template__max_product_range
+msgid "Maximum Range"
+msgstr "Maximum bereik"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__select_roof__0
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__pf_select_roof__3
+msgid "Flat Roof"
+msgstr "Plat dak"
+
+#. module: formulier_type_3
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__product_template__select_roof__1
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__pf_select_roof__3
+msgid "Slanted Roof"
+msgstr "Schuin Dak"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model:ir.model.fields.selection,name:formulier_type_3.selection__question_formulier__pf_select_roof__3
+msgid "Mix Roof"
+msgstr "Meerdere Daken"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_product_template__select_roof
+msgid "Roof"
+msgstr "Dak"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__pf_select_roof
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Is it a flat roof or a slanted roof ?"
+msgstr "Is het een plat dak of een schuin dak ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which Flat roof system You want ?"
+msgstr "Welk platdeksysteem wilt u?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__roof_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which Slanted roof system You want ?"
+msgstr "Welk hellend daksysteem wilt u?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__installation_time
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "How many time needed for installation ?"
+msgstr "Hoeveel tijd nodig voor installatie ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__solar_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which solar panel You want ?"
+msgstr "Welk zonnepaneel u wilt ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__location_correction
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Location Correction"
+msgstr "Ligging correctie"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__location_calculation
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Location Calculations"
+msgstr "Ligging berekeningen"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__need_optimiser
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Do You need product Optimisers ?"
+msgstr "Heeft u product-optimalisers nodig?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__solar_watt_piek
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Solar Energy Watt Piek"
+msgstr "Zonne-energie Watt Piek"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__optimiser_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which optimiser You want ?"
+msgstr "Welke optimiser wilt u?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__stekkers_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which stekkers You want ?"
+msgstr "Welke stekkers wil je?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__remain_material
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which Overige Materialen You want ?"
+msgstr "Welke Overige Materialen wil je?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__vat_refund_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Which btw teruggave You want ?"
+msgstr "Welke btw teruggave wil je?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__need_discount
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Do You need Discount ?"
+msgstr "Heeft u Aanpassing nodig ?"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__discount_product
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Select Discount"
+msgstr "Selecteer Aanpassing"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__discount_qty
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+msgid "Discount Quantity"
+msgstr "Aanpassing Hoeveelheid"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__quote_template_id
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Choose your quote template"
+msgstr "Kies uw offerte template"
+
+#. module: formulier_type_3
+#: model:ir.model.fields,field_description:formulier_type_3.field_question_formulier__quote_pricelist_id
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "Choose your price list"
+msgstr "Kies uw prijs lijst"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.solar_quote_tab
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+msgid "PF Quote"
+msgstr "PF offerte"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+msgid "Create Quote"
+msgstr "Maak een offerte"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.formulier_solar_quote
+msgid "Quote Evaluation"
+msgstr "Offerte beoordeling"
+
+#. module: formulier_type_3
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.view_question_formulier_form
+#: model_terms:ir.ui.view,arch_db:formulier_type_3.solar_quote_tab
+msgid "PF Quote"
+msgstr "PF Offerte"
+

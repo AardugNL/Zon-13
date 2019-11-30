@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_order_form_inherit_white_label" model="ir.ui.view">
+            <field name="name">purchase.order.form.inherit.white.label</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field name="XA_box_quantity" invisible="1"/>
+                    <field name="XA_box_square_meter" invisible="1"/>
+                    <field name="XA_box_weight" invisible="1"/>
+                    <field name="XA_pallet_boxes" invisible="1"/>
+                    <field name="XA_pallet_square_meter" invisible="1"/>
+                    <field name="XA_pallet_weight" invisible="1"/>
+                    <widget name="purchase_box_at_date_widget" width="0.1"/>
+                </field>
+            </field>
+        </record>
+
+        <template id="purchase_order_line_view_list_inherit_white_label" name="purchase.order.line.view.list.inherit.white.label" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/white_label/static/src/js/purchase_box_at_date_widget.js"></script> 
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

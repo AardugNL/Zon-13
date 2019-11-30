@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_order_form_inherit_white_label" model="ir.ui.view">
+            <field name="name">view.order.form.inherit.white.label</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="product_template_id" position="before">
+                    <field name="XA_type_show"/>
+                    <field name="XA_box_quantity" invisible="1"/>
+                    <field name="XA_box_square_meter" invisible="1"/>
+                    <field name="XA_box_weight" invisible="1"/>
+                    <field name="XA_pallet_boxes" invisible="1"/>
+                    <field name="XA_pallet_square_meter" invisible="1"/>
+                    <field name="XA_pallet_weight" invisible="1"/>
+                    <widget name="box_at_date_widget" width="0.1"/>
+                </field>
+                <xpath expr="//tree/field[@name='product_uom']" position="after">
+                    <field name="XA_box"/>
+                </xpath>
+                <field name="user_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="payment_term_id" position="after">
+                    <field name="user_id"/>
+                    <field name="source_id"/>
+                </field>
+            </field>
+        </record>
+
+        <template id="sale_order_line_view_list_inherit_white_label" name="sale.order.line.view.list.inherit.white.label" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/white_label/static/src/js/box_at_date_widget.js"></script> 
+            </xpath>
+        </template>
+
+        <record id="sale_view_inherit123_inherit_white_label" model="ir.ui.view">
+            <field name="name">sale.view.inherit123.inherit.white.label</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_crm.sale_view_inherit123"/>
+            <field name="arch" type="xml">
+                <field name="source_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * online_opportunity_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-20 12:43+0000\n"
+"PO-Revision-Date: 2019-03-20 12:43+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Question Type"
+msgstr "vraag type"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "City"
+msgstr "Stad"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Zip"
+msgstr "Postcode"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Country"
+msgstr "Land"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Save"
+msgstr "Opslaan"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Street"
+msgstr "Straat"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Last Name"
+msgstr "Achter Naam"
+
+#. module: online_opportunity_form
+#: selection:crm.lead,customer_type:0
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Formulier one"
+msgstr "Formulier een"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "First Name"
+msgstr "Voor Naam"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Email"
+msgstr "E-mail"
+
+#. module: online_opportunity_form
+#: selection:crm.lead,customer_type:0
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "EC intake PV"
+msgstr "EC intake PV"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "EC Category"
+msgstr "EC-categorie"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Title"
+msgstr "Titel"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "EC Lead Source"
+msgstr "EC Lead Source"
+
+#. module: online_opportunity_form
+#: selection:crm.lead,customer_type:0
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "EC intake ISO"
+msgstr "EC intake ISO"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_template
+msgid "Describe the lead....."
+msgstr "Beschrijf de lead....."
+
+#. module: online_opportunity_form
+#: model:crm.stage,name:online_opportunity_form.stage_quote_external
+msgid "Quotes External"
+msgstr "Offerte Extern"
+
+#. module: online_opportunity_form
+#: model:ir.ui.view,arch_db:online_opportunity_form.opportunity_link
+msgid "Opportunity"
+msgstr "Analyse"

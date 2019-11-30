@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sale_view_inherit">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/group/field[@name='payment_term_id']" position="after">
+                    <field name="sale_alias"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]" position="after">
+                    <page name="attachments" string="Pictures">
+                        <field name="attachment_ids" widget="many2many_kanban">
+                            <kanban quick_create="false" create="true" delete="true">
+                                <field name="name"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="oe_kanban_global_click" style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey; font-weight: bold;">
+                                            <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('ir.attachment', 'datas', record.raw_value)" class="oe_avatar oe_kanban_avatar_smallbox"/>
+                                                <div class="oe_module_desc">
+                                                    <field name="name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="task_view_inherit">
+            <field name="name">project.task.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="date_last_stage_update" position="after">
+                    <field name="task_alias" />
+                </field>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page name="attachments" string="Pictures">
+                        <field name="attachment_ids" widget="many2many_kanban">
+                            <kanban quick_create="false" create="true" delete="true">
+                                <field name="name"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="oe_kanban_global_click" style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey; font-weight: bold;">
+                                            <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('ir.attachment', 'datas', record.raw_value)" class="oe_avatar oe_kanban_avatar_smallbox"/>
+                                                <div class="oe_module_desc">
+                                                    <field name="name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="opportunity_form_view">
+            <field name="name">opportunity.code.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+                <field name="team_id" position="after">
+                    <field name="opp_alias"/>
+                </field>
+                <xpath expr="//sheet/notebook/page[2]" position="after">
+                    <page name="attachments" string="Pictures">
+                        <field name="attachment_ids" widget="many2many_kanban">
+                            <kanban quick_create="false" create="true" delete="true">
+                                <field name="name"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="oe_kanban_global_click" style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey; font-weight: bold;">
+                                            <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('ir.attachment', 'datas', record.raw_value)" class="oe_avatar oe_kanban_avatar_smallbox"/>
+                                                <div class="oe_module_desc">
+                                                    <field name="name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="quotation_images_form_view_inherit">
+            <field name="name">question.formulier.form</field>
+            <field name="model">question.formulier</field>
+            <field name="inherit_id" ref="quotation_images_feedback.view_question_formulier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='time']" position="after">
+                    <field name="formulier_alias"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[@name='task']" position="after">
+                    <page name="attachments" string="Pictures">
+                        <field name="attachment_ids" mode="kanban">
+                            <kanban string="Images">
+                                    <field name="name"/>
+                                    <field name="datas"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div class="oe_kanban_global_click">
+                                                <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                                <div class="o_kanban_image">
+                                                    <img t-if="record.datas.raw_value" t-att-src="'data:image/png;base64,'+record.datas.raw_value"/>
+                                                </div>
+                                                <div class="oe_kanban_details">
+                                                    <field name="name"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                                
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="datas" class="custom-image-size"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="attachment_view_inherit">
+            <field name="name">ir.attachment.form</field>
+            <field name="model">ir.attachment</field>
+            <field name="inherit_id" ref="base.view_attachment_form"/>
+            <field name="arch" type="xml">
+                <field name="mimetype" position="after">
+                    <field name="task_id" invisible="1"/>
+                    <field name="order_id" invisible="1"/>
+                    <field name="lead_id" invisible="1"/>
+                    <field name="formulier_id" invisible="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

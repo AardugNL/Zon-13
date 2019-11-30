@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="res_users_form_view">
+        <field name="name">res.users.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="project_formulier" string="Project Formulier">
+                    <group>
+                        <group>
+                            <field name="customer_type" widget="many2many_tags"/>
+                            <field name="template_id" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="lead_category"/>
+                            <field name="lead_lead_source"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_template_pf_inherit" model="ir.ui.view">
+        <field name="name">product.template.ec.iso</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='type']" position="before">
+                    <field name="priority"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="product_product_pf_inherit" model="ir.ui.view">
+        <field name="name">product.product.ec.iso</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='type']" position="before">
+                    <field name="priority"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
