@@ -15,7 +15,6 @@
     <record id="action_fetchmail_mail_reminder" model="ir.actions.server">
         <field name="name">Reminder mail for Helpdesk</field>
         <field name="model_id" ref="model_helpdesk_ticket"/>
-        <field name="condition">True</field>
         <field name="type">ir.actions.server</field>
         <field name="state">code</field>
         <field name="code">self.create_helpdesk_from_email_body(cr,uid,context['active_id'],context=context)</field>
