@@ -10,10 +10,10 @@ class ProjectTask(models.Model):
     # code = fields.Char(
     #     string='Task Number', required=True, default="/", readonly=True)
 
-    _sql_constraints = [
-        ('project_task_unique_code', 'UNIQUE (code)',
-         _('The code must be unique!')),
-    ]
+    # _sql_constraints = [
+    #     ('project_task_unique_code', 'UNIQUE (code)',
+    #      _('The code must be unique!')),
+    # ]
 
     @api.model
     def create(self, vals):
