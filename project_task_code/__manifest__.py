@@ -26,6 +26,6 @@
         "views/project_view.xml",
     ],
     'installable': True,
-    # "pre_init_hook": "create_code_equal_to_id",
-    # "post_init_hook": "assign_old_sequences",
+    "pre_init_hook": "create_code_equal_to_id",
+    "post_init_hook": "assign_old_sequences",
 }

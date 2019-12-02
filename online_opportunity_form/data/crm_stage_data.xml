@@ -2,7 +2,6 @@
 <odoo noupdate="1">
     <record model="crm.stage" id="stage_quote_external">
         <field name="name">Quotes External</field>
-        <field name="probability">80</field>
         <field name="on_change">1</field>
         <field name="sequence">4</field>
     </record>
