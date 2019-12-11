@@ -32,8 +32,8 @@ class ResCompany(models.Model):
     # not use more , but still write these fields for avoid existing data error    
     header_image = fields.Binary("Header Image", attachment=True)
     footer_blank_image = fields.Binary("Footer Image", attachment=True)
-    file_name_footer_blank = fields.Char('File Name')
-    file_name_header = fields.Char('File Name')
+    file_name_footer_blank = fields.Char('File Name Footer')
+    file_name_header = fields.Char('File Name Header')
     for_all_report = fields.Boolean("Use images for all report")
 
     @api.onchange('for_all_report')
