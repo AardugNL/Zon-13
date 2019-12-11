@@ -1,24 +1,31 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-# Part of Aardug. (Website: www.aardug.nl).
+# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
 
 {
-    'name': 'Custom Header Footer For All Reports',
-    'version': '13.0.0.1',
+    'name': 'Custom Header Footer',
+    'version': '13.0',
     'category': 'Reports',
-    'author': 'Aardug, Arjan Rosman',
-    'website': 'http://www.aardug.nl/',
-    'support': 'arosman@aardug.nl',
+    'author': 'Caret IT Solutions Pvt. Ltd.',
+    'website': 'http://www.caretit.com/',
     'description': """
+        Change Header/Footer content in reports of sale,invoice,stock records,
+        Based on Dropdown Tradmark(company) selection.
+        Add Dropdown field with 4 options on Model sale,invoice and stock.
+        Add 4 different images for header of report and add also for same footer.
     """,
-    'depends': ['web'],
-    'data': ['data/paperformate_data.xml',
-             'views/res_company.xml',
-             'report/report_template.xml'],
+    'depends': ['crm', 'sale', 'sale_crm', 'account', 'stock'],
+    'data': [
+            'data/paperformate_data.xml',
+            'views/view_res_company.xml',
+            'views/view_models.xml',
+            'report/ec_layout.xml',
+            'report/sale_invoice_reports.xml',
+        ],
     'installable': True,
     'application': False,
 }

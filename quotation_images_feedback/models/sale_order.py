@@ -76,8 +76,9 @@ class SaleOrder(models.Model):
             # custom object replacement for sale order fields value 
             c_variables = re.findall(
                     b'\${custom:.*?}', description)
-            c_variables.extend(re.findall(
-                    b'\${custom:.*?}', footer))
+            if footer:
+                c_variables.extend(re.findall(
+                        b'\${custom:.*?}', footer))
             if c_variables:
                 for custom in list(set(c_variables)):
                     custom_object = custom.decode('utf-8')
@@ -101,8 +102,9 @@ class SaleOrder(models.Model):
                 # dynamic value for custom and project formulier object
                 f_variables = re.findall(
                     b'\${formulier:.*?}', description)
-                f_variables.extend(re.findall(
-                    b'\${formulier:.*?}', footer))
+                if footer:
+                    f_variables.extend(re.findall(
+                        b'\${formulier:.*?}', footer))
                 if f_variables:
                     for custom in  list(set(f_variables)):
                         custom_object = custom.decode('utf-8')
@@ -122,8 +124,9 @@ class SaleOrder(models.Model):
                 # dynamic value for opportunity
                 o_variables = re.findall(
                     b'\${opportunity:.*?}', description)
-                o_variables.extend(re.findall(
-                    b'\${opportunity:.*?}', footer))
+                if footer:
+                    o_variables.extend(re.findall(
+                        b'\${opportunity:.*?}', footer))
                 if o_variables:
                     for oppo in list(set(o_variables)):
                         oppo_object = oppo.decode('utf-8')
@@ -173,10 +176,12 @@ class SaleOrder(models.Model):
             for key, val in imgDict.items():
                 description = description.replace(
                     key.encode('utf-8'), val.encode('utf-8'))
-                footer = footer.replace(
-                    key.encode('utf-8'), val.encode('utf-8'))
+            if footer:
+                for key, val in imgDict.items():
+                    footer = footer.replace(
+                        key.encode('utf-8'), val.encode('utf-8'))
+                self.website_desc_footer = footer
             self.website_description = description
-            self.website_desc_footer = footer
         return self.website_description
 
 class OrderTemplate(models.Model):

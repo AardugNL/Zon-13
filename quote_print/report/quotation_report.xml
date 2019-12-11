@@ -52,6 +52,7 @@
                 <t t-set="data_report_margin_top" t-value="50"/>
                 <t t-set="data_report_header_spacing" t-value="50"/>
                 <t t-foreach="docs" t-as="sale_order">
+                    <t t-set='doc' t-value="sale_order"/>
                     <t t-call="quote_print.web_quotation_content_custom" t-lang="sale_order.partner_id.lang"/>
                 </t>
             </t>

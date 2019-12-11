@@ -25,11 +25,11 @@
 
 <template id="report_project_task_document">
     <t t-call="so_project_task_material.external_layout_header_custom_task">
-        <t t-set="doc" t-value="doc.with_context({'lang':user.lang})" />
+        <!-- <t t-set="doc" t-value="doc.with_context({'lang':user.lang})" /> -->
         <div class="page">
-            <table class="table table-sm">
+            <table class="table table-condensed table-bordered" style="font-size:14px;">
                 <tr>
-                    <td><strong>Project</strong></td>
+                    <td ><strong> Project</strong></td>
                     <td>
                         <span t-field="doc.project_id.name"/>
                     </td>
@@ -42,7 +42,7 @@
                     
                     <td><strong>Assigning Date</strong></td>
                     <td>
-                        <span t-field="doc.date_start"/>
+                        <span t-field="doc.date_assign"/>
                     </td>
                     <td><strong>Deadline</strong></td>
                     <td>
@@ -66,11 +66,11 @@
                     
                     <td><strong>Start Date</strong></td>
                     <td>
-                        <span t-field="doc.date_start"/>
+                        <!-- <span t-field="doc.date_start"/> -->
                     </td>
                     <td><strong>Calendar Notes</strong></td>
                     <td>
-                        <span t-field="doc.notes"/>
+                        <!-- <span t-field="doc.notes"/> -->
                     </td>
                 </tr>
 
@@ -130,12 +130,12 @@
 
             <h3>Planned material</h3>
 
-            <table class="table table-sm">
+            <table class="table table-bordered" style="font-size:12px;">
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
+                        <th><strong>Product</strong></th>
+                        <th class="table-active text-left">Description</th>
+                        <th class="table-active text-left">Quantity</th>
                         <th>Unit of Measure</th>
                     </tr>
                </thead>

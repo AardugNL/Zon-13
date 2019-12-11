@@ -1,0 +1,365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* two_custom_header_footer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-23 07:11+0000\n"
+"PO-Revision-Date: 2019-05-23 07:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "&amp;nbsp;<span>on</span>"
+msgstr "&amp;nbsp;<span>på</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr "&amp;nbsp;<span>på</span>&amp;nbsp;"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Customer Code:</span>"
+msgstr "<span>Kunde kode:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Description:</span>"
+msgstr "<span>Beskrivelse:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Description</span>"
+msgstr "<span>Beskrivelse</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<span>Disc.(%)</span>"
+msgstr "<span>Rabat(%)</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Due Date:</span>"
+msgstr "<span>Forfaldsdato:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Invoice Date:</span>"
+msgstr "<span>Fakturadato:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Proforma faktura # </span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Quantity</span>"
+msgstr "<span>Antal</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Reference:</span>"
+msgstr "<span>Reference:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Serial Number</span>"
+msgstr "<span>serienummer</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Source Document</span>"
+msgstr "<span>Kildedokument</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_inhr
+msgid "<span>Source:</span>"
+msgstr "<span>Kilde:</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Taxes</span>"
+msgstr "<span>Moms</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<span>Unit Price</span>"
+msgstr "<span>Stk. pris</span>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<strong class=\"text-center\">Scan me with your banking app.</strong><br/><br/>"
+msgstr "<strong class=\"text-center\">Scan mig med din bank app.</strong><br/><br/>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "<strong class=\"text-center\">The SEPA QR Code informations are not set correctly.</strong><br/>"
+msgstr "<strong class=\"text-center\">SEPA QR-kodeinformationerne er ikke korrekt opsat.</strong><br/>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_with_payments_2
+msgid "<strong>Amount Due</strong>"
+msgstr "<strong>Skyldigt beløb</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "<strong>Customer Reference:</strong>"
+msgstr "<strong>Kundereference:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Date Ordered:</strong>"
+msgstr "<strong>Ordredato:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "<strong>Date</strong>"
+msgstr "<strong>Dato</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Expiration Date:</strong>"
+msgstr "<strong>Udløbsdato:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>Konteringsgruppe bemærkning:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Incoterms:</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "<strong>Order</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>Betalingsbetingelser:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "<strong>Product</strong>"
+msgstr "<strong>Produkt</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Antal</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Quotation Date:</strong>"
+msgstr "<strong>Tilbudsdato:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>Sælger:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>Leveringsadresse:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Signature</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>Deres reference:</strong>"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "All items couldn't be shipped, the remaining ones will be shipped as soon as they become available."
+msgstr "Ikke alle varer kunne leveres. De resterende vil blive leveret så snart de er til rådighed. "
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Amount"
+msgstr "Beløb"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Cancelled Invoice"
+msgstr "Annulleret faktura"
+
+#. module: two_custom_header_footer
+#: model:ir.model,name:two_custom_header_footer.model_res_company
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Credit Note"
+msgstr "Kreditnota"
+
+#. module: two_custom_header_footer
+#: model:ir.actions.report,name:two_custom_header_footer.action_report_delivery_2
+msgid "Delivery Slip 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Draft Invoice"
+msgstr "Proforma faktura"
+
+#. module: two_custom_header_footer
+#: model:ir.model.fields,field_description:two_custom_header_footer.field_res_company__file_name_footer_image2
+#: model:ir.model.fields,field_description:two_custom_header_footer.field_res_company__file_name_header_image2
+msgid "File Name"
+msgstr "Filnavn"
+
+#. module: two_custom_header_footer
+#: model:ir.model.fields,field_description:two_custom_header_footer.field_res_company__footer_image2
+msgid "Footer Image 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model:ir.model.fields,field_description:two_custom_header_footer.field_res_company__header_image2
+msgid "Header Image 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: two_custom_header_footer
+#: model:ir.actions.report,name:two_custom_header_footer.account_invoices_2
+msgid "Invoices 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model:ir.actions.report,name:two_custom_header_footer.account_invoices_without_payment_2
+msgid "Invoices without Payment 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Invoicing address:"
+msgstr "Faktureringsadresse"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Invoicing and shipping address:"
+msgstr "Fakturerings- og leveringsadresse"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_delivery_document_2
+msgid "Lot/Serial Number"
+msgstr "Lot/serienummer"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_inhr
+msgid "Order Confirmation #"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Order confirmation #"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_with_payments_2
+msgid "Paid on"
+msgstr "Betalt den"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Please use the following communication for your payment :"
+msgstr "Anvend venligst følgende oplysninger i din betaling:"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Quantity"
+msgstr "Antal"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Quotation #"
+msgstr "Tilbud #"
+
+#. module: two_custom_header_footer
+#: model:ir.actions.report,name:two_custom_header_footer.action_report_saleorder_2
+msgid "Quotation / Order 2"
+msgstr ""
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Taxes"
+msgstr "Moms"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Total Price"
+msgstr "Total pris"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_saleorder_document_2
+msgid "Unit Price"
+msgstr "Enhedspris"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Vendor Bill"
+msgstr "Leverandørfaktura"
+
+#. module: two_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:two_custom_header_footer.report_invoice_document_2
+msgid "Vendor Credit Note"
+msgstr "Leverandør kreditnota"
+

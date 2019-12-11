@@ -4,16 +4,23 @@
         <template id="web_quotation_first_page" name="Quotation Content Custom">
             <div style="width:100%;">
                 <div class="header" style="margin-left:-15px;margin-right:-15px;">
-                    <t t-if="sale_order.sale_order_template_id">
-                        <t t-if="sale_order.sale_order_template_id.header_image">
-                            <img t-att-src="'data:image/png;base64,%s' % to_text(sale_order.sale_order_template_id.header_image)" style="max-height:150px;width:100%;"/>
-                        </t>
-                        <t t-else="else">
-                            <img t-if="sale_order.company_id.header_image" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.company_id.header_image)" style="max-height: 150px;width:100%;"/>
-                        </t>
+                    <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.header_image">
+                        <img t-att-src="'data:image/png;base64,%s' %to_text(sale_order.sale_order_template_id.header_image)" style="max-height:150px;width:100%;"/>
                     </t>
-                    <t t-if="not sale_order.sale_order_template_id">
-                        <img t-if="sale_order.company_id.header_image" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.company_id.header_image)" style="max-height: 150px;width:100%;"/>
+                    <t t-elif="sale_order.trademark_type == 'company1'">
+                        <img t-if="sale_order.company_id.report_header_one" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_one)" style="max-height:150px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company2'">
+                        <img t-if="sale_order.company_id.report_header_two" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_two)" style="max-height:150px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company3'">
+                        <img t-if="sale_order.company_id.report_header_three" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_three)" style="max-height:150px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company4'">
+                        <img t-if="sale_order.company_id.report_header_four" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_four)" style="max-height:150px;width:100%;"/>
+                    </t>
+                    <t t-elif="not sale_order.trademark_type">
+                        <img t-if="sale_order.company_id.logo" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.logo)" style="max-height:150px;width:100%;"/>
                     </t>
                 </div>
                 <div class="article page">
@@ -110,13 +117,23 @@
                     </div>
                 </div>
                 <div class="footer" style="margin-left:-15px;margin-right:-15px;">
-                    <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.isfooteradrsimg_first_page">
-                        <img t-if="sale_order.company_id.footeradrs_first_page_img" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.company_id.footeradrs_first_page_img)"
-                        style="max-height: 235px;width:100%;"/>
+                     <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.footer_image">
+                        <img t-att-src="'data:image/png;base64,%s' %to_text(sale_order.sale_order_template_id.footer_image)" style="max-height:235px;width:100%;"/>
                     </t>
-                    <t t-else="else">
-                        <img t-if="sale_order.company_id.footer_address_image" t-att-src="'data:image/png;base64,%s' % to_text(sale_order.company_id.footer_address_image)"
-                        style="max-height: 235px;width:100%;"/>
+                     <t t-elif="sale_order.trademark_type == 'company1'">
+                        <img t-if="sale_order.company_id.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_footer_one)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company2'">
+                        <img t-if="sale_order.company_id.report_footer_two" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_footer_two)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company3'">
+                        <img t-if="sale_order.company_id.report_footer_three" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_footer_three)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                    <t t-elif="sale_order.trademark_type == 'company4'">
+                        <img t-if="sale_order.company_id.report_footer_four" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_footer_four)" style="max-height: 235px;width:100%;"/>
+                    </t>
+                    <t t-else="">
+                        <img t-if="sale_order.company_id.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_footer_one)" style="max-height: 235px;width:100%;"/>
                     </t>
                 </div>
             </div>
