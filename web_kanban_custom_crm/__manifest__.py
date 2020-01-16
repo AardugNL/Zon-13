@@ -9,7 +9,7 @@
         2) server action is very helpfull to do any action on opportunity like autometically stage.
         3) custom action is to set activity on opportunity autometically.
     """,
-    'version': '13.0.0.1',
+    'version': '13.0.1.1',
     'depends':['crm'],
     'author': "Caret IT Soltions PVT. LTD.",
     'website': "http://caretit.com",
