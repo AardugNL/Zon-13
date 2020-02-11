@@ -16,7 +16,7 @@ class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     def _convert_opportunity_data(self, customer, team_id=False):
-        res = super(CrmLead,self)._convert_opportunity_data(customer=self.partner_id, team_id=False)
+        res = super(CrmLead,self)._convert_opportunity_data(customer, team_id)
         OpportunityConfig = self.env['opportunity.mail.configure']
         if self.lead_lead_source and self.lead_category and self.partner_id and len(self.zip) > 1:
             opportunity_config = OpportunityConfig.search([('lead_lead_source', '=', self.lead_lead_source.id),

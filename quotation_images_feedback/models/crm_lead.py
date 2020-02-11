@@ -34,7 +34,7 @@ class CrmLead(models.Model):
             if self.lead_category.name in ['aanbouw','hoek','gevel','groot deel']:
                 self.soort = self.lead_category.name
 
-        partner = self.partner_id
+        partner = self.partner_id or customer
         name = res.get('name') or self.name or ''
         question_frm_id = QuestionFormulier.create({
                                                     'name': name +' PF',
