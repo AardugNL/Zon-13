@@ -85,7 +85,44 @@ msgstr "Lead/Prospect"
 msgid "Sales Order"
 msgstr "Verkooporder"
 
+
 #. module: partner_salutation
-#: model:ir.model.fields,field_description:partner_salutation.field_sale_order__salutation_type
-msgid "Salutation Type"
-msgstr ""
+#: code:addons/partner_salutation/models/models.py:29
+#: code:addons/partner_salutation/models/models.py:64
+#: code:addons/partner_salutation/models/models.py:103
+#, python-format
+msgid "Best"
+msgstr "Beste"
+
+#. module: partner_salutation
+#: code:addons/partner_salutation/models/models.py:29
+#: code:addons/partner_salutation/models/models.py:64
+#: code:addons/partner_salutation/models/models.py:103
+#, python-format
+msgid "Hello"
+msgstr "Hallo"
+
+#. module: partner_salutation
+#: code:addons/partner_salutation/models/models.py:38
+#: code:addons/partner_salutation/models/models.py:78
+#: code:addons/partner_salutation/models/models.py:105
+#, python-format
+msgid "Dear"
+msgstr "Geachte"
+
+#. module: partner_salutation
+#: code:addons/partner_salutation/models/models.py:114
+#, python-format
+msgid "Mister"
+msgstr "heer"
+
+#. module: base
+#: model:res.partner.title,name:base.res_partner_title_mister
+msgid "Mister"
+msgstr "heer"
+
+#. module: partner_salutation
+#: code:addons/partner_salutation/models/models.py:114
+#, python-format
+msgid "Madam"
+msgstr "Mevrouw"

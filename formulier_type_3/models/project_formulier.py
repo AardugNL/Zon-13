@@ -10,7 +10,7 @@ class CrmThree(models.Model):
     _inherit = "crm.lead"
 
     customer_type = fields.Selection(
-        selection_add=[('formulier_three', 'EC intake PV')])
+        selection_add=[('formulier_three', 'Intake PV')])
 
 class QuestionFormulierThree(models.Model):
     """ Question Formulier Model inherit"""
