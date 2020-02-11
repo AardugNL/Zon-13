@@ -74,7 +74,7 @@ class Crm_Lead(models.Model):
     subject_opportunity = fields.Text(string="Subject On Opportunity")
 
     def _convert_opportunity_data(self, customer, team_id=False):
-        res = super(Crm_Lead,self)._convert_opportunity_data(customer=self.partner_id, team_id=False)
+        res = super(Crm_Lead,self)._convert_opportunity_data(customer, team_id)
         city = ''
         partner_name = ''
         street_name = ''
