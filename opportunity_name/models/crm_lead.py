@@ -74,29 +74,30 @@ class Crm_Lead(models.Model):
     subject_opportunity = fields.Text(string="Subject On Opportunity")
 
     def _convert_opportunity_data(self, customer, team_id=False):
+        res = super(Crm_Lead,self)._convert_opportunity_data(customer=self.partner_id, team_id=False)
         city = ''
         partner_name = ''
         street_name = ''
         street_number = ''
         lead_category = ''
         oldName = self.name
-        if self.partner_id.city:
-            city = self.partner_id.city
-        if self.partner_id.name:
-            partner_name = self.partner_id.name 
-        if self.partner_id.street_name:
-            street_name = self.partner_id.street_name
-        if self.partner_id.street_number or self.partner_id.street_number2:
-            street_number = self.partner_id.street_number or self.partner_id.street_number2
-        if self.lead_category.name:
-            lead_category = self.lead_category.name
-        merge = ''.join([
-                        tools.ustr(city+'-') if city else '',
-                        tools.ustr(partner_name+'-') if partner_name else '',
-                        tools.ustr(street_name+' ') if street_name else '',
-                        tools.ustr(street_number) if street_number else '',
-                        tools.ustr('-'+lead_category) if lead_category else ''
-                        ])
-        res = super(Crm_Lead,self)._convert_opportunity_data(customer=self.partner_id, team_id=False)
-        res.update({'subject_opportunity': oldName,'name': merge})
+        if customer:
+            if customer.city:
+                city = customer.city
+            if customer.name:
+                partner_name = customer.name 
+            if customer.street_name:
+                street_name = customer.street_name
+            if customer.street_number or customer.street_number2:
+                street_number = customer.street_number or customer.street_number2
+            if self.lead_category.name:
+                lead_category = self.lead_category.name
+            merge = ''.join([
+                            tools.ustr(city+'-') if city else '',
+                            tools.ustr(partner_name+'-') if partner_name else '',
+                            tools.ustr(street_name+' ') if street_name else '',
+                            tools.ustr(street_number) if street_number else '',
+                            tools.ustr('-'+lead_category) if lead_category else ''
+                            ])
+            res.update({'subject_opportunity': oldName,'name': merge})
         return res

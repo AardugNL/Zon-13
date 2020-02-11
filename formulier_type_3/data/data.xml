@@ -23,7 +23,7 @@
             <field name="name">Premium</field>
         </record>
         <record id="formulier_custom_type_3" model="formulier.customer.type">
-            <field name="name">EC intake PV</field>
+            <field name="name">Intake PV</field>
             <field name="technical_name">formulier_three</field>
         </record>
     </data>
