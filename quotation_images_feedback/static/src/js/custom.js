@@ -84,29 +84,31 @@ var RecordImageWidget = MediaF.SearchableMediaWidget.extend({
     },
     _renderImages: function () {
         var self = this;
-        if (this.options.document){
-            this.$('div.record-data').html(
-                QWeb.render('quotation_images_feedback.widgets.document.existing.attachments',{
-                    rows: this.records,
-                    widget: this,
-                })
-            );
-        }
-        else if (this.options.video){
-            this.$('div.record-data').html(
-                QWeb.render('quotation_images_feedback.widgets.video.existing.attachments',{
-                    rows: this.records,
-                    widget: this,
-                })
-            );
-        }
-        else{
-            this.$('div.record-data').html(
-                QWeb.render('quotation_images_feedback.widgets.image.existing.attachments',{
-                    rows: this.records,
-                    widget: this,
-                })
-            );
+        if (this.records.formulier_id){
+            if (this.options.document){
+                this.$('div.record-data').html(
+                    QWeb.render('quotation_images_feedback.widgets.document.existing.attachments',{
+                        rows: this.records,
+                        widget: this,
+                    })
+                );
+            }
+            else if (this.options.video){
+                this.$('div.record-data').html(
+                    QWeb.render('quotation_images_feedback.widgets.video.existing.attachments',{
+                        rows: this.records,
+                        widget: this,
+                    })
+                );
+            }
+            else{
+                this.$('div.record-data').html(
+                    QWeb.render('quotation_images_feedback.widgets.image.existing.attachments',{
+                        rows: this.records,
+                        widget: this,
+                    })
+                );
+            }
         }
         this._highlightSelected();
     },
