@@ -20,19 +20,19 @@
                     <img t-att-src="'data:image/png;base64,%s' %to_text(doc.sale_order_template_id.header_image)" style="max-height:150px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company1'">
-                    <img t-if="company.report_header_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_one)" style="max-height:150px;width:100%;"/>
+                    <img t-if="company.report_header_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_one)" style="max-height:100px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company2'">
-                    <img t-if="company.report_header_two" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_two)" style="max-height:150px;width:100%;"/>
+                    <img t-if="company.report_header_two" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_two)" style="max-height:100px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company3'">
-                    <img t-if="company.report_header_three" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_three)" style="max-height:150px;width:100%;"/>
+                    <img t-if="company.report_header_three" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_three)" style="max-height:120px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company4'">
-                    <img t-if="company.report_header_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_four)" style="max-height:150px;width:100%;"/>
+                    <img t-if="company.report_header_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_header_four)" style="max-height:120px;width:100%;"/>
                 </t>
                 <t t-elif="not doc.trademark_type">
-                    <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' %to_text(company.logo)" style="max-height:150px;width:100%;"/>
+                    <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' %to_text(company.logo)" style="max-height:120px;width:100%;"/>
                 </t>
             </div>
         </template>
@@ -53,19 +53,19 @@
             </t>
             <div class="footer" style="margin-left:-15px;margin-right:-15px;">
                 <t t-if="doc.sale_order_template_id and doc.sale_order_template_id.footer_image">
-                    <img t-att-src="'data:image/png;base64,%s' %to_text(doc.sale_order_template_id.footer_image)" style="max-height:235px;width:100%;"/>
+                    <img t-att-src="'data:image/png;base64,%s' %to_text(doc.sale_order_template_id.footer_image)" style="max-height:200px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company1'">
-                    <img t-if="company.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_one)" style="max-height: 235px;width:100%;"/>
+                    <img t-if="company.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_one)" style="max-height: 200px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company2'">
-                    <img t-if="company.report_footer_two" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_two)" style="max-height: 235px;width:100%;"/>
+                    <img t-if="company.report_footer_two" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_two)" style="max-height: 200px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company3'">
-                    <img t-if="company.report_footer_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_three)" style="max-height: 235px;width:100%;"/>
+                    <img t-if="company.report_footer_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_three)" style="max-height: 200px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company4'">
-                    <img t-if="company.report_footer_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_four)" style="max-height: 235px;width:100%;"/>
+                    <img t-if="company.report_footer_four" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_four)" style="max-height: 200px;width:100%;"/>
                 </t>
             </div>
         </template>
@@ -89,7 +89,7 @@
                     <img t-att-src="'data:image/png;base64,%s' %to_text(doc.sale_order_template_id.footer_image)" style="max-height: 235px;width:100%;"/>
                 </t>
                  <t t-elif="doc.trademark_type == 'company1'">
-                    <img t-if="company.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_one)" style="max-height: 235px;width:100%;"/>
+                    <img t-if="company.report_footer_one" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_one)" style="max-height: 160px;width:100%;"/>
                 </t>
                 <t t-elif="doc.trademark_type == 'company2'">
                     <img t-if="company.report_footer_two" t-att-src="'data:image/png;base64,%s' %to_text(company.report_footer_two)" style="max-height: 235px;width:100%;"/>
