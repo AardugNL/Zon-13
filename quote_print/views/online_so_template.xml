@@ -214,11 +214,11 @@
                         <address class="col-sm-10 col-xs-10" t-field="sale_order.partner_invoice_id" t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}'/>
                     </div>
                     <div id="your_contact" class="col-lg-5 offset-lg-1 row">
-                        <strong class="d-block mb-1">  Your Contact: </strong>
+                        <strong class="d-block mb-1">Your Contact: </strong>
                         <address class="col-sm-12 col-xs-12" t-field="sale_order.user_id" t-options='{"widget": "contact", "fields": ["name", "phone", "email"]}'/>
                     </div>
                 </div>
-                <div class="row" style="margin-left:35px;">
+                <div class="row" style="margin-left:20px;">
                     <div t-if="sale_order.partner_shipping_id.id != sale_order.partner_invoice_id.id" class="col-lg-6 row"
                         groups="sale.group_delivery_invoice_address">
                         <strong class="d-block mb-1">Ship To:</strong>

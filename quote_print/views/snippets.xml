@@ -7,22 +7,22 @@
                 <p style="page-break-before:always;"></p>
             </section>
         </template>
-        <template id="s_features" name="Features">
+        <template id="website.s_features" name="Features">
             <section class="s_features pt32 pb32">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 pt32 pb32 text-center">
-                            <i class="fa fa-3x fa-gear " style="background-color: #f8f9fa;padding: 30px;border-radius: 100%;"/>
+                            <i class="fa fa-3x m-3 fa-gear " style="background-color: #5C5B80; color: #fff; width: 6rem; height: 6rem; line-height: 6rem; border-radius: 50%;"/>
                             <h3>First Feature</h3>
                             <p>Tell what's the value for the <br/>customer for this feature.</p>
                         </div>
                         <div class="col-lg-4 pt32 pb32 text-center">
-                            <i class="fa fa-3x fa-photo " style="background-color: #f8f9fa;padding: 30px;border-radius: 10%;"/>
+                            <i class="fa fa-3x m-3 fa-photo " style="background-color: #E46F78; color: #fff; width: 6rem; height: 6rem; line-height: 6rem; border-radius: 10%;"/>
                             <h3>Second Feature</h3>
                             <p>Write what the customer would like to know, <br/>not what you want to show.</p>
                         </div>
                         <div class="col-lg-4 pt32 pb32 text-center">
-                            <i class="fa fa-3x fa-leaf" style="background-color: #007bff !important;color: #fff; padding: 30px;border-radius: 100%;"/>
+                            <i class="fa fa-3x m-3 fa-leaf" style="background-color: #00A09D !important; color: #fff;  width: 6rem; height: 6rem; line-height: 6rem; border-top-left-radius: 3rem; border-bottom-right-radius: 3rem;"/>
                             <h3>Third Feature</h3>
                             <p>A small explanation of this great <br/>feature, in clear words.</p>
                         </div>
@@ -33,7 +33,6 @@
         <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
               <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
                     <t t-snippet="quote_print.snippet_pagebreak" t-thumbnail="/quote_print/static/src/img/page_break.png"/>
-                    <t t-snippet="quote_print.s_features" t-thumbnail="/quote_print/static/src/img/s_features.png"/>
             </xpath>
         </template>
     </data>
