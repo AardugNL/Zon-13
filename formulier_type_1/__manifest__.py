@@ -6,8 +6,8 @@
     'summary': '',
     'description': """ """,
     'category': 'CRM',
-    'author': "Caret IT Soltions PVT. LTD.",
-    'website': "http://caretit.com",
+    'author': "Aardug",
+    'website': "http://www.aardug.nl",
     'depends': ['quotation_images_feedback'], #quote_print
     'data': [
             'security/ir.model.access.csv',

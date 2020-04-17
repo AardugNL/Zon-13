@@ -9,8 +9,8 @@
     'description': """
 This module inherit create_crm_lead module and make automatic fill-up fields value of salutation module when lead create from email template
 """,
-    'author': "Caret IT Soltions PVT. LTD.",
-    'website': "http://caretit.com",
+    'author': "Aardug",
+    'website': "http://www.aardug.nl",
     'depends': [
         'create_crm_lead', 'partner_salutation',
     ],

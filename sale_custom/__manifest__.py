@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
+# Part of Aardug. (Website: www.aardug.nl).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
+
 
 {
     'name': "E-Mail alias on Sales order, Task and Opportunity",
     'summary': 'SO configure with alias and mail body in SO chatter',
     'version': '13.0.0.1',
-    'author': 'Caret It Solutions PVT. LTD.',
+    'author': 'Aardug',
     'category': 'Sale, Ptoject, CRM',
-    'website': 'https://caretit.com',
+    'website': 'https://www.aardug.nl',
     'depends': ['mail','sale','opportunity_code','project_task_code','project_formulier_code'],
     'data': [
         'views/sale_view.xml',

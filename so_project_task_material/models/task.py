@@ -1,7 +1,11 @@
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
+# -*- coding: utf-8 -*-
+##############################################################################
+#
+# Part of Aardug. (Website: www.aardug.nl).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
+
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError

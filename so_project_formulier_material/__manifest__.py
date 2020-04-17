@@ -1,12 +1,16 @@
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
+# -*- coding: utf-8 -*-
+##############################################################################
+#
+# Part of Aardug. (Website: www.aardug.nl).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
 
+
 {
     'name': 'SO Project Formulier Material',
-    'author': 'Caret IT Solutions PVT. LTD.',
-    'website': 'http://www.caretit.com',
+    'author': 'Aardug',
+    'website': 'http://www.aardug.nl',
     'category': 'Project',
     'summary': '',
     'version': '13.0.0.1',

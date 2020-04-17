@@ -11,8 +11,8 @@
     """,
     'version': '13.0.0.1',
     'depends':['crm'],
-    'author': "Caret IT Soltions PVT. LTD.",
-    'website': "http://caretit.com",
+    'author': "Aardug",
+    'website': "http://www.aardug.nl",
     'data' : [
         'data/crm_action_rule_data.xml',
         # 'data/crm_security.xml',

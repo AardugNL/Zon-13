@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#                                                                            #
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).           # 
-# See LICENSE file for full copyright and licensing details.                 #
-#                                                                            #
+#
+# Part of Aardug. (Website: www.aardug.nl).
+# See LICENSE file for full copyright and licensing details.
+#
 ##############################################################################
+
 
 {
     'name' : 'white label description',
@@ -14,8 +15,8 @@
     'description': """ This Module Allowes to you set two different 
     price and description for product and also allow you to set product box on 
     sale order line and on product form""",
-    'author': 'Caret IT Solutions Pvt. Ltd.',
-    'website': 'http://www.caretit.com',
+    'author': 'Aardug',
+    'website': 'http://www.aardug.nl',
     'depends': ['base','product', 'sale_management', 'purchase', 
     'sale', 'sale_crm', 'base_address_extended', 'stock'],
     'data': [

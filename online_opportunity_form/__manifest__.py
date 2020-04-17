@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Online Opportunity Form',
-    'author': 'Caret IT Solutions PVT. LTD.',
+    'author': 'Aardug',
     'category': 'Website',
-    'website': 'http://www.caretit.com',
+    'website': 'http://www.aardug.nl',
     'version': '13.0.0.0.1',
     'summary': '',
     'description': """

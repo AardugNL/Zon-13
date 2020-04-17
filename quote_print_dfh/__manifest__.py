@@ -2,8 +2,8 @@
 
 {
     'name': 'Quotation DFH Layout',
-    'author': 'Caret IT Soltions PVT. LTD.',
-    'website': "http://caretit.com",
+    'author': 'Aardug',
+    'website': "http://www.aardug.nl",
     'category': 'Website',
     'summary': 'Add custom layout in report layout on quote template model',
     'version': '12.0',

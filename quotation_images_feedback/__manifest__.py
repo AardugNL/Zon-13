@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Quotation Image And Feedback',
-    'author': 'Caret IT Solutions PVT. LTD.',
+    'author': 'Aardug',
     'category': 'Website',
-    'website': 'http://www.caretit.com',
+    'website': 'http://www.aardug.nl',
     'version': '1.0',
     'summary': '',
     'description': """

@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
+# Part of Aardug. (Website: www.aardug.nl).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
+
 
 {
     'name': 'Custom Header Footer',
     'version': '13.0',
     'category': 'Reports',
-    'author': 'Caret IT Solutions Pvt. Ltd.',
-    'website': 'http://www.caretit.com/',
+    'author': 'Aardug',
+    'website': 'http://www.aardug.nl/',
     'description': """
         Change Header/Footer content in reports of sale,invoice,stock records,
         Based on Dropdown Tradmark(company) selection.

@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-# Part of Caret IT Solutions Pvt. Ltd. (Website: www.caretit.com).
+# Part of Aardug. (Website: www.aardug.nl).
 # See LICENSE file for full copyright and licensing details.
 #
 ##############################################################################
+
 
 {
     'name': 'Sequential Code for Opportunity',
     'version': '13.0.0.1',
     'category': 'crm lead',
-    'author': 'Caret It Solutions PVT. LTD.',
-    'website': 'https://caretit.com',
+    'author': 'Aardug',
+    'website': 'https://www.aardug.nl',
     'depends': ['crm'],
     'data': [
         'data/opportunity_sequence.xml',
