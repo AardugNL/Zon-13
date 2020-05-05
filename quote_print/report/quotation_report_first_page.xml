@@ -5,25 +5,25 @@
             <div style="width:100%;">
                 <div class="header" style="margin-left:-15px;margin-right:-15px;">
                     <t t-if="sale_order.sale_order_template_id and sale_order.sale_order_template_id.header_image">
-                        <img t-att-src="'data:image/png;base64,%s' %to_text(sale_order.sale_order_template_id.header_image)" style="max-height:120px;width:100%;"/>
+                        <img t-att-src="'data:image/png;base64,%s' %to_text(sale_order.sale_order_template_id.header_image)" style="max-height:150px;width:100%;"/>
                     </t>
                     <t t-elif="sale_order.trademark_type == 'company1'">
-                        <img t-if="sale_order.company_id.report_header_one" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_one)" style="max-height:120px;width:100%;"/>
+                        <img t-if="sale_order.company_id.report_header_one" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_one)" style="max-height:150px;width:100%;"/>
                     </t>
                     <t t-elif="sale_order.trademark_type == 'company2'">
-                        <img t-if="sale_order.company_id.report_header_two" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_two)" style="max-height:120px;width:100%;"/>
+                        <img t-if="sale_order.company_id.report_header_two" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_two)" style="max-height:150px;width:100%;"/>
                     </t>
                     <t t-elif="sale_order.trademark_type == 'company3'">
-                        <img t-if="sale_order.company_id.report_header_three" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_three)" style="max-height:120px;width:100%;"/>
+                        <img t-if="sale_order.company_id.report_header_three" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_three)" style="max-height:150px;width:100%;"/>
                     </t>
                     <t t-elif="sale_order.trademark_type == 'company4'">
-                        <img t-if="sale_order.company_id.report_header_four" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_four)" style="max-height:120px;width:100%;"/>
+                        <img t-if="sale_order.company_id.report_header_four" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.report_header_four)" style="max-height:150px;width:100%;"/>
                     </t>
                     <t t-elif="not sale_order.trademark_type">
-                        <img t-if="sale_order.company_id.logo" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.logo)" style="max-height:120px;width:100%;"/>
+                        <img t-if="sale_order.company_id.logo" t-att-src="'data:image/png;base64,%s' %to_text(sale_order.company_id.logo)" style="max-height:150px;width:100%;"/>
                     </t>
                 </div>
-                <div class="article page" style="padding-top:-100px !important;">
+                <div class="article page">
                     <div t-if="sale_order.sale_order_template_id.report_layout == 'address_only'" class="row">
                         <div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                             <h1 class="text-center mt8 mb8" style="margin-left:320px;">
@@ -82,7 +82,7 @@
                                 </t>
                             </div>
                         </div>
-                        <div id="your_contact" class="col-lg-7 ml16 row">
+                        <div id="your_contact" class="col-lg-7 row">
                             <strong class="d-block mb-1">Your Contact:</strong>
                             <address class="col-sm-8 col-xs-8" t-field="sale_order.user_id" t-options='{"widget": "contact", "fields": ["name", "phone", "email"]}'/>
                         </div>
