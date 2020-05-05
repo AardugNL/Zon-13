@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <template id="website.s_features" name="Features">
+            <section class="s_features pt32 pb32">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 pt32 pb32 text-center">
+                            <i class="fa fa-3x m-3 fa-gear " style="background-color: #5C5B80; color: #fff; width: 6rem; height: 6rem; line-height: 6rem; border-radius: 50%;"/>
+                            <h3>First Feature</h3>
+                            <p>Tell what's the value for the <br/>customer for this feature.</p>
+                        </div>
+                        <div class="col-lg-4 pt32 pb32 text-center">
+                            <i class="fa fa-3x m-3 fa-photo " style="background-color: #E46F78; color: #fff; width: 6rem; height: 6rem; line-height: 6rem; border-radius: 10%;"/>
+                            <h3>Second Feature</h3>
+                            <p>Write what the customer would like to know, <br/>not what you want to show.</p>
+                        </div>
+                        <div class="col-lg-4 pt32 pb32 text-center">
+                            <i class="fa fa-3x m-3 fa-leaf" style="background-color: #00A09D !important; color: #fff;  width: 6rem; height: 6rem; line-height: 6rem; border-top-left-radius: 3rem; border-bottom-right-radius: 3rem;"/>
+                            <h3>Third Feature</h3>
+                            <p>A small explanation of this great <br/>feature, in clear words.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
         <template id="snippet_pagebreak" name="Page Break">
             <section>
                 <div class="row hidden-print css_non_editable_mode_hidden" style="border: 1px solid grey; height: 20px;"></div>
@@ -8,10 +33,75 @@
             </section>
         </template>
 
+        <template id="big_icons_txt" name="Big Icons with Text">
+            <section class="s_big_icons o_animation">
+                <div class="container">
+                    <div class="col-lg-12 text-center mb32" style="margin-bottom: 32px !important;">
+                        <h2>Big Icons </h2>
+                        <h3 class="text-muted ">A Great Way to Show Your Numbers</h3>
+                    </div>
+                    <div class="row mb64" style="margin-bottom: 64px !important;">
+                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important; margin-left: 6%;">
+                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
+                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
+                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
+                                    background-color: #957985 !important; color: #ffffff;">
+                                    <span class="fa fa-desktop" style="color: #fff; font-size: 40px;"/>
+                                </div>
+                                <h5>1000 Apps</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
+                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
+                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
+                                    background-color: #957985 !important; color: #ffffff;">
+                                    <span class="fa fa-users" style="color: #fff; font-size: 40px;"/>
+                                </div>
+                                <h5>20.000 Users</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
+                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
+                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
+                                    background-color: #957985 !important; color: #ffffff;">
+                                    <span class="fa fa-user" style="color: #fff; font-size: 40px;"/>
+                                </div>
+                                <h5>234 Clients</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
+                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
+                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
+                                    background-color: #957985 !important; color: #ffffff;">
+                                    <span class="fa fa-globe" style="color: #fff; font-size: 40px;"/>
+                                </div>
+                                <h5>30 Countries</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
+                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
+                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
+                                    background-color: #957985 !important; color: #ffffff;">
+                                    <span class="fa fa-users" style="color: #fff; font-size: 40px;"/>
+                                </div>
+                                <h5>75 Partners</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
         <template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
               <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
                     <t t-snippet="quote_print.snippet_pagebreak" t-thumbnail="/quote_print/static/src/img/page_break.png"/>
+                    <t t-snippet="quote_print.big_icons_txt" t-thumbnail="/quote_print/static/src/img/s_big_icon_circle.png"/>
               </xpath>
         </template>
+
     </data>
 </odoo>

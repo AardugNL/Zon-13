@@ -75,8 +75,8 @@ class mailComposeMessage(models.TransientModel):
                         if att_rec:
                             if att_rec.name.find('.')==-1:
                                 att_rec.write({'name': att_rec.name + '.pdf'})
-                            if not att_rec.datas_fname:
-                                att_rec.write({'datas_fname': order.sale_order_template_id.file_name_pdf})
+                            if not att_rec.store_fname:
+                                att_rec.write({'store_fname': order.sale_order_template_id.file_name_pdf})
                 new_attachment_ids = []
                 for attachment_id in self.attachment_ids:
                     new_attachment_ids.append(attachment_id.id)
