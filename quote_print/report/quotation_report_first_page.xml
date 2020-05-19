@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div id="your_contact" class="col-lg-7 row">
-                            <strong class="d-block mb-1">Your Contact:</strong>
+                            <strong class="d-block mb-1 ml16">Your Contact:</strong>
                             <address class="col-sm-8 col-xs-8" t-field="sale_order.user_id" t-options='{"widget": "contact", "fields": ["name", "phone", "email"]}'/>
                         </div>
                     </div>

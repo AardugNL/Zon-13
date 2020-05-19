@@ -1980,8 +1980,8 @@ msgstr "U kan geen opties toevoegen aan een bevestigd order."
 #. modules: quote_print
 #: model_terms:ir.ui.view,arch_db:quote_print.quotation_web_view
 #: model_terms:ir.ui.view,arch_db:quote_print.web_quotation_content_custom
-msgid "<strong class=/'d-block mb-1/'>Your Contact: </strong>"
-msgstr "<strong class=/'d-block mb-1/'>Uw contactpersoon: </strong>"
+msgid "<strong class=/'d-block mb-1 ml16/'>Your Contact: </strong>"
+msgstr "<strong class=/'d-block mb-1 ml16/'>Uw contactpersoon: </strong>"
 
 #. module: quote_print
 #: model_terms:ir.ui.view,arch_db:quote_print.quotation_web_view

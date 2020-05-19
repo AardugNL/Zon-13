@@ -41,7 +41,7 @@
                         <h3 class="text-muted ">A Great Way to Show Your Numbers</h3>
                     </div>
                     <div class="row mb64" style="margin-bottom: 64px !important;">
-                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important; margin-left: 6%;">
+                        <div class="col-lg-3 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important; margin-left: 6%;">
                             <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
                                 <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
                                     padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
@@ -51,7 +51,7 @@
                                 <h5>1000 Apps</h5>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                        <div class="col-lg-3 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
                             <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
                                 <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
                                     padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
@@ -61,7 +61,7 @@
                                 <h5>20.000 Users</h5>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                        <div class="col-lg-3 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
                             <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
                                 <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
                                     padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
@@ -71,7 +71,7 @@
                                 <h5>234 Clients</h5>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
+                        <div class="col-lg-3 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
                             <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
                                 <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
                                     padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
@@ -79,16 +79,6 @@
                                     <span class="fa fa-globe" style="color: #fff; font-size: 40px;"/>
                                 </div>
                                 <h5>30 Countries</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-12 mt16 mb32" style="min-height: 24px; margin-bottom: 32px !important; margin-top: 16px !important;">
-                            <div class="s_big_icons_box" style="text-align: center; width: 150px; margin: 0 auto; box-sizing: border-box;">
-                                <div class="s_big_icons_icon bg-epsilon mb8" style="width: 120px; height: 120px; text-align: center; 
-                                    padding: 40px 0; transition: all 0.3s ease-in-out; border-radius: 80px; margin: 0px auto;
-                                    background-color: #957985 !important; color: #ffffff;">
-                                    <span class="fa fa-users" style="color: #fff; font-size: 40px;"/>
-                                </div>
-                                <h5>75 Partners</h5>
                             </div>
                         </div>
                     </div>
