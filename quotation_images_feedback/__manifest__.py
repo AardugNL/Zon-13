@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+# Part of Aardug. (Website: www.aardug.nl).
+# See LICENSE file for full copyright and licensing details.
+#
+##############################################################################
 {
     'name': 'Quotation Image And Feedback',
-    'author': 'Aardug',
+    'author': 'Aardug, Arjan Rosman',
     'category': 'Website',
-    'website': 'http://www.aardug.nl',
-    'version': '1.0',
+    'website': 'http://www.aardug.nl/',
+    'version': '13.0',
     'summary': '',
     'description': """
     1. This module for create Question Form, This Record Create from crm_lead Record.

@@ -212,6 +212,10 @@ MediaDialog.include({
         options.noRecordImages = onlyImages || options.noRecordImages
         options.noRecordDocuments = onlyImages || options.noRecordDocuments;
         options.noRecordVideos = onlyImages || options.noRecordVideos;
+        options.noDocuments = onlyImages || options.noDocuments;
+        options.noIcons = onlyImages || options.noIcons;
+        options.noVideos = onlyImages || options.noVideos;
+
         this._super(parent, _.extend({}, {
             title: _t("Select a Media"),
             save_text: _t("Add"),
@@ -225,6 +229,15 @@ MediaDialog.include({
             },
         });
 
+        if (!options.noDocuments) {
+            this.documentWidget = new MediaF.DocumentWidget(this, this.media, options);
+        }
+        if (!options.noIcons) {
+            this.iconWidget = new MediaF.IconWidget(this, this.media, options);
+        }
+        if (!options.noVideos) {
+            this.videoWidget = new MediaF.VideoWidget(this, this.media, options);
+        }
         if(options.res_model == 'sale.order.template'){
             if (!options.noRecordVideos) {
                 this.record_videoWidget = new RecordImageWidget(this, this.media, _.extend({}, options, {video: true}));
@@ -247,7 +260,6 @@ MediaDialog.include({
         this.$el.find('#editor-media-record_image-tab').hide();
         this.$el.find('#editor-media-record_video-tab').hide();
         this.$el.find('#editor-media-record_document-tab').hide();
-
         if (this.record_imageWidget) {
             this.$el.find('#editor-media-record_image-tab').show();
             promises.push(this.record_imageWidget.appendTo(this.$("#editor-media-record_image")));
@@ -259,6 +271,9 @@ MediaDialog.include({
         if (this.record_videoWidget) {
             this.$el.find('#editor-media-record_video-tab').show();
             promises.push(this.record_videoWidget.appendTo(this.$("#editor-media-record_video")));
+        }
+        if (this.iconWidget) {
+            promises.push(this.iconWidget.appendTo(this.$("#editor-media-icon")));
         }
         return Promise.all(promises);
     },
