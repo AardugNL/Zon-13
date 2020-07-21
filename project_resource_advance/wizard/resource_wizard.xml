@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form</field>
+            <field name="model">resource.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Add">
+                    <field name="task_id" invisible="1"/>
+                    <field name="date_start" invisible="1"/>
+                    <field name="date_end" invisible="1"/>
+                    <group col="6">
+                        <div col="6">
+                            <field name="category_ids" widget="many2many_tags" nolabel="1" style="width:500px;"/>
+                            <label string="Human" for="type_user" style="margin-left:100px;"/>
+                            <field name="type_user"/>
+                            <label string="Material" for="type_material" style="margin-left:50px;"/>
+                            <field name="type_material"/>
+                        </div>
+                        <label for="selected_resource_ids" colspan="6" string="Selected Resources"/>
+                        <field name="selected_resource_ids" mode="kanban" nolabel="1" colspan="6">
+                            <kanban quick_create="false" create="false" delete="true" default_order="resource_type desc, name asc" limit="100">
+                                <field name="name"/>
+                                <field name="resource_type"/>
+                                <field name="resource_image"/>
+                                <field name="category_ids"/>
+                                <field name="id"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey; font-weight: bold;">
+                                            <a type="delete"
+                                               style="position: absolute; right: 20px; diplay: inline-block ">
+                                               Deselect
+                                            </a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('resource.resource', 'resource_image', record.id.raw_value)" height="40" width="40" style="position: absolute; diplay: inline-block"/>
+                                                <div class="oe_resource_details">
+                                                    <ul style="margin-bottom: 4px;margin-left: 60px;">
+                                                        <li><b><field name="name"/></b></li>
+                                                        <li style="color: grey; font-weight: bold;">Occupied</li>
+                                                        <li><field name="str_category"/></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field> 
+                    </group>
+                    <group col="6">
+                        <label for="avail_resource_ids" colspan="2" string="Available Resources" style="padding-left: 10px;"/>
+                        <label for="partial_resource_ids" colspan="2" string="Partial Available Resources" style="padding-left: 10px;"/>
+                        <label for="not_avail_resource_ids" colspan="2" string="Not Available Resources" style="padding-left: 10px;"/>
+                        <field name="avail_resource_ids" mode="kanban" nolabel="1" colspan="2">
+                            <kanban quick_create="false" create="false" delete="true" default_order="resource_type desc, name asc" limit="100">
+                                <field name="name"/>
+                                <field name="resource_type"/>
+                                <field name="resource_image"/>
+                                <field name="category_ids"/>
+                                <field name="id"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey;">
+                                            <a type="delete"
+                                               style="position: absolute; right: 20px; diplay: inline-block">
+                                               <b>Select</b>
+                                            </a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('resource.resource', 'resource_image', record.id.raw_value)" height="40" width="40" style="position: absolute; diplay: inline-block"/>
+                                                <div class="oe_resource_details">
+                                                    <ul style="margin-bottom: 4px;margin-left: 60px;">
+                                                        <li><b><field name="name"/></b></li>
+                                                        <li style="color: green; font-weight: bold;">Available</li>
+                                                        <li><field name="str_category"/></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                        <field name="partial_resource_ids" mode="kanban" nolabel="1" colspan="2">
+                            <kanban quick_create="false" create="false" delete="true" default_order="resource_type desc, name asc" limit="100">
+                                <field name="name"/>
+                                <field name="resource_type"/>
+                                <field name="resource_image"/>
+                                <field name="category_ids"/>
+                                <field name="id"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey;">
+                                            <a type="delete"
+                                               style="position: absolute; right: 20px; diplay: inline-block">
+                                               <b>Select</b>
+                                            </a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('resource.resource', 'resource_image', record.id.raw_value)" height="40" width="40" style="position: absolute; diplay: inline-block"/>
+                                                <div class="oe_resource_details">
+                                                    <ul style="margin-bottom: 4px;margin-left: 60px;">
+                                                        <li><b><field name="name"/></b></li>
+                                                        <li style="color: yellowgreen; font-weight: bold;">Partial Available</li>
+                                                        <li><field name="str_category"/></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="text-justify mb0" t-if="record.allocated_timing.raw_value"><field name="allocated_timing"/></p>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                        <field name="not_avail_resource_ids" mode="kanban" nolabel="1" colspan="2">
+                            <kanban quick_create="false" create="false" delete="true" default_order="resource_type desc, name asc" limit="100">
+                                <field name="name"/>
+                                <field name="resource_type"/>
+                                <field name="resource_image"/>
+                                <field name="category_ids"/>
+                                <field name="id"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey;">
+                                            <a type="delete"
+                                               style="position: absolute; right: 20px; diplay: inline-block">
+                                               <b>Select</b>
+                                            </a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('resource.resource', 'resource_image', record.id.raw_value)" height="40" width="40" style="position: absolute; diplay: inline-block"/>
+                                                <div class="oe_resource_details">
+                                                    <ul style="margin-bottom: 4px;margin-left: 60px;">
+                                                        <li><b><field name="name"/></b></li>
+                                                        <li style="color: red; font-weight: bold;">
+                                                            Not Available</li>
+                                                        <li><field name="str_category"/></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </group>
+                    <footer>
+                        <button string="Save" name="save_window_close" type="object" class="btn btn-primary"/>
+                        <button string="Discard" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

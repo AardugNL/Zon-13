@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="resource_daily_status_details_form">
+            <field name="name">resource.daily.status.from</field>
+            <field name="model">resource.daily.status</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="resource_id"/>
+                    <field name="schedule_ids"/>
+                    <field name="leave_ids"/>
+
+                    <field name="dateof"/>
+                    <field name="dayof"/>
+                    <field name="meridiem"/>
+                    <field name="compare_date"/>
+
+                    <field name="working_hours"/>
+                    <field name="planned_hours"/>
+                    <field name="res_status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="resource_details_action">
+            <field name="name">Resource Daily Status</field>
+            <field name="res_model">resource.daily.status</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Resource Daily Status"
+                  id="res_details"
+                  parent="resource.menu_resource_config"
+                  action="resource_details_action"
+                  sequence="4"/>
+
+        <record id="resource_form_inh" model="ir.ui.view">
+            <field name="name">Resource</field>
+            <field name="model">resource.resource</field>
+            <field name="inherit_id" ref="project_resource.inherit_resource_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="processResourceStatusForPeriod" string="Calculate Work Status" type="object" class="btn-primary"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

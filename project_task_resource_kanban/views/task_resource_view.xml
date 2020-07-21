@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="filter_task_resource_today" model="ir.filters">
+            <field name="name">Today</field>
+            <field name="model_id">task.resource</field>
+            <field name="domain">
+                ['&amp;',
+                 ('start', '=', context_today().strftime('%Y-%m-%d')),
+                 ('end', '=', context_today().strftime('%Y-%m-%d'))]
+            </field>
+            <field name="is_default">1</field>
+        </record>
+        <record id="filter_task_resource_tomorrow" model="ir.filters">
+            <field name="name">Tomorrow</field>
+            <field name="model_id">task.resource</field>
+            <field name="domain">
+                ['&amp;',
+                 ('start', '=', (context_today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d')),
+                 ('end', '=', (context_today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d'))]
+            </field>
+        </record>
+        <record id="filter_task_resource_this_week" model="ir.filters">
+            <field name="name">This Week</field>
+            <field name="model_id">task.resource</field>
+            <field name="domain">
+                ['&amp;',
+                 ('start', '=', (context_today() - datetime.timedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                 ('end','=',((context_today() - datetime.timedelta(days=context_today().weekday())) + datetime.timedelta(days=6)).strftime('%Y-%m-%d'))]
+             </field>
+            <!-- <field name="is_default">1</field> -->
+        </record>
+        <record id="filter_task_resource_next_week" model="ir.filters">
+            <field name="name">Next Week</field>
+            <field name="model_id">task.resource</field>
+            <field name="domain">['&amp;',('start','=',(context_today() + datetime.timedelta(days=(7 - context_today().weekday()))).strftime('%Y-%m-%d')),('end','=',((context_today() + datetime.timedelta(days=(7 - context_today().weekday()))) + datetime.timedelta(days=6)).strftime('%Y-%m-%d'))]</field>
+        </record>
+
+        <record model="ir.ui.view" id="task_resource_search_view">
+            <field name="name">Task Resource</field>
+            <field name="model">task.resource</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="resource_id" string="Resource" filter_domain="[('resource_id','ilike',self)]"/>
+                    <field name="task_id" string="Task" filter_domain="[('task_id','ilike',self)]"/>
+                    <field name="start" operator="=" string="From" type="date"/>
+                    <field name="end" operator="=" string="To" type="date"/>
+                    <field name="category_ids" string="Tags" filter_domain="[('category_ids','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="task_resource_view_kanban" model="ir.ui.view" >
+            <field name="name">Task Resource</field>
+            <field name="model">task.resource</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column kanban_task_resource" create="0" default_group_by="obj_type">
+                    <field name="resource_img"/>
+                    <field name="project_id" />
+                    <field name="obj_type" />
+                    <field name="category_name" />
+                    <field name="task_id" />
+                    <field name="resource_id" />
+                    <field name="task_color" />
+                    <field name="resource_color" />
+                    <field name="resource_name"/>
+                    <field name="id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+
+                            <t t-if="record.obj_type.value == 'Task'">
+                                <div t-attf-class="#{kanban_color(record.task_color.raw_value)} oe_kanban_global_click kanban_droppable oe_kanban_card" t-att-data-id="record.id.value" data-type="task" style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey;">
+                                    <div class="oe_module_vignette">
+                                        <div class="oe_resource_details">
+                                            <ul style="margin-bottom: 4px; margin-left: 20px;">
+                                                <li><b><t t-esc="record.task_id.value"/></b></li>
+                                                <li><i><field name="project_id"/></i></li>
+                                                <li><field name="planned_hours"/> - <field name="schedule_hours"/></li>
+                                                <li><t t-esc='record.resource_name.value' /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <t t-if="record.obj_type.value == 'Resource'">
+                                <div t-attf-class="#{kanban_color(record.resource_color.raw_value)} oe_kanban_global_click kanban_draggable oe_kanban_card" t-att-data-id="record.id.value" data-type="resource" style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey; font-weight: bold; height:60px;">
+                                    <div class="oe_module_vignette">
+                                        <img t-att-src="kanban_image('task.resource', 'resource_img', record.id.value)"
+                                             class="oe_avatar oe_kanban_avatar_smallbox" alt="resource" height="40" width="40" 
+                                             style="position: absolute; diplay: inline-block"/>
+                                        <div class="oe_resource_details">
+                                            <ul style="margin-bottom: 4px; margin-left: 60px;">
+                                                <li><b><t t-esc="record.resource_id.value"/></b></li>
+                                                <li><field name="category_name"/></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_task_resource_kanban">
+            <field name="name">Manage Task &amp; Resources</field>
+            <field name="res_model">task.resource</field>
+            <field name="view_mode">kanban</field>
+            <field name="domain">[('obj_type','!=','Undefined')]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_task_resource_kanban"
+            name="Manage Task &amp; Resources"
+            parent="project.menu_project_management"
+            action="action_task_resource_kanban"/>
+
+    </data>
+</odoo>

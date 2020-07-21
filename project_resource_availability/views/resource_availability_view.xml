@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="resource_available_form_view" model="ir.ui.view">
+            <field name="name">resource.availability.form</field>
+            <field name="model">resource.availability</field>
+            <field name="arch" type="xml">
+                <form string="Resource Availability" class="custom-formview-res-avail" style="height: 100%;">
+                    <header>
+                        <separator string="Resource Availability" colspan="4"/>
+                    </header>
+                    <div col="6" style="margin-top: 10px;">
+                        <field name="category_ids" widget="many2many_tags" nolabel="1" style="width:500px; margin-left: 135px;" placeholder="Filter Tags"/>
+                        <label string="Plan Period" for="resource_period" style="margin-left: 100px;"/>
+                        <field name="resource_period" style="width:12%;"/>
+                        <label string="Human" for="type_user" style="margin-left:5%;"/>
+                        <field name="type_user"/>
+                        <label string="Material" for="type_material" style="margin-left:3%;"/>
+                        <field name="type_material"/>
+                        <group col="4" colspan="4">
+                            <field name="date_from" attrs="{'invisible': [('resource_period', '!=', 'custom')]}"/>
+                            <field name="date_to" attrs="{'invisible': [('resource_period', '!=', 'custom')]}"/>
+                        </group>
+                    </div>
+                    <field name="resource_header" colspan="4" invisible="1" />
+                    <field name="resource_info" colspan="4" invisible="1" />
+                    <field name="resource_header_date" colspan="4" invisible="1" />
+                    <field name="resource_header_day" colspan="4" invisible="1" />
+                    <widget name="Resource_Availability"/>
+                    <group>
+                        <div>
+                            <table width='80%'>
+                                <tr>
+                                    <td style="padding-right: 10px; width: 10%;text-align: right;">Occupied</td>
+                                    <td style="height: 30px; width: 10%; background-color: #f77c5d;border: gray solid 1px;"></td>
+                                    <td style="padding-right: 10px; width: 10%;text-align: right;">Free</td>
+                                    <td style="height: 30px; width: 10%; background-color: #30b273;border: gray solid 1px;"></td>
+                                    <td style="padding-right: 10px; width: 10%;text-align: right;">Leave</td>
+                                    <td style="height: 30px; width: 10%; background-color: #f4ac2e;border: gray solid 1px;"></td>
+                                    <td style="padding-right: 10px; width: 10%;text-align: right;">Available</td>
+                                    <td style="height: 30px; width: 10%; border: gray solid 1px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_resource_availability">
+            <field name="name"> Resource Available</field>
+            <field name="res_model">resource.availability</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project_resource_availability.resource_available_form_view" />
+        </record>
+
+        <menuitem id="menu_resource_availability"
+            name="Resource Availability"
+            parent="project.menu_project_report"
+            action="action_resource_availability"/>
+
+    </data>
+</odoo>

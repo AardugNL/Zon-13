@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_summary_report1,resource.access_summary_report1,model_summary_report,project.group_project_user,1,1,1,1
+access_summary_report2,resource.access_summary_report2,model_summary_report,project.group_project_manager,1,1,1,1

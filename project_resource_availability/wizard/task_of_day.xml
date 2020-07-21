@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       
+        <record model="ir.ui.view" id="task_report_view">
+            <field name="name">Schedule Report</field>
+            <field name="model">schedule.report</field>
+            <field name="arch" type="xml">
+            <form string="Task Availability">
+                <header>
+                    <separator string="Task Schedules" colspan="4" />
+                </header>
+                <sheet>
+                    <group colspan="4" col="4">
+                        <div>
+                            <label for="date_from" string="Time Period"/>
+                            <field name="date_from" class="oe_inline"/>
+                            to
+                            <field name="date_to" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page string="Schedules">
+                            <field name="schedule_ids">
+                                <tree colors="#7c7bad:raw_color == 'conflict';"
+                              decoration-danger="(date_start&lt;task_date_start or date_end&gt;task_date_end)">
+                                    <field name="resource_id"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="task_id"/>
+                                    <field name="task_date_start" invisible="1"/>
+                                    <field name="task_date_end" invisible="1"/>
+                                    <field name="raw_color" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                         <br/>
+                    </footer>
+                </sheet>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_task_report" model="ir.actions.act_window">
+            <field name="name">Schedule Report</field>
+            <field name="res_model">schedule.report</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> 
+
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_resource_daily_status,resource.daily.status,model_resource_daily_status,project.group_project_manager,1,1,1,1
+access_resource_status,resource.status,model_resource_status,project.group_project_manager,1,1,1,1
+access_resource_status_wizard,access_resource_status_wizard,model_resource_status_wizard,base.group_user,1,1,1,1
+access_resource_daily_status2,access.resource.daily.status2,model_resource_daily_status,base.group_user,1,1,1,1

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="ir_cron_timesheet_creation" model="ir.cron">
+            <field name="name">Make Timesheet From Schedule</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_task_schedule" />
+            <field name="state">code</field>
+            <field name="code">model.timesheet_create()</field>
+            <field name="nextcall" eval="(DateTime.now() +
+                timedelta(days=0)).strftime('%Y-%m-%d 23:00:00')" />
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- <record id="ir_cron_task_sche_double_booked_quick" model="ir.cron">
+            <field name="name">Double Book Quick</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_task_schedule" />
+            <field name="state">code</field>
+            <field name="code">model.cron_double_booked_quick()</field>
+            <field name="active" eval="True"/>
+        </record> -->
+
+        <!-- <record id="ir_cron_task_sche_double_booked_all" model="ir.cron">
+            <field name="name">Double Book Calculate Daily</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_task_schedule" />
+            <field name="state">code</field>
+            <field name="code">model.cron_double_booked_daily()</field>
+            <field name="active" eval="False"/>
+        </record> -->
+
+        <!-- <record id="ir_cron_stage_change" model="ir.cron">
+            <field name="name">Auto Stage Change</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_project_task" />
+            <field name="state">code</field>
+            <field name="code">model.stage_change()</field>
+            <field name="nextcall" eval="(DateTime.now() +
+                timedelta(days=0)).strftime('%Y-%m-%d 23:00:00')" />
+            <field name="active" eval="True"/>
+        </record> -->
+
+        <record id="ir_cron_resource_reschedule" model="ir.cron">
+            <field name="name">Resource Reschedule</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_project_task" />
+            <field name="state">code</field>
+            <field name="code">model.resource_reschedule()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <record id="ir_cron_create_meeting_from_schedule" model="ir.cron">
+            <field name="name">Create Meeting From Schedule</field>
+            <field name="interval_number">30</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_project_task"/>
+            <field name="state">code</field>
+            <field name="code">model.action_meeting_create()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

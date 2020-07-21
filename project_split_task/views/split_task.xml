@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="project_task_split" model="ir.ui.view">
+            <field name="name">project task split</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header" position="inside">
+                    <button name="action_split_task" string="Split Task" type="object"
+                        class="btn-primary" attrs="{'invisible': [('hide_split', '=', True)]}"/>
+                    <button name="action_split_task" string="Split Task 2" type="object"
+                        class="btn-primary" attrs="{'invisible': [('hide_split', '=', True)]}" context="{'split2': True}"/>
+                </xpath>
+                <field name="tag_ids" position="after">
+                    <field name="hide_split" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       
+        <record model="ir.ui.view" id="summary_report_view">
+            <field name="name">Summary Report</field>
+            <field name="model">summary.report</field>
+            <field name="arch" type="xml">
+            <form string="Resource Availability">
+                <header>
+                    <separator string="Summary" colspan="4" />
+                </header>
+                <sheet>
+                    <group colspan="4" col="4">
+                        <div>
+                            <label for="date_from" string="Time Period"/>
+                            <field name="date_from" class="oe_inline"/>
+                            to
+                            <field name="date_to" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page string="Schedules">
+                            <field name="schedule_ids">
+                                <tree colors="#7c7bad:raw_color == 'conflict';" decoration-danger="(date_start&lt;task_date_start or date_end&gt;task_date_end)">
+                                    <field name="resource_id"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="task_id"/>
+                                    <field name="task_date_start" invisible="1"/>
+                                    <field name="task_date_end" invisible="1"/>
+                                    <field name="raw_color" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Tasks">
+                            <field name="task_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="project_id"/>
+                                    <field name="user_id"/>
+                                    <field name="stage_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Leaves">
+                            <field name="leave_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="resource_id"/>
+                                    <field name="calendar_id"/>
+                                    <field name="date_from"/>
+                                    <field name="date_to"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                         <br/>
+                    </footer>
+                </sheet>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_summary_report" model="ir.actions.act_window">
+            <field name="name">Summary Report</field>
+            <field name="res_model">summary.report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> 
+
+        <menuitem id="menu_summary" name="Summary" action="action_summary_report" parent="project.menu_project_report"/>
+
+    </data>
+</odoo>

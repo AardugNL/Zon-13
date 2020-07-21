@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_resource_availability1,resource.availability,model_resource_availability,project.group_project_manager,1,1,1,1
+access_schedule_report,schedule.report,model_schedule_report,project.group_project_user,1,1,1,1

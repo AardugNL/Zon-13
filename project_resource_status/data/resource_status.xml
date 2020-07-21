@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="resource_status_free" model="resource.status">
+            <field name="name">Free</field>
+            <field name="techname">free</field>
+            <field name="modelname"></field>
+        </record>
+
+        <record id="resource_status_available" model="resource.status">
+            <field name="name">Available</field>
+            <field name="techname">available</field>
+            <field name="modelname"></field>
+        </record>
+
+        <record id="resource_status_notapplicable" model="resource.status">
+            <field name="name">Notapplicable</field>
+            <field name="techname">notapplicable</field>
+            <field name="modelname"></field>
+        </record>
+
+        <record id="resource_status_leave" model="resource.status">
+            <field name="name">Leave</field>
+            <field name="techname">leave</field>
+            <field name="modelname">resource.calendar.leaves</field>
+        </record>
+
+        <record id="resource_status_occupied" model="resource.status">
+            <field name="name">Occupied</field>
+            <field name="techname">occupied</field>
+            <field name="modelname">task.schedule</field>
+            <field name="fieldname">schedule_ids</field>
+        </record>
+
+        <record id="resource_status_partialavailable" model="resource.status">
+            <field name="name">Partial Available</field>
+            <field name="techname">partialavailable</field>
+            <field name="modelname">task.schedule</field>
+            <field name="fieldname">schedule_ids</field>
+        </record>
+
+    </data>
+</odoo>

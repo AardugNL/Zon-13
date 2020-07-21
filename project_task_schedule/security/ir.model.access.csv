@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_schedule,task.schedule,model_task_schedule,project.group_project_user,1,1,1,1
+access_task_schedule_on_partner,task.schedule on partners,model_task_schedule,base.group_user,1,0,0,0

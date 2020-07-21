@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	
+    	<record id="inherit_resource_form" model="ir.ui.view">
+            <field name="name">Resource</field>
+            <field name="model">resource.resource</field>
+            <field name="inherit_id" ref="resource.resource_resource_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="replace"/>
+                <xpath expr="//field[@name='resource_type']" position="replace"/>
+                <xpath expr="//field[@name='user_id']" position="replace"/>
+                <xpath expr="//field[@name='time_efficiency']" position="replace"/>
+                <field name="active" position="replace"/>
+                <xpath expr="//form/sheet/group[1]" position="before">
+                    <div class="oe_button_box" name="button_box"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="active" invisible="1"/>
+                    <field name="resource_image" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1 class="o_row">
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <field name="category_ids" widget="many2many_tags" 
+                        attrs="{'invisible': [('resource_type', '!=', 'user')]}"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group" position="inside">
+                    <field name="resource_type"/>
+                    <field name="user_id" attrs="{'readonly':[('resource_type','=','material')], 'required':[('resource_type','!=','material')]}"/>
+                    <field name="time_efficiency"/>
+                    <field name="str_category"/>
+                </xpath>
+                <field name="calendar_id" position="after">
+                    <field name="employee_id" attrs="{'invisible': [('resource_type', '!=', 'user')]}"
+                           readonly="1"/>
+                </field>
+                <xpath expr="//form/sheet/group" position="after">
+                    <notebook>
+                        <page string="Dates">
+                            <field name="start_end_ids">
+                                <tree editable="bottom">
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- <record id="action_resource_resource_tree_dashboard" model="ir.actions.act_window">
+            <field name="name">Resources</field>
+            <field name="res_model">resource.resource</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="resource.view_resource_resource_search"/>
+        </record> -->
+
+        <record id="resource_start_end_tree_view" model="ir.ui.view">
+            <field name="name">resource.start_end.tree</field>
+            <field name="model">resource.start_end</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

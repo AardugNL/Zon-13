@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="inherit_project_task_form" model="ir.ui.view">
+            <field name="name">project task</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project_task_schedule.project_task_form_inh"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[@name='team']/field[@name='resource_ids']" position="before">
+                    <button string="Manage Resources" type="object"
+                        name="kanban_selector" class="btn btn-primary oe_read_only"
+                        style="margin-top: 10px; margin-bottom: 10px;"
+                        context="{'default_groups_ref': ['base.group_user',
+                                                         'base.group_partner_manager',
+                                                         'project.group_project_user'],
+                        'date_start': date_start, 'date_end': date_end}"/>
+                    <button string="Remove Resources" type="object"
+                        name="button_remove_resources" class="btn btn-primary oe_read_only"
+                        style="margin-top: 10px; margin-bottom: 10px;margin-left: 2px;"
+                        />
+                    <button name="syncTaskSchedules" string="Sync Team" type="object" class="btn-primary oe_read_only"      style="float: right; margin-top: 10px; margin-bottom: 10px;"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='team']/field[@name='resource_ids']" position="replace">
+                    <field colspan="4" name="resource_ids" mode="kanban"
+                        context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_user'], 'date_start': date_start, 'date_end': date_end}" nolabel="1">
+                        <kanban quick_create="false" create="false" delete="true" default_order="name asc">
+                            <field name="name"/>
+                            <field name="resource_image"/>
+                            <field name="id"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div style="position: relative; border: 1px solid lightgrey; border-radius: 5px; box-shadow: 0px 0px 5px lightgrey;">
+                                        <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0;
+                                        padding: 4px; diplay: inline-block">X</a>
+                                        <div class="oe_module_vignette">
+                                            <img t-att-src="kanban_image('resource.resource', 'resource_image', record.id.raw_value)" height="40" width="40" style="position: absolute; diplay: inline-block"/>
+                                            <div class="oe_resource_details">
+                                                <ul style="margin-bottom: 4px; margin-left: 60px;">
+                                                    <li><b><field name="name"/></b></li>
+                                                    <li style="color: green; font-weight: bold;">Occupied</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

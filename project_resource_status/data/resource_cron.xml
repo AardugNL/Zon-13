@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="ir_cron_resource_daily_status_smart" model="ir.cron">
+            <field name="name">Generate Resource Daily Status (last hour)</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_resource_daily_status" />
+            <field name="state">code</field>
+            <field name="code">model.smartSyncResources()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <record id="ir_cron_resource_daily_status_all" model="ir.cron">
+            <field name="name">Calculate All Resource Daily Status</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">weeks</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_resource_daily_status" />
+            <field name="state">code</field>
+            <field name="code">model.calculateAllResourceStatus()</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')" />
+            <field name="active" eval="False"/>
+        </record>
+
+        <record id="ir_cron_resource_monthly_status" model="ir.cron">
+            <field name="name">Calculate Monthly Resource Daily Status</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_resource_daily_status" />
+            <field name="state">code</field>
+            <field name="code">model.calculateMonthlyResourceStatus()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <record id="ir_cron_remove_duplicate_resource_status" model="ir.cron">
+            <field name="name">Remove Duplicate Resource Daily Status: (DO NOT RUN MANUALLY)</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_resource_daily_status" />
+            <field name="state">code</field>
+            <field name="code">model.deleteDuplicateResourceStatus()</field>
+            <field name="priority">6</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

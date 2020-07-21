@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+         <record model="ir.ui.view" id="resource_status_wizard_view">
+            <field name="name">resource.status.wizard.view</field>
+            <field name="model">resource.status.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Resource Daily Status">
+                    <header>
+                        <separator string="Status" colspan="4" />
+                    </header>
+                    <sheet>
+                        <group colspan="2" col="2">
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                         <button name="createResourceStatus" string="Create Status" type="object"/>
+                         <button class="btn-default" string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_resource_status_wizard" model="ir.actions.act_window">
+            <field name="name">Resource Daily Status</field>
+            <field name="res_model">resource.status.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Resource Status Wizard"
+                  id="menu_create_status"
+                  parent="resource.menu_resource_config"
+                  action="action_resource_status_wizard"
+                  sequence="5"/>
+
+    </data>
+</odoo>

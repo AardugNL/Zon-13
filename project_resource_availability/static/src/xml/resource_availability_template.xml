@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE xml>
+
+<templates id="resource_available_template" xml:space="preserve">
+    <t t-name="resourceDetails">
+        <div style="overflow: auto; height: 85%; width:max-content;">
+            <button class="search-data btn btn-primary">Go</button>
+            <table class="avail-report fht-table" border="1">
+                <thead>
+                    <t t-foreach="widget.resource_header_date" t-as="date_head">
+                        <tr>
+                            <th rowspan="3" class="table_header celda_encabezado_general" style="border-bottom: 0px; height: 76px; width:169px;">Employee</th>
+                            <t t-foreach="date_head.head" t-as="date">
+                                <th colspan="2" class="table_header_date celda_encabezado_general" style="text-align:center; border-bottom: 0px; height: 20px;" t-att-data-date="date.org_date"><t t-esc="date.date" /></th>
+                            </t>
+                        </tr>
+                    </t>
+                    <t t-foreach="widget.resource_header_day" t-as="day_head">
+                        <tr>
+                            <t t-foreach="day_head.head" t-as="day">
+                                <th colspan="2" class="table_header celda_encabezado_general" style="text-align:center; border-top: 0px; height: 20px;"><t t-esc="day" /></th>
+                            </t>
+                        </tr>
+                    </t>
+                    <t t-foreach="widget.resource_header" t-as="header_detail">
+                        <tr>
+                            <t t-foreach="header_detail.header" t-as="date">
+                                <th class="table_header celda_encabezado_general" style="text-align:center;"><t t-esc="date" /></th>
+                            </t>
+                        </tr>
+                    </t>
+                </thead>
+                <tbody>
+                    <t t-foreach="widget.resource_info" t-as="detail">
+                        <tr>
+                            <td class="table_header resource-details celda_encabezado_general" t-att-data-id="detail.id">
+                                <p style="white-space: nowrap; overflow: hidden; width: 150px; text-overflow: ellipsis;"><t t-esc="detail.name"/></p>
+                            </td>
+                            <t t-foreach="detail.value" t-as="status">
+                                <t t-set="tooltipvalue" t-value="[detail.name, status.date]" />
+                                <t t-if="status.state == 'Notapplicable'">
+                                    <td class="celda_encabezado_general tooltiptext" t-att-data-empid="status.employee_id" t-att-data-date="status.date" t-att-title="tooltipvalue">&amp;nbsp;</td>
+                                </t>
+                                <t t-if="status.state == 'Free'">
+                                    <td class="summary_click resource_free celda_encabezado_general tooltiptext" t-att-data-empid="status.employee_id" t-att-data-date="status.date" t-att-title="tooltipvalue"/>
+                                </t>
+                                <t t-if="status.state == 'Occupied'">
+                                    <td class="summary_click resource_occupied celda_encabezado_general tooltiptext" t-att-data-model="status.data_model" t-att-data-id="status.data_id" t-att-data-date="status.date" t-att-data-view_id="status.view_id" t-att-title="tooltipvalue"/>
+                                </t>
+                                <t t-if="status.state == 'Leave' ">
+                                    <td class="summary_click resource_leave celda_encabezado_general tooltiptext" t-att-data-model="status.data_model" t-att-data-id="status.data_id" t-att-data-date="status.date" t-att-title="tooltipvalue"/>
+                                </t>
+                                <t t-if="status.state == 'Available'">
+                                    <td class="summary_click celda_encabezado_general tooltiptext" t-att-data-empid="status.employee_id" t-att-data-date="status.date" t-att-title="tooltipvalue">&amp;nbsp;</td>
+                                </t>
+                            </t>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <script type="text/javascript">
+            $(document).ready(function(){
+                $(".avail-report").CongelarFilaColumna({lboHoverTr:true});
+            });
+        </script> -->
+
+    </t>
+
+
+</templates>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="task_schedule_tree_view">
+            <field name="name">Schedule</field>
+            <field name="model">task.schedule</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="(date_start&lt;task_date_start or date_end&gt;task_date_end)" create="0">
+                    <field name="name" invisible="1"/>
+                    <field name="resource_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="task_id"/>
+                    <field name="meeting_id"/>
+                    <!-- <field name="double_booked" invisible="1"/> -->
+                    <field name="status_icon" widget="image" string="" class="reduce_flag_size"/>
+                    <field name="task_date_start" invisible="1"/>
+                    <field name="task_date_end" invisible="1"/>
+                    <field name="raw_color" invisible="1"/>
+                    <field name="timesheet_id" invisible="1"/>
+                    <field name="locked" invisible="1"/>
+                    <field name="partner_shipping_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="task_schedule_search_view">
+            <field name="name">Schedule</field>
+            <field name="model">task.schedule</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="resource_id" string="Resource"/>
+                    <field name="task_id" string="Task"/>
+                    <field name="date_start" operator="&gt;=" string="Start Date greater or equal" type="date" />
+                    <field name="date_start" operator="&lt;=" string="Start Date less or equal" type="date"/>
+                    <filter string="Future Schedules" name="future_schedules"
+                        domain="[('date_start','&gt;=',current_date)]"/>
+                    <filter name="today" string="Today" domain="[('date_start', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('date_start', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="task_schedule_form_occupied">
+            <field name="name">Schedule.form</field>
+            <field name="model">task.schedule</field>
+            <field name="arch" type="xml">
+                <form create="0" edit="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="task_id" required="1" attrs="{'readonly':[('locked', '=', True)]}" domain="[('date_start','&lt;=',date_start), ('date_end', '&gt;=', date_end),('resource_ids.id','=',resource_id)]"/>
+                                <field name="resource_id" attrs="{'readonly':[('locked', '=', True)]}" readonly="True"/>
+                                <field name="date_start" attrs="{'readonly':[('locked', '=', True)]}" readonly="True"/>
+                                <field name="date_end" attrs="{'readonly':[('locked', '=', True)]}" readonly="True"/>
+                                <field name="meeting_id" invisible="1"/>
+                                <field name="task_date_start" invisible="1"/>
+                                <field name="task_date_end" invisible="1"/>
+                                <field name="raw_color" invisible="1"/>
+                                <field name="locked" invisible="1"/>
+                                <field name="partner_shipping_id" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_schedule_ganttaps" model="ir.ui.view">
+            <field name="name">task.schedule.gantt</field>
+            <field name="model">task.schedule</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <gantt default_group_by = "resource_id"
+                       date_start="date_start"
+                       date_stop="date_end"/>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="task_schedule_action">
+            <field name="name">Schedule</field>
+            <field name="res_model">task.schedule</field>
+            <field name="context">{'search_default_future_schedules': 1}</field>
+            <field name="view_mode">tree,form,gantt</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="task_schedule_action_dashboard">
+            <field name="name">Schedule Dashboard</field>
+            <field name="res_model">task.schedule</field>
+            <field name="view_mode">tree,form,gantt</field>
+        </record>
+
+        <!-- <record model="ir.actions.act_window" id="calendar.action_calendar_event">
+            <field name="view_mode">gantt</field>
+        </record> -->
+
+        <menuitem name="Resource Schedule" id="res_schedule" parent="project.menu_project_config"
+                  action="task_schedule_action"/>
+
+        <record model="ir.ui.view" id="task_schedule_kanban">
+            <field name="name">task.schedule.kanban</field>
+            <field name="model">task.schedule</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column o_kanban_project_tasks"  create="0" default_group_by="task_id">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <p>
+                                    <b><field name="task_id" /></b><br/>
+                                    <field name="resource_id"/><br/>
+                                    <field name="date_start"/><br/>
+                                    <field name="date_end"/>
+                                </p>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_task_schedule_kanban">
+            <field name="name">Planning</field>
+            <field name="res_model">task.schedule</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_future_schedules':1}</field>
+        </record>
+
+        <menuitem id="menu_task_kanban"
+                  name="Planning"
+                  parent="project.menu_project_management"
+                  action="action_task_schedule_kanban"
+                  sequence="6"/>
+
+    </data>
+</odoo>

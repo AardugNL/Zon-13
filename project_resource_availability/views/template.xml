@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="resource assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/project_resource_availability/static/src/js/resource_availability.js"/>
+            <link rel="stylesheet" href="/project_resource_availability/static/src/css/resource_availability.css"/>
+
+            <!-- Freeze Row Column in Resource Avaibility -->
+            <link rel="stylesheet" href="/project_resource_availability/static/src/css/ScrollTabla.css" media="screen"/>
+            <!-- <script type="text/javascript" src="/project_resource_availability/static/src/js/jquery.CongelarFilaColumna.js"/> -->
+        </xpath>
+    </template>
+</odoo>
